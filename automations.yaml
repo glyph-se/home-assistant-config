@@ -1,12 +1,12 @@
 - id: '1583530252657'
-  alias: Tänd skåp på helgen
+  alias: Tänd muminskåp på helgen
   description: ''
   trigger:
   - event: sunset
-    platform: sun
     offset: +00:45:00
+    platform: sun
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: state
       entity_id: group.people
@@ -22,7 +22,7 @@
     entity_id: switch.innr_sp_120_59328903_on_off
     type: turn_on
 - id: '1583530546061'
-  alias: Släck skåp på helgen
+  alias: Släck muminskåp på helgen
   description: ''
   trigger:
   - at: '23:00:00'
