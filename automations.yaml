@@ -6,10 +6,8 @@
     offset: +00:45:00
     platform: sun
   condition:
-  - condition: and
-    conditions:
     - condition: state
-      entity_id: all
+      entity_id: group.people
       state: home
     - condition: time
       weekday:
