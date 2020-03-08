@@ -9,7 +9,7 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: group.people
+      entity_id: all
       state: home
     - condition: time
       weekday:
