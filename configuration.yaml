@@ -34,7 +34,6 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-    - media_player
 
 media_player:
   - platform: kodi
