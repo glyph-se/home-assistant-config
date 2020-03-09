@@ -36,7 +36,7 @@
     domain: switch
     entity_id: switch.innr_sp_120_59328903_on_off
     type: turn_off
-- id: '1583772997902'
+- id: '1583772997902_boll_on'
   alias: Tänd blå boll
   description: ''
   trigger:
@@ -48,7 +48,7 @@
     domain: switch
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_on
-- id: '1583773386688'
+- id: '1583773386688_boll_off_vardag'
   alias: Släck blå boll (vardag)
   description: ''
   trigger:
@@ -63,7 +63,7 @@
     domain: switch
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_off
-- id: '1583773386689'
+- id: '1583773386689_boll_off_helg'
   alias: Släck blå boll (helg)
   description: ''
   trigger:
