@@ -40,3 +40,8 @@ media_player:
     name: Eris (kodi)
     host: flora.lan.glyph.se
     port: 80
+
+# Enable workday
+binary_sensor:
+  - platform: workday
+    country: SWE
