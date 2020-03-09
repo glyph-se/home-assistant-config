@@ -25,3 +25,12 @@ device_tracker:
   - platform: ping
     hosts:
       sony_xperia_one: 192.168.2.192
+
+google_assistant:
+  project_id: home-assistant-c84b7
+  expose_by_default: true
+  service_account: !include ha-state-report-account.json
+  report_state: true
+  exposed_domains:
+    - switch
+    - light
