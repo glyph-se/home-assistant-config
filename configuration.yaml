@@ -34,3 +34,10 @@ google_assistant:
   exposed_domains:
     - switch
     - light
+    - media_player
+
+media_player:
+  - platform: kodi
+    name: Eris (kodi)
+    host: flora.lan.glyph.se
+    port: 80
