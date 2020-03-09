@@ -1,5 +1,5 @@
 - id: '1583530252657'
-  alias: Tänd muminskåp på helgen
+  alias: Muminskåp tänd
   description: ''
   trigger:
   - event: sunset
@@ -20,7 +20,7 @@
     entity_id: switch.innr_sp_120_59328903_on_off
     type: turn_on
 - id: '1583530546061'
-  alias: Släck muminskåp på helgen
+  alias: Muminskåp släck
   description: ''
   trigger:
   - at: '23:00:00'
@@ -36,8 +36,8 @@
     domain: switch
     entity_id: switch.innr_sp_120_59328903_on_off
     type: turn_off
-- id: '1583772997902_boll_on'
-  alias: Tänd blå boll
+- id: 1583772997902_boll_on
+  alias: Blå boll tänd
   description: ''
   trigger:
   - event: sunset
@@ -48,8 +48,8 @@
     domain: switch
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_on
-- id: '1583773386688_boll_off_vardag'
-  alias: Släck blå boll (vardag)
+- id: 1583773386688_boll_off_vardag
+  alias: Blå boll släck (vardag)
   description: ''
   trigger:
   - at: '22:00:00'
@@ -63,8 +63,8 @@
     domain: switch
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_off
-- id: '1583773386689_boll_off_helg'
-  alias: Släck blå boll (helg)
+- id: 1583773386689_boll_off_helg
+  alias: Blå boll släck (helg)
   description: ''
   trigger:
   - at: '23:59:00'
@@ -77,4 +77,30 @@
   - device_id: 8269351cd5fd4ab7aa20a373c72279d3
     domain: switch
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
+    type: turn_off
+- id: '1583773805811'
+  alias: TV-skåp tänd
+  description: ''
+  trigger:
+  - at: '18:00'
+    platform: time
+  condition:
+  - after: sunset
+    condition: sun
+  action:
+  - device_id: 67515fccbe29472c8032217b84fb9b1b
+    domain: switch
+    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
+    type: turn_on
+- id: '1583773866555'
+  alias: TV-skåp släck
+  description: ''
+  trigger:
+  - at: '22:00:00'
+    platform: time
+  condition: []
+  action:
+  - device_id: 67515fccbe29472c8032217b84fb9b1b
+    domain: switch
+    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
     type: turn_off
