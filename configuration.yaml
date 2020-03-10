@@ -44,4 +44,12 @@ media_player:
 # Enable workday
 binary_sensor:
   - platform: workday
-    country: SWE
+    country: SE
+
+light:
+  - platform: group
+    name: Korgar
+    entities:
+      - light.philips_lta001_5a422d08_level_light_color_on_off
+      - light.philips_lta001_40e83008_level_light_color_on_off
+      - light.philips_lta001_bc2fab08_level_light_color_on_off
