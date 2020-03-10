@@ -15,6 +15,7 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+light: !include light_groups.yaml
 
 device_tracker:
   - platform: bluetooth_tracker
@@ -45,11 +46,3 @@ media_player:
 binary_sensor:
   - platform: workday
     country: SE
-
-light:
-  - platform: group
-    name: Korgar
-    entities:
-      - light.philips_lta001_5a422d08_level_light_color_on_off
-      - light.philips_lta001_40e83008_level_light_color_on_off
-      - light.philips_lta001_bc2fab08_level_light_color_on_off
