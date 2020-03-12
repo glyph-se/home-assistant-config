@@ -85,7 +85,6 @@
   - platform: time
     at: '18:00:00'
   - platform: sun
-    # Possible values: sunset, sunrise
     event: sunset
   condition:
   - condition: sun
@@ -108,4 +107,50 @@
   - device_id: 67515fccbe29472c8032217b84fb9b1b
     domain: switch
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
+    type: turn_off
+- id: '1584047833146'
+  alias: Korgar tänd
+  description: ''
+  trigger:
+  - event: sunset
+    platform: sun
+  condition: []
+  action:
+  - device_id: 061954fe386a4b719682f1c47e0ccc51
+    domain: light
+    entity_id: light.philips_lta001_5a422d08_level_light_color_on_off
+    type: turn_on
+    color_temp: 360
+    brightness: 160
+  - device_id: 82728923eede491cb884a7f734b6c735
+    domain: light
+    entity_id: light.philips_lta001_40e83008_level_light_color_on_off
+    type: turn_on
+    color_temp: 360
+    brightness: 160
+  - device_id: e804df0452714102837f74a408071aa7
+    domain: light
+    entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
+    type: turn_on
+    color_temp: 360
+    brightness: 160
+- id: '1584047917317'
+  alias: Korgar släck
+  description: ''
+  trigger:
+  - at: '23:00:00'
+    platform: time
+  condition: []
+  action:
+  - device_id: 061954fe386a4b719682f1c47e0ccc51
+    domain: light
+    entity_id: light.philips_lta001_5a422d08_level_light_color_on_off
+    type: turn_off
+  - device_id: 82728923eede491cb884a7f734b6c735
+    domain: light
+    entity_id: light.philips_lta001_40e83008_level_light_color_on_off
+    type: turn_off
+  - device_id: e804df0452714102837f74a408071aa7
+    domain: light
+    entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
     type: turn_off
