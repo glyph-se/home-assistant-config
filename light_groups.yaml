@@ -4,3 +4,16 @@
     - light.philips_lta001_5a422d08_level_light_color_on_off
     - light.philips_lta001_40e83008_level_light_color_on_off
     - light.philips_lta001_bc2fab08_level_light_color_on_off
+
+- platform: switch
+  name: Blå boll
+  entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
+- platform: switch
+  name: Muminskåp
+  entity_id: switch.innr_sp_120_59328903_on_off
+- platform: switch
+  name: Sänglampa
+  entity_id: switch.innr_sp_120_ed448903_on_off
+- platform: switch
+  name: TV-skåp
+  entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
