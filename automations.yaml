@@ -129,7 +129,7 @@
     - service: light.turn_on
       data:
         entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
-        color_temp:430
+        color_temp: 430
         brightness: 160
 - id: '1584047917317'
   alias: Korgar släck
