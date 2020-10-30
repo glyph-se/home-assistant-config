@@ -36,12 +36,6 @@ google_assistant:
     - switch
     - light
 
-media_player:
-  - platform: kodi
-    name: Eris (kodi)
-    host: flora.lan.glyph.se
-    port: 80
-
 # Enable workday
 binary_sensor:
   - platform: workday
