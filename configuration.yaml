@@ -40,3 +40,9 @@ google_assistant:
 binary_sensor:
   - platform: workday
     country: SE
+
+# Extra logs for Google Assistant debugging
+#logger:
+#  default: error
+#  logs:
+#    homeassistant.components.google_assistant: debug
