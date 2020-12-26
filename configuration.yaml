@@ -28,9 +28,9 @@ light: !include light_groups.yaml
 #      sony_xperia_one: 192.168.2.192
 
 google_assistant:
-  project_id: home-assistant-c84b7
+  project_id: home-assistant-2-dca83
   expose_by_default: true
-  service_account: !include ha-state-report-account.json
+  service_account: !include google-assistant-service-account-2.json
   report_state: true
   exposed_domains:
     - switch
