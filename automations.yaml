@@ -1,5 +1,5 @@
 - id: '1583530252657'
-  alias: Muminskåp tänd
+  alias: Legoskåp tänd
   description: ''
   trigger:
   - event: sunset
@@ -19,8 +19,9 @@
     domain: switch
     entity_id: switch.innr_sp_120_59328903_on_off
     type: turn_on
+  mode: single
 - id: '1583530546061'
-  alias: Muminskåp släck
+  alias: Legoskåp släck
   description: ''
   trigger:
   - at: '23:00:00'
@@ -36,6 +37,7 @@
     domain: switch
     entity_id: switch.innr_sp_120_59328903_on_off
     type: turn_off
+  mode: single
 - id: 1583772997902_boll_on
   alias: Blå boll tänd
   description: ''
@@ -116,21 +118,21 @@
     platform: sun
   condition: []
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.philips_lta001_5a422d08_level_light_color_on_off
-        color_temp: 430
-        brightness: 160
-    - service: light.turn_on
-      data:
-        entity_id: light.philips_lta001_40e83008_level_light_color_on_off
-        color_temp: 430
-        brightness: 160
-    - service: light.turn_on
-      data:
-        entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
-        color_temp: 430
-        brightness: 160
+  - service: light.turn_on
+    data:
+      entity_id: light.philips_lta001_5a422d08_level_light_color_on_off
+      color_temp: 430
+      brightness: 160
+  - service: light.turn_on
+    data:
+      entity_id: light.philips_lta001_40e83008_level_light_color_on_off
+      color_temp: 430
+      brightness: 160
+  - service: light.turn_on
+    data:
+      entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
+      color_temp: 430
+      brightness: 160
 - id: '1584047917317'
   alias: Korgar släck
   description: ''
