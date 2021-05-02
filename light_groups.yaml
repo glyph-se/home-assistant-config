@@ -14,3 +14,6 @@
 - platform: switch
   name: TV-skåp
   entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
+- platform: switch
+  name: Trälampa
+  entity_id: switch.innr_sp_120_ed448903_on_off
