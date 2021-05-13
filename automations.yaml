@@ -153,3 +153,35 @@
     domain: light
     entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
     type: turn_off
+- id: '1620915831174'
+  alias: Hallautomation
+  description: ''
+  trigger:
+  - type: occupied
+    platform: device
+    device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
+    entity_id: binary_sensor.hallsensor_occupancy
+    domain: binary_sensor
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
+    entity_id: sensor.hallsensor_illuminance
+    domain: sensor
+    below: 20
+  action:
+  - type: turn_on
+    device_id: a9b757038722af90948fd69813460753
+    entity_id: light.hallampa
+    domain: light
+    brightness_pct: 100
+  - delay:
+      hours: 0
+      minutes: 2
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: a9b757038722af90948fd69813460753
+    entity_id: light.hallampa
+    domain: light
+  mode: restart
