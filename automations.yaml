@@ -174,7 +174,7 @@
     device_id: a9b757038722af90948fd69813460753
     entity_id: light.hallampa
     domain: light
-    brightness_pct: 100
+    brightness_pct: 50
   - delay:
       hours: 0
       minutes: 2
