@@ -31,6 +31,9 @@ google_assistant:
   exposed_domains:
     - switch
     - light
+  entity_config:
+    sensor.hallsensor_temperature:
+        expose: true
 
 # Enable workday
 binary_sensor:
