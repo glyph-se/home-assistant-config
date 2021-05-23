@@ -40,6 +40,11 @@ binary_sensor:
   - platform: workday
     country: SE
 
+# Move recorder to memory
+recorder:
+   purge_keep_days: 2
+   db_url: 'sqlite:///:memory:'
+
 # Extra logs for Google Assistant debugging
 #logger:
 #  default: error
