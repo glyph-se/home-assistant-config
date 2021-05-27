@@ -1,4 +1,3 @@
-
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -33,7 +32,7 @@ google_assistant:
     - light
   entity_config:
     sensor.hallsensor_temperature:
-        expose: true
+      expose: true
 
 # Enable workday
 binary_sensor:
@@ -42,9 +41,8 @@ binary_sensor:
 
 # Move recorder to memory
 recorder:
-   purge_keep_days: 2
-   db_url: 'sqlite:///:memory:'
-
+  purge_keep_days: 2
+  db_url: "sqlite:///:memory:"
 # Extra logs for Google Assistant debugging
 #logger:
 #  default: error
