@@ -17,12 +17,12 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 light: !include light_groups.yaml
 
-#device_tracker:
-#  - platform: bluetooth_tracker
-#    interval_seconds: 60
-#    consider_home: 180
-#    new_device_defaults:
-#      track_new_devices: false
+device_tracker:
+  - platform: bluetooth_tracker
+    #    interval_seconds: 60
+    consider_home: 00:10:00
+    new_device_defaults:
+      track_new_devices: false
 #  - platform: ping
 #    hosts:
 #      sony_xperia_one: 192.168.2.192
