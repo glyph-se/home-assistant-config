@@ -192,3 +192,33 @@
     entity_id: light.hallampa
     domain: light
   mode: restart
+- id: '1625166644648'
+  alias: Skafferi tänd
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 0d7b63c4567e702930913571ce840ab9
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: switch.turn_on
+    target:
+      device_id: 52f9317673d83e56150c3d8ca7e18bc4
+  mode: restart
+- id: '1625167345545'
+  alias: Skafferi släck
+  description: ''
+  trigger:
+  - type: not_opened
+    platform: device
+    device_id: 0d7b63c4567e702930913571ce840ab9
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: switch.turn_off
+    target:
+      device_id: 52f9317673d83e56150c3d8ca7e18bc4
+  mode: restart
