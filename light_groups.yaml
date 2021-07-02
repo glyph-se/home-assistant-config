@@ -17,3 +17,11 @@
 - platform: switch
   name: Trälampa
   entity_id: switch.innr_sp_120_ed448903_on_off
+
+- platform: group
+  name: Taklampor
+  entities:
+    - light.taklampa_ett
+    - light.taklampa_tva
+    - light.taklampa_tre
+    - light.taklampa_fyra
