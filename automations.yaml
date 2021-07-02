@@ -199,7 +199,7 @@
   - type: opened
     platform: device
     device_id: 0d7b63c4567e702930913571ce840ab9
-    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_on_off
+    entity_id: binary_sensor.skafferisensor_on_off
     domain: binary_sensor
   condition: []
   action:
@@ -214,7 +214,7 @@
   - type: not_opened
     platform: device
     device_id: 0d7b63c4567e702930913571ce840ab9
-    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_on_off
+    entity_id: binary_sensor.skafferisensor_on_off
     domain: binary_sensor
   condition: []
   action:
