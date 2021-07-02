@@ -38,6 +38,8 @@ google_assistant:
   entity_config:
     sensor.hallsensor_temperature:
       expose: true
+    binary_sensor.skafferisensor_on_off:
+      expose: true
 
 # Enable workday
 binary_sensor:
