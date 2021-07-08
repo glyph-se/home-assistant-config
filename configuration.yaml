@@ -40,6 +40,8 @@ google_assistant:
       expose: true
     binary_sensor.skafferisensor_on_off:
       expose: true
+    input_boolean.nattlage:
+      expose: true
 
 # Enable workday
 binary_sensor:
@@ -55,3 +57,8 @@ recorder:
 #  default: error
 #  logs:
 #    homeassistant.components.google_assistant: debug
+
+input_boolean:
+  nattlage:
+    name: Nattläge
+    icon: mdi:sleep
