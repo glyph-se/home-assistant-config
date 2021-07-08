@@ -216,6 +216,16 @@
     device_id: 0d7b63c4567e702930913571ce840ab9
     entity_id: binary_sensor.skafferisensor_on_off
     domain: binary_sensor
+  - type: opened
+    platform: device
+    device_id: 0d7b63c4567e702930913571ce840ab9
+    entity_id: binary_sensor.skafferisensor_on_off
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
   condition: []
   action:
   - service: switch.turn_off
