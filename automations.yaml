@@ -232,3 +232,27 @@
     target:
       device_id: 52f9317673d83e56150c3d8ca7e18bc4
   mode: restart
+- id: '1626003792906'
+  alias: Nattläge på
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:59:59'
+  condition: []
+  action:
+  - service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.nattlage
+  mode: single
+- id: '1626003846144'
+  alias: Nattläge av
+  description: ''
+  trigger:
+  - platform: time
+    at: '12:00:00'
+  condition: []
+  action:
+  - service: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.nattlage
+  mode: single
