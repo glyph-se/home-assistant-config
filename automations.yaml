@@ -191,7 +191,7 @@
     device_id: a9b757038722af90948fd69813460753
     entity_id: light.hallampa
     domain: light
-  mode: restart
+  mode: single
 - id: '1625166644648'
   alias: Skafferi tänd
   description: ''
@@ -296,4 +296,4 @@
   - service: light.turn_off
     target:
       entity_id: light.taklampor
-  mode: restart
+  mode: single
