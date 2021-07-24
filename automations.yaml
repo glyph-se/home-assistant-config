@@ -263,13 +263,13 @@
   - type: occupied
     platform: device
     device_id: 0ed67a986d805df2f3c109d23f1c772e
-    entity_id: binary_sensor.vardagsrumsensor_occupancy
+    entity_id: binary_sensor.vardagsrumssensor_occupancy
     domain: binary_sensor
   condition:
   - type: is_illuminance
     condition: device
     device_id: 0ed67a986d805df2f3c109d23f1c772e
-    entity_id: sensor.vardagsrumsensor_illuminance
+    entity_id: sensor.vardagsrumssensor_illuminance
     domain: sensor
     below: 10
   - condition: state
@@ -285,7 +285,7 @@
     - type: not_occupied
       platform: device
       device_id: 0ed67a986d805df2f3c109d23f1c772e
-      entity_id: binary_sensor.vardagsrumsensor_occupancy
+      entity_id: binary_sensor.vardagsrumssensor_occupancy
       domain: binary_sensor
       for:
         hours: 3
