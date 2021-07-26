@@ -35,6 +35,7 @@ google_assistant:
   exposed_domains:
     - switch
     - light
+    - cover
   entity_config:
     sensor.hallsensor_temperature:
       expose: true
