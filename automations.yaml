@@ -297,3 +297,45 @@
     target:
       entity_id: light.taklampor
   mode: single
+- id: '1627313580791'
+  alias: Sovrumsautomation
+  description: ''
+  trigger:
+  - type: occupied
+    platform: device
+    device_id: d232f7b6822bb0f46805fc7562963e0d
+    entity_id: binary_sensor.sovrumssensor_occupancy
+    domain: binary_sensor
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: d232f7b6822bb0f46805fc7562963e0d
+    entity_id: sensor.sovrumssensor_illuminance
+    domain: sensor
+    below: 10
+  - condition: state
+    entity_id: input_boolean.nattlage
+    state: 'off'
+  action:
+  - type: turn_on
+    device_id: 1995d0fdd0c3a6eaedce2317c06e870f
+    entity_id: light.sovrumslampa
+    domain: light
+    brightness_pct: 10
+  - wait_for_trigger:
+    - type: not_occupied
+      platform: device
+      device_id: d232f7b6822bb0f46805fc7562963e0d
+      entity_id: binary_sensor.sovrumssensor_occupancy
+      domain: binary_sensor
+      for:
+        hours: 0
+        minutes: 5
+        seconds: 0
+        milliseconds: 0
+    timeout: 00:30:00
+  - type: turn_off
+    device_id: 1995d0fdd0c3a6eaedce2317c06e870f
+    entity_id: light.sovrumslampa
+    domain: light
+  mode: single
