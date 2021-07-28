@@ -79,7 +79,7 @@
                                     "entity": "sensor.snapshot_backup"
                                 }
                             ],
-                            "title": "Home Assistant",
+                            "title": "Home Assistant Info",
                             "state_color": false
                         },
                         {
@@ -200,6 +200,19 @@
                             ],
                             "square": true,
                             "columns": 4
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.nattlage"
+                                },
+                                {
+                                    "entity": "switch.skafferilampa"
+                                }
+                            ],
+                            "title": "Home Assistant Debug",
+                            "show_icon": true
                         }
                     ]
                 }
