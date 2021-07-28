@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "key": "lovelace.lovelace_custom",
+    "key": "lovelace.custom_dashboard",
     "data": {
         "config": {
             "title": "Custom dashboard",

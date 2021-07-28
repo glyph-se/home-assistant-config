@@ -6,11 +6,11 @@
             {
                 "require_admin": false,
                 "show_in_sidebar": true,
+                "icon": "hass:home-heart",
                 "title": "Custom dashboard",
-                "url_path": "lovelace-custom",
+                "url_path": "custom-dashboard",
                 "mode": "storage",
-                "id": "lovelace_custom",
-                "icon": "hass:home-heart"
+                "id": "custom_dashboard"
             }
         ]
     }
