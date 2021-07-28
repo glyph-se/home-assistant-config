@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "key": "lovelace_dashboards",
+    "data": {
+        "items": [
+            {
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Custom dashboard",
+                "url_path": "lovelace-custom",
+                "mode": "storage",
+                "id": "lovelace_custom",
+                "icon": "hass:home-heart"
+            }
+        ]
+    }
+}

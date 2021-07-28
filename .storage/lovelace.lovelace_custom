@@ -1,0 +1,209 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_custom",
+    "data": {
+        "config": {
+            "title": "Custom dashboard",
+            "views": [
+                {
+                    "path": "",
+                    "title": "Home",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.taklampor",
+                                    "name": "Alla",
+                                    "secondary_info": "brightness"
+                                },
+                                {
+                                    "entity": "light.taklampa_ett",
+                                    "name": "Ett",
+                                    "secondary_info": "brightness"
+                                },
+                                {
+                                    "entity": "light.taklampa_tva",
+                                    "name": "Tv\u00e5",
+                                    "secondary_info": "brightness"
+                                },
+                                {
+                                    "entity": "light.taklampa_tre",
+                                    "name": "Tre",
+                                    "secondary_info": "brightness"
+                                },
+                                {
+                                    "entity": "light.taklampa_fyra",
+                                    "name": "Fyra",
+                                    "secondary_info": "brightness"
+                                }
+                            ],
+                            "title": "Vardagsrum",
+                            "show_header_toggle": false
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.sovrumslampa",
+                                    "name": "Tak",
+                                    "secondary_info": "brightness"
+                                },
+                                {
+                                    "entity": "light.sanglampor_zha_group_0x0003",
+                                    "secondary_info": "brightness"
+                                },
+                                {
+                                    "entity": "light.fredriks_sanglampa_level_on_off",
+                                    "secondary_info": "brightness"
+                                },
+                                {
+                                    "entity": "light.linneas_sanglampa_level_on_off",
+                                    "secondary_info": "brightness"
+                                }
+                            ],
+                            "title": "Sovrum",
+                            "show_header_toggle": false
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.updater"
+                                },
+                                {
+                                    "entity": "binary_sensor.snapshots_stale"
+                                },
+                                {
+                                    "entity": "sensor.snapshot_backup"
+                                }
+                            ],
+                            "title": "Home Assistant",
+                            "state_color": false
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.matbordslampa",
+                                    "name": "Matbord",
+                                    "secondary_info": "last-changed"
+                                },
+                                {
+                                    "entity": "light.hallampa",
+                                    "name": "Hall",
+                                    "secondary_info": "last-changed"
+                                }
+                            ],
+                            "title": "Nedanv\u00e5ning",
+                            "show_header_toggle": false
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.hallsensor_temperature",
+                                    "detail": 2,
+                                    "graph": "line"
+                                },
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.vardagsrumssensor_temperature",
+                                    "graph": "line",
+                                    "detail": 2
+                                },
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.sovrumssensor_temperature",
+                                    "graph": "line",
+                                    "detail": 2
+                                },
+                                {
+                                    "type": "weather-forecast",
+                                    "entity": "weather.home",
+                                    "show_forecast": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "grid",
+                            "title": "Batteriniv\u00e5er",
+                            "cards": [
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_1_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "min": 0,
+                                    "max": 100,
+                                    "entity": "sensor.rullgardin_2_battery",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "min": 0,
+                                    "max": 100,
+                                    "entity": "sensor.hallsensor_power",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "min": 0,
+                                    "max": 100,
+                                    "entity": "sensor.vardagsrumssensor_power",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "min": 0,
+                                    "max": 100,
+                                    "entity": "sensor.sovrumssensor_power",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.skafferisensor_power",
+                                    "min": 0,
+                                    "max": 100,
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                }
+                            ],
+                            "square": true,
+                            "columns": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
