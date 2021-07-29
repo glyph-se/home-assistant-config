@@ -6,7 +6,7 @@
             {
                 "require_admin": false,
                 "show_in_sidebar": true,
-                "icon": "hass:home-heart",
+                "icon": "mdi:home-heart",
                 "title": "Custom dashboard",
                 "url_path": "custom-dashboard",
                 "mode": "storage",
