@@ -17,26 +17,31 @@
                                 {
                                     "type": "light",
                                     "entity": "light.taklampor",
-                                    "name": "Tak"
+                                    "name": "Tak",
+                                    "icon": "mdi:ceiling-light"
                                 },
                                 {
                                     "type": "entities",
                                     "entities": [
                                         {
                                             "entity": "light.taklampa_ett",
-                                            "secondary_info": "last-changed"
+                                            "secondary_info": "last-changed",
+                                            "icon": "mdi:ceiling-light"
                                         },
                                         {
                                             "entity": "light.taklampa_tva",
-                                            "secondary_info": "last-changed"
+                                            "secondary_info": "last-changed",
+                                            "icon": "mdi:ceiling-light"
                                         },
                                         {
                                             "entity": "light.taklampa_tre",
-                                            "secondary_info": "last-changed"
+                                            "secondary_info": "last-changed",
+                                            "icon": "mdi:ceiling-light"
                                         },
                                         {
                                             "entity": "light.taklampa_fyra",
-                                            "secondary_info": "last-changed"
+                                            "secondary_info": "last-changed",
+                                            "icon": "mdi:ceiling-light"
                                         }
                                     ]
                                 },
@@ -62,23 +67,29 @@
                                 {
                                     "type": "light",
                                     "entity": "light.sovrumslampa",
-                                    "name": "Tak"
+                                    "name": "Tak",
+                                    "icon": "mdi:ceiling-light"
                                 },
                                 {
                                     "type": "horizontal-stack",
                                     "cards": [
                                         {
                                             "type": "light",
-                                            "entity": "light.sanglampor_zha_group_0x0003"
+                                            "entity": "light.sanglampor_zha_group_0x0003",
+                                            "icon": "mdi:floor-lamp"
                                         },
                                         {
                                             "type": "entities",
                                             "entities": [
                                                 {
-                                                    "entity": "light.fredriks_sanglampa_level_on_off"
+                                                    "entity": "light.fredriks_sanglampa_level_on_off",
+                                                    "secondary_info": "last-changed",
+                                                    "icon": "mdi:floor-lamp"
                                                 },
                                                 {
-                                                    "entity": "light.linneas_sanglampa_level_on_off"
+                                                    "entity": "light.linneas_sanglampa_level_on_off",
+                                                    "secondary_info": "last-changed",
+                                                    "icon": "mdi:floor-lamp"
                                                 }
                                             ]
                                         }
