@@ -11,76 +11,80 @@
                     "badges": [],
                     "cards": [
                         {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "light.taklampor",
-                                    "name": "Alla",
-                                    "secondary_info": "brightness"
-                                },
-                                {
-                                    "entity": "light.taklampa_ett",
-                                    "name": "Ett",
-                                    "secondary_info": "brightness"
-                                },
-                                {
-                                    "entity": "light.taklampa_tva",
-                                    "name": "Tv\u00e5",
-                                    "secondary_info": "brightness"
-                                },
-                                {
-                                    "entity": "light.taklampa_tre",
-                                    "name": "Tre",
-                                    "secondary_info": "brightness"
-                                },
-                                {
-                                    "entity": "light.taklampa_fyra",
-                                    "name": "Fyra",
-                                    "secondary_info": "brightness"
-                                }
-                            ],
+                            "type": "vertical-stack",
                             "title": "Vardagsrum",
-                            "show_header_toggle": false
+                            "cards": [
+                                {
+                                    "type": "light",
+                                    "entity": "light.taklampor",
+                                    "name": "Tak"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.taklampa_ett",
+                                            "secondary_info": "last-changed"
+                                        },
+                                        {
+                                            "entity": "light.taklampa_tva",
+                                            "secondary_info": "last-changed"
+                                        },
+                                        {
+                                            "entity": "light.taklampa_tre",
+                                            "secondary_info": "last-changed"
+                                        },
+                                        {
+                                            "entity": "light.taklampa_fyra",
+                                            "secondary_info": "last-changed"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "cover.rullgardin_1",
+                                            "secondary_info": "position"
+                                        },
+                                        {
+                                            "entity": "cover.rullgardin_2",
+                                            "secondary_info": "position"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "light.sovrumslampa",
-                                    "name": "Tak",
-                                    "secondary_info": "brightness"
-                                },
-                                {
-                                    "entity": "light.sanglampor_zha_group_0x0003",
-                                    "secondary_info": "brightness"
-                                },
-                                {
-                                    "entity": "light.fredriks_sanglampa_level_on_off",
-                                    "secondary_info": "brightness"
-                                },
-                                {
-                                    "entity": "light.linneas_sanglampa_level_on_off",
-                                    "secondary_info": "brightness"
-                                }
-                            ],
+                            "type": "vertical-stack",
                             "title": "Sovrum",
-                            "show_header_toggle": false
-                        },
-                        {
-                            "type": "glance",
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "binary_sensor.updater"
+                                    "type": "light",
+                                    "entity": "light.sovrumslampa",
+                                    "name": "Tak"
                                 },
                                 {
-                                    "entity": "binary_sensor.snapshots_stale"
-                                },
-                                {
-                                    "entity": "sensor.snapshot_backup"
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "light",
+                                            "entity": "light.sanglampor_zha_group_0x0003"
+                                        },
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "light.fredriks_sanglampa_level_on_off"
+                                                },
+                                                {
+                                                    "entity": "light.linneas_sanglampa_level_on_off"
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
-                            ],
-                            "title": "Home Assistant Info",
-                            "state_color": false
+                            ]
                         },
                         {
                             "type": "entities",
@@ -101,24 +105,28 @@
                         },
                         {
                             "type": "vertical-stack",
+                            "title": "Temperatur",
                             "cards": [
                                 {
                                     "type": "sensor",
                                     "entity": "sensor.hallsensor_temperature",
                                     "detail": 2,
+                                    "name": "Hall",
                                     "graph": "line"
                                 },
                                 {
                                     "type": "sensor",
                                     "entity": "sensor.vardagsrumssensor_temperature",
                                     "graph": "line",
-                                    "detail": 2
+                                    "detail": 2,
+                                    "name": "Vardagsrum"
                                 },
                                 {
                                     "type": "sensor",
                                     "entity": "sensor.sovrumssensor_temperature",
                                     "graph": "line",
-                                    "detail": 2
+                                    "detail": 2,
+                                    "name": "Sovrum"
                                 },
                                 {
                                     "type": "weather-forecast",
@@ -140,7 +148,8 @@
                                         "green": 50,
                                         "yellow": 25,
                                         "red": 10
-                                    }
+                                    },
+                                    "name": "Rullgardin 1"
                                 },
                                 {
                                     "type": "gauge",
@@ -151,7 +160,8 @@
                                         "green": 50,
                                         "yellow": 25,
                                         "red": 10
-                                    }
+                                    },
+                                    "name": "Rullgardin 2"
                                 },
                                 {
                                     "type": "gauge",
@@ -162,7 +172,8 @@
                                         "green": 50,
                                         "yellow": 25,
                                         "red": 10
-                                    }
+                                    },
+                                    "name": "Hallsensor"
                                 },
                                 {
                                     "type": "gauge",
@@ -173,7 +184,8 @@
                                         "green": 50,
                                         "yellow": 25,
                                         "red": 10
-                                    }
+                                    },
+                                    "name": "Vardagsrumssensor"
                                 },
                                 {
                                     "type": "gauge",
@@ -184,7 +196,8 @@
                                         "green": 50,
                                         "yellow": 25,
                                         "red": 10
-                                    }
+                                    },
+                                    "name": "Sovrumssenor"
                                 },
                                 {
                                     "type": "gauge",
@@ -195,24 +208,46 @@
                                         "green": 50,
                                         "yellow": 25,
                                         "red": 10
-                                    }
+                                    },
+                                    "name": "Skafferisensor"
                                 }
                             ],
                             "square": true,
                             "columns": 4
                         },
                         {
-                            "type": "glance",
-                            "entities": [
+                            "type": "vertical-stack",
+                            "title": "Home Assistant",
+                            "cards": [
                                 {
-                                    "entity": "input_boolean.nattlage"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.updater"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.snapshots_stale"
+                                        },
+                                        {
+                                            "entity": "sensor.snapshot_backup"
+                                        }
+                                    ],
+                                    "state_color": false
                                 },
                                 {
-                                    "entity": "switch.skafferilampa"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "input_boolean.nattlage"
+                                        },
+                                        {
+                                            "entity": "switch.skafferilampa"
+                                        }
+                                    ],
+                                    "title": "Debug",
+                                    "show_icon": true
                                 }
-                            ],
-                            "title": "Home Assistant Debug",
-                            "show_icon": true
+                            ]
                         }
                     ]
                 }
