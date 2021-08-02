@@ -243,7 +243,7 @@
                                             "entity": "sensor.snapshot_backup"
                                         }
                                     ],
-                                    "state_color": false
+                                    "state_color": true
                                 },
                                 {
                                     "type": "glance",
@@ -253,10 +253,44 @@
                                         },
                                         {
                                             "entity": "switch.skafferilampa"
+                                        },
+                                        {
+                                            "entity": "sensor.hallsensor_illuminance"
+                                        },
+                                        {
+                                            "entity": "sensor.sovrumssensor_illuminance"
+                                        },
+                                        {
+                                            "entity": "sensor.vardagsrumssensor_illuminance"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.workday_sensor"
                                         }
                                     ],
                                     "title": "Debug",
-                                    "show_icon": true
+                                    "show_icon": true,
+                                    "state_color": true
+                                },
+                                {
+                                    "type": "entity-filter",
+                                    "title": "Uppdateringar",
+                                    "entities": [
+                                        "binary_sensor.check_home_assistant_configuration_update_available",
+                                        "binary_sensor.deconz_update_available",
+                                        "binary_sensor.home_assistant_google_drive_backup_update_available",
+                                        "binary_sensor.home_assistant_operating_system_update_available",
+                                        "binary_sensor.log_viewer_update_available",
+                                        "binary_sensor.ssh_web_terminal_update_available",
+                                        "binary_sensor.unifi_controller_update_available",
+                                        "binary_sensor.visual_studio_code_update_available",
+                                        "binary_sensor.z_wave_js_update_available"
+                                    ],
+                                    "state_filter": [
+                                        "on"
+                                    ],
+                                    "card": {
+                                        "type": "glance"
+                                    }
                                 }
                             ]
                         }
