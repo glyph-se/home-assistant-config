@@ -292,7 +292,7 @@
         minutes: 0
         seconds: 0
         milliseconds: 0
-    timeout: 03:00:00
+    timeout: 10:00:00
   - service: light.turn_off
     target:
       entity_id: light.taklampor
