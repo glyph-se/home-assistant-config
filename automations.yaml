@@ -339,3 +339,28 @@
     entity_id: light.sovrumslampa
     domain: light
   mode: single
+- id: '1627475620291'
+  alias: Rulla ner rullgardiner
+  description: ''
+  trigger:
+  - type: illuminance
+    platform: device
+    device_id: 0ed67a986d805df2f3c109d23f1c772e
+    entity_id: sensor.vardagsrumssensor_illuminance
+    domain: sensor
+    above: 900
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: above_horizon
+  - condition: numeric_state
+    entity_id: weather.home
+    attribute: temperature
+    above: '20'
+  action: []
+  mode: single
