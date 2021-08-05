@@ -292,7 +292,7 @@
         minutes: 0
         seconds: 0
         milliseconds: 0
-    timeout: 10:00:00
+    timeout: 36000
   - service: light.turn_off
     target:
       entity_id: light.taklampor
@@ -363,4 +363,18 @@
     attribute: temperature
     above: '20'
   action: []
+  mode: single
+- id: '1628173388980'
+  alias: Run config check when new version released
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.updater
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: hassio.addon_start
+    data:
+      addon: core_check_config
   mode: single
