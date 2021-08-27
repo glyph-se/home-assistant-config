@@ -18,6 +18,13 @@
   name: Trälampa
   entity_id: switch.innr_sp_120_ed448903_on_off
 
+- platform: switch
+  name: Kökslampor
+  entity_id: switch.kokslampor
+- platform: switch
+  name: Kökshörn
+  entity_id: switch.kokshorn
+
 - platform: group
   name: Taklampor
   entities:
