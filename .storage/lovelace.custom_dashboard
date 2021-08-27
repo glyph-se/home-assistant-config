@@ -109,6 +109,12 @@
                                     "entity": "light.hallampa",
                                     "name": "Hall",
                                     "secondary_info": "last-changed"
+                                },
+                                {
+                                    "entity": "light.kokshorn"
+                                },
+                                {
+                                    "entity": "light.kokslampor"
                                 }
                             ],
                             "title": "Nedanv\u00e5ning",
