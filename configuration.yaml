@@ -33,7 +33,6 @@ google_assistant:
   service_account: !include google-assistant-service-account-2.json
   report_state: true
   exposed_domains:
-    - switch
     - light
     - cover
   entity_config:
@@ -46,6 +45,8 @@ google_assistant:
     binary_sensor.skafferisensor_on_off:
       expose: true
     input_boolean.nattlage:
+      expose: true
+    switch.skafferilampa:
       expose: true
 
 # Enable workday
