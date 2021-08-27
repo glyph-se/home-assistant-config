@@ -18,7 +18,7 @@
                                     "type": "light",
                                     "entity": "light.taklampor",
                                     "name": "Tak",
-                                    "icon": "mdi:ceiling-light"
+                                    "icon": "mdi:wall-sconce-round"
                                 },
                                 {
                                     "type": "entities",
@@ -26,22 +26,22 @@
                                         {
                                             "entity": "light.taklampa_ett",
                                             "secondary_info": "last-changed",
-                                            "icon": "mdi:ceiling-light"
+                                            "icon": "mdi:wall-sconce-round"
                                         },
                                         {
                                             "entity": "light.taklampa_tva",
                                             "secondary_info": "last-changed",
-                                            "icon": "mdi:ceiling-light"
+                                            "icon": "mdi:wall-sconce-round"
                                         },
                                         {
                                             "entity": "light.taklampa_tre",
                                             "secondary_info": "last-changed",
-                                            "icon": "mdi:ceiling-light"
+                                            "icon": "mdi:wall-sconce-round"
                                         },
                                         {
                                             "entity": "light.taklampa_fyra",
                                             "secondary_info": "last-changed",
-                                            "icon": "mdi:ceiling-light"
+                                            "icon": "mdi:wall-sconce-round"
                                         }
                                     ]
                                 },
@@ -68,7 +68,7 @@
                                     "type": "light",
                                     "entity": "light.sovrumslampa",
                                     "name": "Tak",
-                                    "icon": "mdi:ceiling-light"
+                                    "icon": "mdi:dome-light"
                                 },
                                 {
                                     "type": "horizontal-stack",
@@ -103,18 +103,24 @@
                                 {
                                     "entity": "light.matbordslampa",
                                     "name": "Matbord",
-                                    "secondary_info": "last-changed"
+                                    "secondary_info": "last-changed",
+                                    "icon": "mdi:ceiling-light"
+                                },
+                                {
+                                    "entity": "light.kokshorn",
+                                    "secondary_info": "last-changed",
+                                    "icon": "mdi:light-recessed"
+                                },
+                                {
+                                    "entity": "light.kokslampor",
+                                    "secondary_info": "last-changed",
+                                    "icon": "mdi:track-light"
                                 },
                                 {
                                     "entity": "light.hallampa",
                                     "name": "Hall",
-                                    "secondary_info": "last-changed"
-                                },
-                                {
-                                    "entity": "light.kokshorn"
-                                },
-                                {
-                                    "entity": "light.kokslampor"
+                                    "secondary_info": "last-changed",
+                                    "icon": "mdi:string-lights"
                                 }
                             ],
                             "title": "Nedanv\u00e5ning",
