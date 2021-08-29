@@ -154,7 +154,7 @@
     entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
     type: turn_off
 - id: '1620915831174'
-  alias: Hallautomation
+  alias: Lampa hall auto
   description: ''
   trigger:
   - type: occupied
@@ -257,7 +257,7 @@
       entity_id: input_boolean.nattlage
   mode: single
 - id: '1626438149685'
-  alias: Vardagsrumautomation
+  alias: Lampa vardagsrum auto
   description: ''
   trigger:
   - type: occupied
@@ -298,7 +298,7 @@
       entity_id: light.taklampor
   mode: single
 - id: '1627313580791'
-  alias: Sovrumsautomation
+  alias: Lampa sovrum auto
   description: ''
   trigger:
   - type: occupied
@@ -377,4 +377,38 @@
   - service: hassio.addon_start
     data:
       addon: core_check_config
+  mode: single
+- id: '1630233997180'
+  alias: Lampa kök auto
+  description: ''
+  trigger:
+  - type: occupied
+    platform: device
+    device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
+    entity_id: binary_sensor.hallsensor_occupancy
+    domain: binary_sensor
+  - type: occupied
+    platform: device
+    device_id: 0ed67a986d805df2f3c109d23f1c772e
+    entity_id: binary_sensor.vardagsrumssensor_occupancy
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  - condition: state
+    entity_id: input_boolean.nattlage
+    state: 'off'
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.kokslampor
+  - delay:
+      hours: 3
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  - service: light.turn_off
+    target:
+      entity_id: light.kokslampor
   mode: single
