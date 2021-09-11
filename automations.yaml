@@ -415,3 +415,37 @@
     target:
       entity_id: light.kokslampor
   mode: single
+- id: '1631392792807'
+  alias: Lampa trappa auto
+  description: ''
+  trigger:
+  - type: occupied
+    platform: device
+    device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
+    entity_id: binary_sensor.hallsensor_occupancy
+    domain: binary_sensor
+  - type: occupied
+    platform: device
+    device_id: 0ed67a986d805df2f3c109d23f1c772e
+    entity_id: binary_sensor.vardagsrumssensor_occupancy
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  - condition: state
+    entity_id: input_boolean.nattlage
+    state: 'off'
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.trapplampa
+  - delay:
+      hours: 3
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  - service: light.turn_off
+    target:
+      entity_id: light.trapplampa
+  mode: single
