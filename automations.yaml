@@ -292,6 +292,9 @@
         minutes: 0
         seconds: 0
         milliseconds: 0
+    - platform: sun
+      event: sunrise
+      offset: 01:00:00
     timeout: 36000
   - service: light.turn_off
     target:
@@ -321,7 +324,7 @@
     device_id: 1995d0fdd0c3a6eaedce2317c06e870f
     entity_id: light.sovrumslampa
     domain: light
-    brightness_pct: 10
+    brightness_pct: 1
   - wait_for_trigger:
     - type: not_occupied
       platform: device
