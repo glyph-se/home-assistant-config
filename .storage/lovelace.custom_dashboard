@@ -303,6 +303,11 @@
                                     "state_color": true
                                 }
                             ]
+                        },
+                        {
+                            "type": "light",
+                            "entity": "light.trapplampa",
+                            "icon": "mdi:stairs"
                         }
                     ]
                 }
