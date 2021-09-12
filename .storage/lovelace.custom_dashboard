@@ -181,6 +181,17 @@
                             ]
                         },
                         {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.trapplampa",
+                                    "secondary_info": "last-changed",
+                                    "icon": "mdi:stairs"
+                                }
+                            ],
+                            "title": "Trappa"
+                        },
+                        {
                             "type": "grid",
                             "title": "Batteriniv\u00e5er",
                             "cards": [
@@ -268,10 +279,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "binary_sensor.snapshots_stale"
+                                            "entity": "binary_sensor.backups_stale"
                                         },
                                         {
-                                            "entity": "sensor.snapshot_backup"
+                                            "entity": "sensor.backup_state"
                                         }
                                     ],
                                     "state_color": true
@@ -303,11 +314,6 @@
                                     "state_color": true
                                 }
                             ]
-                        },
-                        {
-                            "type": "light",
-                            "entity": "light.trapplampa",
-                            "icon": "mdi:stairs"
                         }
                     ]
                 }
