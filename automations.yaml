@@ -319,6 +319,11 @@
   - condition: state
     entity_id: input_boolean.nattlage
     state: 'off'
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+      milliseconds: 0
   action:
   - type: turn_on
     device_id: 1995d0fdd0c3a6eaedce2317c06e870f
@@ -399,6 +404,8 @@
   - condition: sun
     before: sunset
     before_offset: -01:00:00
+    after: sunset
+    after_offset: -01:00:00
   - condition: state
     entity_id: input_boolean.nattlage
     state: 'off'
@@ -431,8 +438,10 @@
     domain: binary_sensor
   condition:
   - condition: sun
-    before: sunset
-    before_offset: -01:00:00
+    before: sunrise
+    before_offset: 01:00:00
+    after: sunset
+    after_offset: -01:00:00
   - condition: state
     entity_id: input_boolean.nattlage
     state: 'off'
@@ -448,4 +457,16 @@
   - service: light.turn_off
     target:
       entity_id: light.trapplampa
+  mode: single
+- id: '1631561711121'
+  alias: Släck allt
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      node_id: 4
+      value_raw: 14
+  condition: []
+  action: []
   mode: single
