@@ -437,14 +437,17 @@
     entity_id: binary_sensor.vardagsrumssensor_occupancy
     domain: binary_sensor
   condition:
-  - condition: sun
-    before: sunrise
-    before_offset: 01:00:00
-    after: sunset
-    after_offset: -01:00:00
   - condition: state
     entity_id: input_boolean.nattlage
     state: 'off'
+  - condition: or
+    conditions:
+    - condition: sun
+      before: sunrise
+      before_offset: 01:00:00
+    - condition: sun
+      after: sunset
+      after_offset: -01:00:00
   action:
   - service: light.turn_on
     target:
