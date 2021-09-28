@@ -71,6 +71,16 @@
                                     "type": "entities",
                                     "entities": [
                                         {
+                                            "entity": "light.tralampa",
+                                            "icon": "mdi:floor-lamp",
+                                            "secondary_info": "last-changed"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
                                             "entity": "cover.rullgardin_1",
                                             "secondary_info": "position"
                                         },
@@ -98,7 +108,7 @@
                                         {
                                             "type": "light",
                                             "entity": "light.sanglampor_zha_group_0x0003",
-                                            "icon": "mdi:floor-lamp"
+                                            "icon": "mdi:lamps"
                                         },
                                         {
                                             "type": "entities",
@@ -279,10 +289,16 @@
                                     "type": "glance",
                                     "entities": [
                                         {
+                                            "entity": "sensor.backup_state"
+                                        },
+                                        {
                                             "entity": "binary_sensor.backups_stale"
                                         },
                                         {
-                                            "entity": "sensor.backup_state"
+                                            "entity": "sensor.snapshot_backup"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.snapshots_stale"
                                         }
                                     ],
                                     "state_color": true
