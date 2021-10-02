@@ -401,11 +401,14 @@
     entity_id: binary_sensor.vardagsrumssensor_occupancy
     domain: binary_sensor
   condition:
-  - condition: sun
-    before: sunset
-    before_offset: -01:00:00
-    after: sunset
-    after_offset: -01:00:00
+  - condition: or
+    conditions:
+    - condition: sun
+      after: sunset
+      after_offset: -01:00:00
+    - condition: sun
+      before: sunrise
+      before_offset: 01:00:00
   - condition: state
     entity_id: input_boolean.nattlage
     state: 'off'
