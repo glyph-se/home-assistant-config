@@ -293,12 +293,6 @@
                                         },
                                         {
                                             "entity": "binary_sensor.backups_stale"
-                                        },
-                                        {
-                                            "entity": "sensor.snapshot_backup"
-                                        },
-                                        {
-                                            "entity": "binary_sensor.snapshots_stale"
                                         }
                                     ],
                                     "state_color": true
