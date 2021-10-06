@@ -426,7 +426,7 @@
       entity_id: light.kokslampor
   mode: single
 - id: '1631392792807'
-  alias: Lampa trappa auto
+  alias: Lampa trappa auto (dag)
   description: ''
   trigger:
   - type: occupied
