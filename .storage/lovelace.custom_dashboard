@@ -207,30 +207,6 @@
                             "cards": [
                                 {
                                     "type": "gauge",
-                                    "entity": "sensor.rullgardin_1_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Rullgardin 1"
-                                },
-                                {
-                                    "type": "gauge",
-                                    "min": 0,
-                                    "max": 100,
-                                    "entity": "sensor.rullgardin_2_battery",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Rullgardin 2"
-                                },
-                                {
-                                    "type": "gauge",
                                     "min": 0,
                                     "max": 100,
                                     "entity": "sensor.hallsensor_power",
@@ -276,6 +252,30 @@
                                         "red": 10
                                     },
                                     "name": "Skafferisensor"
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_1_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    },
+                                    "name": "Rullgardin 1"
+                                },
+                                {
+                                    "type": "gauge",
+                                    "min": 0,
+                                    "max": 100,
+                                    "entity": "sensor.rullgardin_2_battery",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    },
+                                    "name": "Rullgardin 2"
                                 }
                             ],
                             "square": true,
