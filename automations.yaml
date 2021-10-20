@@ -472,9 +472,12 @@
     event_type: zwave_js_value_notification
     event_data:
       node_id: 4
-      value_raw: 14
+      value_raw: 25
   condition: []
-  action: []
+  action:
+  - service: light.turn_off
+    target:
+      entity_id: all
   mode: single
 - id: '1632909230885'
   alias: Dekoration trälampa auto
