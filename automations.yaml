@@ -81,28 +81,28 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_off
 - id: '1583773805811'
-  alias: TV-skåp tänd
+  alias: Svarta ljusstakar tänd
   description: ''
   trigger:
   - platform: time
-    at: '18:00:00'
+    at: '18:00'
   - platform: sun
     event: sunset
   condition:
   - condition: sun
     after: sunset
   - condition: time
-    after: '18:00:00'
+    after: '18:00'
   action:
   - device_id: 67515fccbe29472c8032217b84fb9b1b
     domain: switch
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
     type: turn_on
 - id: '1583773866555'
-  alias: TV-skåp släck
+  alias: Svarta ljusstakar släck
   description: ''
   trigger:
-  - at: '22:00:00'
+  - at: '22:00'
     platform: time
   condition: []
   action:
