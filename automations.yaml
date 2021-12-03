@@ -81,7 +81,7 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_off
 - id: '1583773805811'
-  alias: Svarta ljusstakar tänd
+  alias: Dekoration svarta ljusstakar tänd
   description: ''
   trigger:
   - platform: time
@@ -99,7 +99,7 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
     type: turn_on
 - id: '1583773866555'
-  alias: Svarta ljusstakar släck
+  alias: Dekoration svarta ljusstakar släck
   description: ''
   trigger:
   - at: '22:00'
