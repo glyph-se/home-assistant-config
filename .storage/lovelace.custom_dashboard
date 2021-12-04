@@ -71,16 +71,6 @@
                                     "type": "entities",
                                     "entities": [
                                         {
-                                            "entity": "light.tralampa",
-                                            "icon": "mdi:floor-lamp",
-                                            "secondary_info": "last-changed"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
                                             "entity": "cover.rullgardin_1",
                                             "secondary_info": "position"
                                         },
@@ -128,6 +118,23 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "switch.innr_sp_120_59328903_on_off"
+                                },
+                                {
+                                    "entity": "switch.innr_sp_120_ed448903_on_off"
+                                },
+                                {
+                                    "entity": "switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off"
+                                }
+                            ],
+                            "title": "Dekorationer",
+                            "show_header_toggle": true,
+                            "state_color": false
                         },
                         {
                             "type": "entities",
