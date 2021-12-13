@@ -27,33 +27,7 @@ device_tracker:
 #    hosts:
 #      sony_xperia_one: 192.168.2.192
 
-google_assistant:
-  project_id: home-assistant-2-dca83
-  expose_by_default: true
-  service_account: !include google-assistant-service-account-2.json
-  report_state: true
-  exposed_domains:
-    - light
-    - cover
-  entity_config:
-    sensor.hallsensor_temperature:
-      expose: true
-    sensor.vardagsrumssensor_temperature:
-      expose: true
-    sensor.sovrumssensor_temperature:
-      expose: true
-    binary_sensor.skafferisensor_on_off:
-      expose: true
-    input_boolean.nattlage:
-      expose: true
-    switch.skafferilampa:
-      expose: true
-    switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off:
-      expose: true
-    switch.innr_sp_120_59328903_on_off:
-      expose: true
-    switch.innr_sp_120_ed448903_on_off:
-      expose: true
+google_assistant: !include google_assistant.yaml
 
 # Enable workday
 binary_sensor:
