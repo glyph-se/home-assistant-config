@@ -8,9 +8,6 @@
 - platform: switch
   name: Blå boll
   entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
-- platform: switch
-  name: Svarta ljusstakar
-  entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
 
 - platform: switch
   name: Kökslampor
