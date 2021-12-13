@@ -495,8 +495,8 @@
       - f021ae88c9c94bb9b00a399eaab1019d
       - 250e639622274815bd5c178f9953a225
   - wait_for_trigger:
-    - platform: time
-      at: '23:00'
+    - platform: sun
+      event: sunrise
   - service: switch.turn_off
     target:
       device_id:
