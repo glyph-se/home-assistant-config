@@ -11,7 +11,7 @@
 
 - platform: switch
   name: Kökslampor
-  entity_id: switch.kok
+  entity_id: switch.kokslampor
 - platform: switch
   name: Kökshörn
   entity_id: switch.kokshorn
