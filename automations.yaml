@@ -549,6 +549,7 @@
     entity_id: switch.badrumspegel_nere
     domain: switch
   mode: single
+  max_exceeded: silent
 - id: '1640613845415'
   alias: Lampa badrum uppe auto
   description: ''
@@ -595,3 +596,4 @@
     entity_id: switch.badrumspegel_uppe
     domain: switch
   mode: single
+  max_exceeded: silent
