@@ -9,6 +9,7 @@
                 {
                     "path": "",
                     "title": "Home",
+                    "icon": "mdi:home-heart",
                     "badges": [],
                     "cards": [
                         {
@@ -332,32 +333,6 @@
                                         }
                                     ],
                                     "state_color": true
-                                },
-                                {
-                                    "type": "glance",
-                                    "entities": [
-                                        {
-                                            "entity": "input_boolean.nattlage"
-                                        },
-                                        {
-                                            "entity": "switch.skafferilampa"
-                                        },
-                                        {
-                                            "entity": "sensor.hallsensor_illuminance"
-                                        },
-                                        {
-                                            "entity": "sensor.sovrumssensor_illuminance"
-                                        },
-                                        {
-                                            "entity": "sensor.vardagsrumssensor_illuminance"
-                                        },
-                                        {
-                                            "entity": "binary_sensor.workday_sensor"
-                                        }
-                                    ],
-                                    "title": "Debug",
-                                    "show_icon": true,
-                                    "state_color": true
                                 }
                             ]
                         },
@@ -396,6 +371,44 @@
                                         }
                                     ],
                                     "title": "Nere"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:bug-outline",
+                    "title": "Debug",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "sensor.badrumsensor_nere_illuminance"
+                                },
+                                {
+                                    "entity": "sensor.badrumsensor_uppe_illuminance"
+                                },
+                                {
+                                    "entity": "sensor.hallsensor_illuminance"
+                                },
+                                {
+                                    "entity": "sensor.sovrumssensor_illuminance"
+                                },
+                                {
+                                    "entity": "sensor.vardagsrumssensor_illuminance"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "switch.skafferilampa"
+                                },
+                                {
+                                    "entity": "binary_sensor.workday_sensor"
                                 }
                             ]
                         }
