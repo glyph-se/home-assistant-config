@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "lovelace.custom_dashboard",
     "data": {
         "config": {
@@ -170,25 +171,29 @@
                             "title": "Temperatur",
                             "cards": [
                                 {
-                                    "type": "sensor",
-                                    "entity": "sensor.hallsensor_temperature",
-                                    "detail": 2,
-                                    "name": "Hall",
-                                    "graph": "line"
-                                },
-                                {
-                                    "type": "sensor",
-                                    "entity": "sensor.vardagsrumssensor_temperature",
-                                    "graph": "line",
-                                    "detail": 2,
-                                    "name": "Vardagsrum"
-                                },
-                                {
-                                    "type": "sensor",
-                                    "entity": "sensor.sovrumssensor_temperature",
-                                    "graph": "line",
-                                    "detail": 2,
-                                    "name": "Sovrum"
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.badrumsensor_nere_temperature",
+                                            "name": "Badrum nere"
+                                        },
+                                        {
+                                            "entity": "sensor.badrumsensor_uppe_temperature",
+                                            "name": "Badrum uppe"
+                                        },
+                                        {
+                                            "entity": "sensor.hallsensor_temperature",
+                                            "name": "Hall"
+                                        },
+                                        {
+                                            "entity": "sensor.sovrumssensor_temperature",
+                                            "name": "Sovrum"
+                                        },
+                                        {
+                                            "entity": "sensor.vardagsrumssensor_temperature",
+                                            "name": "Vardagsrum"
+                                        }
+                                    ]
                                 },
                                 {
                                     "type": "weather-forecast",
@@ -283,6 +288,30 @@
                                         "red": 10
                                     },
                                     "name": "Rullgardin 2"
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.badrumsensor_nere_power",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Badrum nere",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.badrumsensor_uppe_power",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Badrum uppe",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
                                 }
                             ],
                             "square": true,
@@ -329,6 +358,44 @@
                                     "title": "Debug",
                                     "show_icon": true,
                                     "state_color": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "title": "Badrum",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.badrumslampa_uppe",
+                                            "icon": "mdi:wall-sconce-round",
+                                            "name": "Lampa"
+                                        },
+                                        {
+                                            "entity": "light.badrumspegel_uppe",
+                                            "icon": "mdi:mirror-rectangle",
+                                            "name": "Spegel"
+                                        }
+                                    ],
+                                    "title": "Uppe"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.badrumslampa_nere",
+                                            "icon": "mdi:wall-sconce-round",
+                                            "name": "Lampa"
+                                        },
+                                        {
+                                            "entity": "light.badrumspegel_nere",
+                                            "icon": "mdi:mirror-rectangle",
+                                            "name": "Spegel"
+                                        }
+                                    ],
+                                    "title": "Nere"
                                 }
                             ]
                         }
