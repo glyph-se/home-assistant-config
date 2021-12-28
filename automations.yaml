@@ -537,7 +537,7 @@
       domain: binary_sensor
       for:
         hours: 0
-        minutes: 10
+        minutes: 15
         seconds: 0
     timeout: 00:30:00
   - type: turn_off
@@ -584,9 +584,9 @@
       domain: binary_sensor
       for:
         hours: 0
-        minutes: 10
+        minutes: 15
         seconds: 0
-    timeout: 00:30:00
+    timeout: 00:60:00
   - type: turn_off
     device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
     entity_id: switch.badrumslampa_uppe
