@@ -15,6 +15,9 @@
                         {
                             "type": "entity-filter",
                             "title": "Uppdateringar",
+                            "state_filter": [
+                                "on"
+                            ],
                             "entities": [
                                 "binary_sensor.check_home_assistant_configuration_update_available",
                                 "binary_sensor.deconz_update_available",
@@ -25,10 +28,24 @@
                                 "binary_sensor.unifi_controller_update_available",
                                 "binary_sensor.visual_studio_code_update_available",
                                 "binary_sensor.z_wave_js_update_available",
-                                "binary_sensor.updater"
-                            ],
-                            "state_filter": [
-                                "on"
+                                "binary_sensor.updater",
+                                {
+                                    "entity": "sensor.backup_state",
+                                    "state_filter": [
+                                        {
+                                            "operator": "!=",
+                                            "value": "backed_up"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entity": "binary_sensor.backups_stale",
+                                    "state_filter": [
+                                        {
+                                            "value": "on"
+                                        }
+                                    ]
+                                }
                             ],
                             "card": {
                                 "type": "glance"
@@ -319,24 +336,6 @@
                             "columns": 4
                         },
                         {
-                            "type": "vertical-stack",
-                            "title": "Home Assistant",
-                            "cards": [
-                                {
-                                    "type": "glance",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.backup_state"
-                                        },
-                                        {
-                                            "entity": "binary_sensor.backups_stale"
-                                        }
-                                    ],
-                                    "state_color": true
-                                }
-                            ]
-                        },
-                        {
                             "type": "horizontal-stack",
                             "title": "Badrum",
                             "cards": [
@@ -411,6 +410,19 @@
                                     "entity": "binary_sensor.workday_sensor"
                                 }
                             ]
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "sensor.backup_state"
+                                },
+                                {
+                                    "entity": "binary_sensor.backups_stale"
+                                }
+                            ],
+                            "state_color": true,
+                            "title": "Backup"
                         }
                     ]
                 }
