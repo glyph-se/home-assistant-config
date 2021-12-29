@@ -398,7 +398,8 @@
                                 {
                                     "entity": "sensor.vardagsrumssensor_illuminance"
                                 }
-                            ]
+                            ],
+                            "title": "Ljusniv\u00e5er"
                         },
                         {
                             "type": "glance",
@@ -423,6 +424,34 @@
                             ],
                             "state_color": true,
                             "title": "Backup"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.badsrumsensor_nere_occupancy",
+                                    "name": "Badrum nere"
+                                },
+                                {
+                                    "entity": "binary_sensor.badrumsensor_uppe_occupancy",
+                                    "name": "Badrum uppe"
+                                },
+                                {
+                                    "entity": "binary_sensor.hallsensor_occupancy",
+                                    "name": "Hall"
+                                },
+                                {
+                                    "entity": "binary_sensor.sovrumssensor_occupancy",
+                                    "name": "Sovrum"
+                                },
+                                {
+                                    "entity": "binary_sensor.vardagsrumssensor_occupancy",
+                                    "name": "Vardagsrum"
+                                }
+                            ],
+                            "refresh_interval": 0,
+                            "title": "R\u00f6relser",
+                            "hours_to_show": 1
                         }
                     ]
                 }
