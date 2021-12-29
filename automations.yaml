@@ -539,7 +539,7 @@
         hours: 0
         minutes: 15
         seconds: 0
-    timeout: 00:30:00
+    timeout: 00:60:00
   - type: turn_off
     device_id: cf2145b123b35ce82aac34e874445af5
     entity_id: switch.badrumslampa_nere
