@@ -58,7 +58,7 @@
                                 {
                                     "type": "light",
                                     "entity": "light.taklampor",
-                                    "name": "Tak",
+                                    "name": "Tak alla",
                                     "icon": "mdi:wall-sconce-round"
                                 },
                                 {
