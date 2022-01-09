@@ -142,23 +142,6 @@
                             "type": "entities",
                             "entities": [
                                 {
-                                    "entity": "switch.innr_sp_120_59328903_on_off"
-                                },
-                                {
-                                    "entity": "switch.innr_sp_120_ed448903_on_off"
-                                },
-                                {
-                                    "entity": "switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off"
-                                }
-                            ],
-                            "title": "Dekorationer",
-                            "show_header_toggle": true,
-                            "state_color": false
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
                                     "entity": "light.matbordslampa",
                                     "name": "Matbord",
                                     "secondary_info": "last-changed",
@@ -452,6 +435,31 @@
                             "refresh_interval": 0,
                             "title": "R\u00f6relser",
                             "hours_to_show": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "Tillf\u00e4lliga",
+                    "path": "tillfalliga",
+                    "icon": "mdi:archive",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "switch.innr_sp_120_59328903_on_off"
+                                },
+                                {
+                                    "entity": "switch.innr_sp_120_ed448903_on_off"
+                                },
+                                {
+                                    "entity": "switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off"
+                                }
+                            ],
+                            "title": "Dekorationer",
+                            "show_header_toggle": true,
+                            "state_color": false
                         }
                     ]
                 }
