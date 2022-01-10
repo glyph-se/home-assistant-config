@@ -6,10 +6,6 @@
 #    - light.philips_lta001_bc2fab08_level_light_color_on_off
 
 - platform: switch
-  name: Blå boll
-  entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
-
-- platform: switch
   name: Kökslampor
   entity_id: switch.kokslampor
 - platform: switch
