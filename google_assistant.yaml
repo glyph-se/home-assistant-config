@@ -16,8 +16,6 @@ entity_config:
     expose: true
   sensor.badrumsensor_uppe_temperature:
     expose: true
-  binary_sensor.skafferisensor_on_off:
-    expose: true
   input_boolean.nattlage:
     expose: true
   switch.skafferilampa:
