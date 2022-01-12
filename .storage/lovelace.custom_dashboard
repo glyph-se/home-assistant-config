@@ -14,7 +14,6 @@
                     "cards": [
                         {
                             "type": "entity-filter",
-                            "title": "Uppdateringar",
                             "state_filter": [
                                 "on"
                             ],
@@ -48,8 +47,10 @@
                                 }
                             ],
                             "card": {
-                                "type": "glance"
-                            }
+                                "type": "glance",
+                                "title": "Uppdateringar"
+                            },
+                            "show_empty": false
                         },
                         {
                             "type": "vertical-stack",
