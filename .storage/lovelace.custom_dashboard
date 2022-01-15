@@ -60,7 +60,7 @@
                                     "type": "light",
                                     "entity": "light.taklampor",
                                     "name": "Tak alla",
-                                    "icon": "mdi:sofa"
+                                    "icon": "mdi:wall-sconce-round"
                                 },
                                 {
                                     "type": "entities",
@@ -110,7 +110,7 @@
                                     "type": "light",
                                     "entity": "light.sovrumslampa",
                                     "name": "Tak",
-                                    "icon": "mdi:bed-king"
+                                    "icon": "mdi:dome-light"
                                 },
                                 {
                                     "type": "horizontal-stack",
