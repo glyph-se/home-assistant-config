@@ -329,7 +329,7 @@
     device_id: 1995d0fdd0c3a6eaedce2317c06e870f
     entity_id: light.sovrumslampa
     domain: light
-    brightness_pct: 1
+    brightness_pct: 20
   - wait_for_trigger:
     - type: not_occupied
       platform: device
@@ -597,3 +597,31 @@
     domain: switch
   mode: single
   max_exceeded: silent
+- id: '1641374393437'
+  alias: Lampa vardagsrum alla max
+  description: Sätt alla lampor till max om en blir det
+  trigger:
+  - platform: state
+    entity_id: light.taklampa_ett
+    attribute: brightness
+    to: '100'
+  - platform: state
+    entity_id: light.taklampa_tva
+    attribute: brightness
+    to: '100'
+  - platform: state
+    entity_id: light.taklampa_tre
+    attribute: brightness
+    to: '100'
+  - platform: state
+    entity_id: light.taklampa_fyra
+    attribute: brightness
+    to: '100'
+  condition: []
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.taklampor
+    data:
+      brightness: 255
+  mode: single
