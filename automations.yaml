@@ -597,31 +597,21 @@
     domain: switch
   mode: single
   max_exceeded: silent
-- id: '1641374393437'
-  alias: Lampa vardagsrum alla max
-  description: Sätt alla lampor till max om en blir det
+- id: '1642450773581'
+  alias: Lampa vardagsrum max
+  description: ''
   trigger:
-  - platform: state
-    entity_id: light.taklampa_ett
-    attribute: brightness
-    to: '100'
-  - platform: state
-    entity_id: light.taklampa_tva
-    attribute: brightness
-    to: '100'
-  - platform: state
-    entity_id: light.taklampa_tre
-    attribute: brightness
-    to: '100'
-  - platform: state
-    entity_id: light.taklampa_fyra
-    attribute: brightness
-    to: '100'
-  condition: []
+  - platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      value_raw: 14
+  condition:
+  - condition: template
+    value_template: '{{ trigger.event.data[''node_id''] in [3, 5, 6, 8] }}'
   action:
   - service: light.turn_on
+    data:
+      brightness_pct: 100
     target:
       entity_id: light.taklampor
-    data:
-      brightness: 255
   mode: single
