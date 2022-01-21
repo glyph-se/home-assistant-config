@@ -329,7 +329,7 @@
     device_id: 1995d0fdd0c3a6eaedce2317c06e870f
     entity_id: light.sovrumslampa
     domain: light
-    brightness_pct: 20
+    brightness_pct: 30
   - wait_for_trigger:
     - type: not_occupied
       platform: device
