@@ -442,7 +442,7 @@
                 {
                     "title": "Tillf\u00e4lliga",
                     "path": "tillfalliga",
-                    "icon": "mdi:archive",
+                    "icon": "mdi:hexagram-outline",
                     "badges": [],
                     "cards": [
                         {
