@@ -97,6 +97,9 @@
                                         {
                                             "entity": "cover.rullgardin_2",
                                             "secondary_info": "position"
+                                        },
+                                        {
+                                            "entity": "cover.rullgardin_tvhorna"
                                         }
                                     ]
                                 }
@@ -113,27 +116,33 @@
                                     "icon": "mdi:dome-light"
                                 },
                                 {
-                                    "type": "horizontal-stack",
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
-                                            "type": "light",
                                             "entity": "light.sanglampor_zha_group_0x0003",
-                                            "icon": "mdi:lamps"
+                                            "icon": "mdi:lamps",
+                                            "secondary_info": "last-changed"
                                         },
                                         {
-                                            "type": "entities",
-                                            "entities": [
-                                                {
-                                                    "entity": "light.fredriks_sanglampa_level_on_off",
-                                                    "secondary_info": "last-changed",
-                                                    "icon": "mdi:floor-lamp"
-                                                },
-                                                {
-                                                    "entity": "light.linneas_sanglampa_level_on_off",
-                                                    "secondary_info": "last-changed",
-                                                    "icon": "mdi:floor-lamp"
-                                                }
-                                            ]
+                                            "entity": "light.fredriks_sanglampa_level_on_off",
+                                            "secondary_info": "last-changed",
+                                            "icon": "mdi:floor-lamp"
+                                        },
+                                        {
+                                            "entity": "light.linneas_sanglampa_level_on_off",
+                                            "secondary_info": "last-changed",
+                                            "icon": "mdi:floor-lamp"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "cover.rullgardin_sovrum_1"
+                                        },
+                                        {
+                                            "entity": "cover.rullgardin_sovrum_2"
                                         }
                                     ]
                                 }
@@ -314,9 +323,45 @@
                                         "yellow": 25,
                                         "red": 10
                                     }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_tvhorna_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "TV-h\u00f6rna",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_sovrum_1_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Sovrum 1",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_sovrum_2_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Sovrum 2",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
                                 }
                             ],
-                            "square": true,
+                            "square": false,
                             "columns": 4
                         },
                         {
