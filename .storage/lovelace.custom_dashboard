@@ -91,15 +91,13 @@
                                     "type": "entities",
                                     "entities": [
                                         {
-                                            "entity": "cover.rullgardin_1",
-                                            "secondary_info": "position"
-                                        },
-                                        {
-                                            "entity": "cover.rullgardin_2",
-                                            "secondary_info": "position"
-                                        },
-                                        {
-                                            "entity": "cover.rullgardin_tvhorna"
+                                            "type": "buttons",
+                                            "entities": [
+                                                {
+                                                    "entity": "scene.oppna_vardagsrum",
+                                                    "name": "\u00d6ppna"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -139,10 +137,17 @@
                                     "type": "entities",
                                     "entities": [
                                         {
-                                            "entity": "cover.rullgardin_sovrum_1"
-                                        },
-                                        {
-                                            "entity": "cover.rullgardin_sovrum_2"
+                                            "type": "buttons",
+                                            "entities": [
+                                                {
+                                                    "entity": "scene.oppna_sovrum",
+                                                    "name": "\u00d6ppna"
+                                                },
+                                                {
+                                                    "entity": "scene.morklagg_sovrum",
+                                                    "name": "M\u00f6rkl\u00e4gg"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -410,10 +415,17 @@
                                     "type": "entities",
                                     "entities": [
                                         {
-                                            "entity": "cover.rullgardin_arbetsrum_1"
-                                        },
-                                        {
-                                            "entity": "cover.rullgardin_arbetsrum_2"
+                                            "type": "buttons",
+                                            "entities": [
+                                                {
+                                                    "entity": "scene.oppna_arbetsrum",
+                                                    "name": "\u00d6ppna"
+                                                },
+                                                {
+                                                    "entity": "scene.halften_arbetsrum",
+                                                    "name": "H\u00e4lften"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
