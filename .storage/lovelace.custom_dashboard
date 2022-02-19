@@ -401,6 +401,23 @@
                                     "title": "Nere"
                                 }
                             ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "Arbetsrum",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "cover.rullgardin_arbetsrum_1"
+                                        },
+                                        {
+                                            "entity": "cover.rullgardin_arbetsrum_2"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -438,6 +455,9 @@
                                 },
                                 {
                                     "entity": "binary_sensor.workday_sensor"
+                                },
+                                {
+                                    "entity": "input_boolean.nattlage"
                                 }
                             ]
                         },
