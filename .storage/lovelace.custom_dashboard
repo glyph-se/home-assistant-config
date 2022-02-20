@@ -57,6 +57,24 @@
                             "title": "Vardagsrum",
                             "cards": [
                                 {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "type": "buttons",
+                                            "entities": [
+                                                {
+                                                    "entity": "scene.oppna_vardagsrum",
+                                                    "name": "\u00d6ppna"
+                                                },
+                                                {
+                                                    "entity": "scene.nere_vardagsrum",
+                                                    "name": "St\u00e4ng"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
                                     "type": "light",
                                     "entity": "light.taklampor",
                                     "name": "Tak alla",
@@ -86,24 +104,6 @@
                                             "icon": "mdi:wall-sconce-round"
                                         }
                                     ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "type": "buttons",
-                                            "entities": [
-                                                {
-                                                    "entity": "scene.oppna_vardagsrum",
-                                                    "name": "\u00d6ppna"
-                                                },
-                                                {
-                                                    "entity": "scene.nere_vardagsrum",
-                                                    "name": "St\u00e4ng"
-                                                }
-                                            ]
-                                        }
-                                    ]
                                 }
                             ]
                         },
@@ -111,6 +111,24 @@
                             "type": "vertical-stack",
                             "title": "Sovrum",
                             "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "type": "buttons",
+                                            "entities": [
+                                                {
+                                                    "entity": "scene.oppna_sovrum",
+                                                    "name": "\u00d6ppna"
+                                                },
+                                                {
+                                                    "entity": "scene.morklagg_sovrum",
+                                                    "name": "M\u00f6rkl\u00e4gg"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
                                 {
                                     "type": "light",
                                     "entity": "light.sovrumslampa",
@@ -136,7 +154,13 @@
                                             "icon": "mdi:floor-lamp"
                                         }
                                     ]
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "Arbetsrum",
+                            "cards": [
                                 {
                                     "type": "entities",
                                     "entities": [
@@ -144,12 +168,12 @@
                                             "type": "buttons",
                                             "entities": [
                                                 {
-                                                    "entity": "scene.oppna_sovrum",
+                                                    "entity": "scene.oppna_arbetsrum",
                                                     "name": "\u00d6ppna"
                                                 },
                                                 {
-                                                    "entity": "scene.morklagg_sovrum",
-                                                    "name": "M\u00f6rkl\u00e4gg"
+                                                    "entity": "scene.halften_arbetsrum",
+                                                    "name": "H\u00e4lften"
                                                 }
                                             ]
                                         }
@@ -185,17 +209,6 @@
                             ],
                             "title": "K\u00f6k",
                             "show_header_toggle": false
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "light.trapplampa",
-                                    "secondary_info": "last-changed",
-                                    "icon": "mdi:stairs"
-                                }
-                            ],
-                            "title": "Trappa"
                         },
                         {
                             "type": "horizontal-stack",
@@ -236,28 +249,15 @@
                             ]
                         },
                         {
-                            "type": "vertical-stack",
-                            "title": "Arbetsrum",
-                            "cards": [
+                            "type": "entities",
+                            "entities": [
                                 {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "type": "buttons",
-                                            "entities": [
-                                                {
-                                                    "entity": "scene.oppna_arbetsrum",
-                                                    "name": "\u00d6ppna"
-                                                },
-                                                {
-                                                    "entity": "scene.halften_arbetsrum",
-                                                    "name": "H\u00e4lften"
-                                                }
-                                            ]
-                                        }
-                                    ]
+                                    "entity": "light.trapplampa",
+                                    "secondary_info": "last-changed",
+                                    "icon": "mdi:stairs"
                                 }
-                            ]
+                            ],
+                            "title": "Trappa"
                         }
                     ]
                 },
