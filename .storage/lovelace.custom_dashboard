@@ -8,7 +8,7 @@
             "views": [
                 {
                     "path": "",
-                    "title": "Home",
+                    "title": "Control",
                     "icon": "mdi:home-heart",
                     "badges": [],
                     "cards": [
@@ -187,42 +187,6 @@
                             "show_header_toggle": false
                         },
                         {
-                            "type": "vertical-stack",
-                            "title": "Temperatur",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.badrumsensor_nere_temperature",
-                                            "name": "Badrum nere"
-                                        },
-                                        {
-                                            "entity": "sensor.badrumsensor_uppe_temperature",
-                                            "name": "Badrum uppe"
-                                        },
-                                        {
-                                            "entity": "sensor.hallsensor_temperature",
-                                            "name": "Hall"
-                                        },
-                                        {
-                                            "entity": "sensor.sovrumssensor_temperature",
-                                            "name": "Sovrum"
-                                        },
-                                        {
-                                            "entity": "sensor.vardagsrumssensor_temperature",
-                                            "name": "Vardagsrum"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "weather-forecast",
-                                    "entity": "weather.home",
-                                    "show_forecast": false
-                                }
-                            ]
-                        },
-                        {
                             "type": "entities",
                             "entities": [
                                 {
@@ -233,6 +197,75 @@
                             ],
                             "title": "Trappa"
                         },
+                        {
+                            "type": "horizontal-stack",
+                            "title": "Badrum",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.badrumslampa_uppe",
+                                            "icon": "mdi:wall-sconce-round",
+                                            "name": "Lampa"
+                                        },
+                                        {
+                                            "entity": "light.badrumspegel_uppe",
+                                            "icon": "mdi:mirror-rectangle",
+                                            "name": "Spegel"
+                                        }
+                                    ],
+                                    "title": "Uppe"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.badrumslampa_nere",
+                                            "icon": "mdi:wall-sconce-round",
+                                            "name": "Lampa"
+                                        },
+                                        {
+                                            "entity": "light.badrumspegel_nere",
+                                            "icon": "mdi:mirror-rectangle",
+                                            "name": "Spegel"
+                                        }
+                                    ],
+                                    "title": "Nere"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "Arbetsrum",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "type": "buttons",
+                                            "entities": [
+                                                {
+                                                    "entity": "scene.oppna_arbetsrum",
+                                                    "name": "\u00d6ppna"
+                                                },
+                                                {
+                                                    "entity": "scene.halften_arbetsrum",
+                                                    "name": "H\u00e4lften"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:information-outline",
+                    "title": "Information",
+                    "badges": [],
+                    "cards": [
                         {
                             "type": "grid",
                             "title": "Batteriniv\u00e5er",
@@ -374,64 +407,38 @@
                             "columns": 4
                         },
                         {
-                            "type": "horizontal-stack",
-                            "title": "Badrum",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.badrumslampa_uppe",
-                                            "icon": "mdi:wall-sconce-round",
-                                            "name": "Lampa"
-                                        },
-                                        {
-                                            "entity": "light.badrumspegel_uppe",
-                                            "icon": "mdi:mirror-rectangle",
-                                            "name": "Spegel"
-                                        }
-                                    ],
-                                    "title": "Uppe"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.badrumslampa_nere",
-                                            "icon": "mdi:wall-sconce-round",
-                                            "name": "Lampa"
-                                        },
-                                        {
-                                            "entity": "light.badrumspegel_nere",
-                                            "icon": "mdi:mirror-rectangle",
-                                            "name": "Spegel"
-                                        }
-                                    ],
-                                    "title": "Nere"
-                                }
-                            ]
-                        },
-                        {
                             "type": "vertical-stack",
-                            "title": "Arbetsrum",
+                            "title": "Temperatur",
                             "cards": [
                                 {
                                     "type": "entities",
                                     "entities": [
                                         {
-                                            "type": "buttons",
-                                            "entities": [
-                                                {
-                                                    "entity": "scene.oppna_arbetsrum",
-                                                    "name": "\u00d6ppna"
-                                                },
-                                                {
-                                                    "entity": "scene.halften_arbetsrum",
-                                                    "name": "H\u00e4lften"
-                                                }
-                                            ]
+                                            "entity": "sensor.badrumsensor_nere_temperature",
+                                            "name": "Badrum nere"
+                                        },
+                                        {
+                                            "entity": "sensor.badrumsensor_uppe_temperature",
+                                            "name": "Badrum uppe"
+                                        },
+                                        {
+                                            "entity": "sensor.hallsensor_temperature",
+                                            "name": "Hall"
+                                        },
+                                        {
+                                            "entity": "sensor.sovrumssensor_temperature",
+                                            "name": "Sovrum"
+                                        },
+                                        {
+                                            "entity": "sensor.vardagsrumssensor_temperature",
+                                            "name": "Vardagsrum"
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "weather-forecast",
+                                    "entity": "weather.home",
+                                    "show_forecast": false
                                 }
                             ]
                         }
