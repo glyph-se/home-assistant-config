@@ -96,6 +96,10 @@
                                                 {
                                                     "entity": "scene.oppna_vardagsrum",
                                                     "name": "\u00d6ppna"
+                                                },
+                                                {
+                                                    "entity": "scene.nere_vardagsrum",
+                                                    "name": "St\u00e4ng"
                                                 }
                                             ]
                                         }
