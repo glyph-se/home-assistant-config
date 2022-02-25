@@ -1,660 +1,660 @@
-- id: "1583530252657"
+- id: '1583530252657'
   alias: Legoskåp tänd
-  description: ""
+  description: ''
   trigger:
-    - event: sunset
-      offset: +00:45:00
-      platform: sun
+  - event: sunset
+    offset: +00:45:00
+    platform: sun
   condition:
-    - condition: state
-      entity_id: group.people
-      state: home
-    - condition: time
-      weekday:
-        - fri
-        - sat
-        - sun
+  - condition: state
+    entity_id: group.people
+    state: home
+  - condition: time
+    weekday:
+    - fri
+    - sat
+    - sun
   action:
-    - device_id: f021ae88c9c94bb9b00a399eaab1019d
-      domain: switch
-      entity_id: switch.innr_sp_120_59328903_on_off
-      type: turn_on
+  - device_id: f021ae88c9c94bb9b00a399eaab1019d
+    domain: switch
+    entity_id: switch.innr_sp_120_59328903_on_off
+    type: turn_on
   mode: single
-- id: "1583530546061"
+- id: '1583530546061'
   alias: Legoskåp släck
-  description: ""
+  description: ''
   trigger:
-    - at: "23:00:00"
-      platform: time
+  - at: '23:00:00'
+    platform: time
   condition:
-    - condition: time
-      weekday:
-        - fri
-        - sat
-        - sun
+  - condition: time
+    weekday:
+    - fri
+    - sat
+    - sun
   action:
-    - device_id: f021ae88c9c94bb9b00a399eaab1019d
-      domain: switch
-      entity_id: switch.innr_sp_120_59328903_on_off
-      type: turn_off
+  - device_id: f021ae88c9c94bb9b00a399eaab1019d
+    domain: switch
+    entity_id: switch.innr_sp_120_59328903_on_off
+    type: turn_off
   mode: single
 - id: 1583772997902_boll_on
   alias: Blå boll tänd
-  description: ""
+  description: ''
   trigger:
-    - event: sunset
-      platform: sun
+  - event: sunset
+    platform: sun
   condition: []
   action:
-    - device_id: 8269351cd5fd4ab7aa20a373c72279d3
-      domain: switch
-      entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
-      type: turn_on
+  - device_id: 8269351cd5fd4ab7aa20a373c72279d3
+    domain: switch
+    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
+    type: turn_on
 - id: 1583773386688_boll_off_vardag
   alias: Blå boll släck (vardag)
-  description: ""
+  description: ''
   trigger:
-    - at: "22:00:00"
-      platform: time
+  - at: '22:00:00'
+    platform: time
   condition:
-    - condition: state
-      entity_id: binary_sensor.workday_sensor
-      state: "on"
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
   action:
-    - device_id: 8269351cd5fd4ab7aa20a373c72279d3
-      domain: switch
-      entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
-      type: turn_off
+  - device_id: 8269351cd5fd4ab7aa20a373c72279d3
+    domain: switch
+    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
+    type: turn_off
 - id: 1583773386689_boll_off_helg
   alias: Blå boll släck (helg)
-  description: ""
+  description: ''
   trigger:
-    - at: "23:59:00"
-      platform: time
+  - at: '23:59:00'
+    platform: time
   condition:
-    - condition: state
-      entity_id: binary_sensor.workday_sensor
-      state: "off"
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'off'
   action:
-    - device_id: 8269351cd5fd4ab7aa20a373c72279d3
-      domain: switch
-      entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
-      type: turn_off
-- id: "1583773805811"
+  - device_id: 8269351cd5fd4ab7aa20a373c72279d3
+    domain: switch
+    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
+    type: turn_off
+- id: '1583773805811'
   alias: Dekoration svarta ljusstakar tänd
-  description: ""
+  description: ''
   trigger:
-    - platform: time
-      at: "18:00"
-    - platform: sun
-      event: sunset
+  - platform: time
+    at: '18:00'
+  - platform: sun
+    event: sunset
   condition:
-    - condition: sun
-      after: sunset
-    - condition: time
-      after: "18:00"
+  - condition: sun
+    after: sunset
+  - condition: time
+    after: '18:00'
   action:
-    - device_id: 67515fccbe29472c8032217b84fb9b1b
-      domain: switch
-      entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
-      type: turn_on
-- id: "1583773866555"
+  - device_id: 67515fccbe29472c8032217b84fb9b1b
+    domain: switch
+    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
+    type: turn_on
+- id: '1583773866555'
   alias: Dekoration svarta ljusstakar släck
-  description: ""
+  description: ''
   trigger:
-    - at: "22:00"
-      platform: time
+  - at: '22:00'
+    platform: time
   condition: []
   action:
-    - device_id: 67515fccbe29472c8032217b84fb9b1b
-      domain: switch
-      entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
-      type: turn_off
-- id: "1584047833146"
+  - device_id: 67515fccbe29472c8032217b84fb9b1b
+    domain: switch
+    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
+    type: turn_off
+- id: '1584047833146'
   alias: Korgar tänd
-  description: ""
+  description: ''
   trigger:
-    - event: sunset
-      platform: sun
+  - event: sunset
+    platform: sun
   condition: []
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.philips_lta001_5a422d08_level_light_color_on_off
-        color_temp: 430
-        brightness: 160
-    - service: light.turn_on
-      data:
-        entity_id: light.philips_lta001_40e83008_level_light_color_on_off
-        color_temp: 430
-        brightness: 160
-    - service: light.turn_on
-      data:
-        entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
-        color_temp: 430
-        brightness: 160
-- id: "1584047917317"
-  alias: Korgar släck
-  description: ""
-  trigger:
-    - at: "23:00:00"
-      platform: time
-  condition: []
-  action:
-    - device_id: 061954fe386a4b719682f1c47e0ccc51
-      domain: light
+  - service: light.turn_on
+    data:
       entity_id: light.philips_lta001_5a422d08_level_light_color_on_off
-      type: turn_off
-    - device_id: 82728923eede491cb884a7f734b6c735
-      domain: light
+      color_temp: 430
+      brightness: 160
+  - service: light.turn_on
+    data:
       entity_id: light.philips_lta001_40e83008_level_light_color_on_off
-      type: turn_off
-    - device_id: e804df0452714102837f74a408071aa7
-      domain: light
+      color_temp: 430
+      brightness: 160
+  - service: light.turn_on
+    data:
       entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
-      type: turn_off
-- id: "1620915831174"
-  alias: Lampa hall auto
-  description: ""
+      color_temp: 430
+      brightness: 160
+- id: '1584047917317'
+  alias: Korgar släck
+  description: ''
   trigger:
-    - type: occupied
+  - at: '23:00:00'
+    platform: time
+  condition: []
+  action:
+  - device_id: 061954fe386a4b719682f1c47e0ccc51
+    domain: light
+    entity_id: light.philips_lta001_5a422d08_level_light_color_on_off
+    type: turn_off
+  - device_id: 82728923eede491cb884a7f734b6c735
+    domain: light
+    entity_id: light.philips_lta001_40e83008_level_light_color_on_off
+    type: turn_off
+  - device_id: e804df0452714102837f74a408071aa7
+    domain: light
+    entity_id: light.philips_lta001_bc2fab08_level_light_color_on_off
+    type: turn_off
+- id: '1620915831174'
+  alias: Lampa hall auto
+  description: ''
+  trigger:
+  - type: occupied
+    platform: device
+    device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
+    entity_id: binary_sensor.hallsensor_occupancy
+    domain: binary_sensor
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
+    entity_id: sensor.hallsensor_illuminance
+    domain: sensor
+    below: 10
+  action:
+  - type: turn_on
+    device_id: a9b757038722af90948fd69813460753
+    entity_id: light.hallampa
+    domain: light
+    brightness_pct: 50
+  - wait_for_trigger:
+    - type: not_occupied
       platform: device
       device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
       entity_id: binary_sensor.hallsensor_occupancy
       domain: binary_sensor
-  condition:
-    - type: is_illuminance
-      condition: device
-      device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
-      entity_id: sensor.hallsensor_illuminance
-      domain: sensor
-      below: 10
-  action:
-    - type: turn_on
-      device_id: a9b757038722af90948fd69813460753
-      entity_id: light.hallampa
-      domain: light
-      brightness_pct: 50
-    - wait_for_trigger:
-        - type: not_occupied
-          platform: device
-          device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
-          entity_id: binary_sensor.hallsensor_occupancy
-          domain: binary_sensor
-          for:
-            hours: 0
-            minutes: 2
-            seconds: 0
-            milliseconds: 0
-      timeout: 00:30:00
-    - type: turn_off
-      device_id: a9b757038722af90948fd69813460753
-      entity_id: light.hallampa
-      domain: light
-  mode: single
-- id: "1625166644648"
-  alias: Skafferi tänd
-  description: ""
-  trigger:
-    - type: opened
-      platform: device
-      device_id: 0d7b63c4567e702930913571ce840ab9
-      entity_id: binary_sensor.skafferisensor_on_off
-      domain: binary_sensor
-  condition: []
-  action:
-    - service: switch.turn_on
-      target:
-        device_id: 52f9317673d83e56150c3d8ca7e18bc4
-  mode: restart
-- id: "1625167345545"
-  alias: Skafferi släck
-  description: ""
-  trigger:
-    - type: not_opened
-      platform: device
-      device_id: 0d7b63c4567e702930913571ce840ab9
-      entity_id: binary_sensor.skafferisensor_on_off
-      domain: binary_sensor
-    - type: opened
-      platform: device
-      device_id: 0d7b63c4567e702930913571ce840ab9
-      entity_id: binary_sensor.skafferisensor_on_off
-      domain: binary_sensor
       for:
         hours: 0
-        minutes: 30
+        minutes: 2
         seconds: 0
         milliseconds: 0
+    timeout: 00:30:00
+  - type: turn_off
+    device_id: a9b757038722af90948fd69813460753
+    entity_id: light.hallampa
+    domain: light
+  mode: single
+- id: '1625166644648'
+  alias: Skafferi tänd
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 0d7b63c4567e702930913571ce840ab9
+    entity_id: binary_sensor.skafferisensor_on_off
+    domain: binary_sensor
   condition: []
   action:
-    - service: switch.turn_off
-      target:
-        device_id: 52f9317673d83e56150c3d8ca7e18bc4
+  - service: switch.turn_on
+    target:
+      device_id: 52f9317673d83e56150c3d8ca7e18bc4
   mode: restart
-- id: "1626003792906"
+- id: '1625167345545'
+  alias: Skafferi släck
+  description: ''
+  trigger:
+  - type: not_opened
+    platform: device
+    device_id: 0d7b63c4567e702930913571ce840ab9
+    entity_id: binary_sensor.skafferisensor_on_off
+    domain: binary_sensor
+  - type: opened
+    platform: device
+    device_id: 0d7b63c4567e702930913571ce840ab9
+    entity_id: binary_sensor.skafferisensor_on_off
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+      milliseconds: 0
+  condition: []
+  action:
+  - service: switch.turn_off
+    target:
+      device_id: 52f9317673d83e56150c3d8ca7e18bc4
+  mode: restart
+- id: '1626003792906'
   alias: Nattläge på
-  description: ""
+  description: ''
   trigger:
-    - platform: time
-      at: "23:59:59"
+  - platform: time
+    at: '23:59:59'
   condition: []
   action:
-    - service: input_boolean.turn_on
-      target:
-        entity_id: input_boolean.nattlage
+  - service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.nattlage
   mode: single
-- id: "1626003846144"
+- id: '1626003846144'
   alias: Nattläge av
-  description: ""
+  description: ''
   trigger:
-    - platform: time
-      at: "12:00:00"
+  - platform: time
+    at: '12:00:00'
   condition: []
   action:
-    - service: input_boolean.turn_off
-      target:
-        entity_id: input_boolean.nattlage
+  - service: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.nattlage
   mode: single
-- id: "1626438149685"
+- id: '1626438149685'
   alias: Lampa vardagsrum auto
-  description: ""
+  description: ''
   trigger:
-    - type: occupied
+  - type: occupied
+    platform: device
+    device_id: 0ed67a986d805df2f3c109d23f1c772e
+    entity_id: binary_sensor.vardagsrumssensor_occupancy
+    domain: binary_sensor
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: 0ed67a986d805df2f3c109d23f1c772e
+    entity_id: sensor.vardagsrumssensor_illuminance
+    domain: sensor
+    below: 10
+  - condition: state
+    entity_id: input_boolean.nattlage
+    state: 'off'
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.taklampor
+    data:
+      brightness: 40
+  - wait_for_trigger:
+    - type: not_occupied
       platform: device
       device_id: 0ed67a986d805df2f3c109d23f1c772e
       entity_id: binary_sensor.vardagsrumssensor_occupancy
       domain: binary_sensor
-  condition:
-    - type: is_illuminance
-      condition: device
-      device_id: 0ed67a986d805df2f3c109d23f1c772e
-      entity_id: sensor.vardagsrumssensor_illuminance
-      domain: sensor
-      below: 10
-    - condition: state
-      entity_id: input_boolean.nattlage
-      state: "off"
-  action:
-    - service: light.turn_on
-      target:
-        entity_id: light.taklampor
-      data:
-        brightness: 40
-    - wait_for_trigger:
-        - type: not_occupied
-          platform: device
-          device_id: 0ed67a986d805df2f3c109d23f1c772e
-          entity_id: binary_sensor.vardagsrumssensor_occupancy
-          domain: binary_sensor
-          for:
-            hours: 3
-            minutes: 0
-            seconds: 0
-            milliseconds: 0
-        - platform: sun
-          event: sunrise
-          offset: 01:00:00
-      timeout: 36000
-    - service: light.turn_off
-      target:
-        entity_id: light.taklampor
+      for:
+        hours: 3
+        minutes: 0
+        seconds: 0
+        milliseconds: 0
+    - platform: sun
+      event: sunrise
+      offset: 01:00:00
+    timeout: 36000
+  - service: light.turn_off
+    target:
+      entity_id: light.taklampor
   mode: single
-- id: "1627313580791"
+- id: '1627313580791'
   alias: Lampa sovrum auto
-  description: ""
+  description: ''
   trigger:
-    - type: occupied
+  - type: occupied
+    platform: device
+    device_id: d232f7b6822bb0f46805fc7562963e0d
+    entity_id: binary_sensor.sovrumssensor_occupancy
+    domain: binary_sensor
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: d232f7b6822bb0f46805fc7562963e0d
+    entity_id: sensor.sovrumssensor_illuminance
+    domain: sensor
+    below: 10
+  - condition: state
+    entity_id: input_boolean.nattlage
+    state: 'off'
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+      milliseconds: 0
+  action:
+  - type: turn_on
+    device_id: 1995d0fdd0c3a6eaedce2317c06e870f
+    entity_id: light.sovrumslampa
+    domain: light
+    brightness_pct: 30
+  - wait_for_trigger:
+    - type: not_occupied
       platform: device
       device_id: d232f7b6822bb0f46805fc7562963e0d
       entity_id: binary_sensor.sovrumssensor_occupancy
       domain: binary_sensor
-  condition:
-    - type: is_illuminance
-      condition: device
-      device_id: d232f7b6822bb0f46805fc7562963e0d
-      entity_id: sensor.sovrumssensor_illuminance
-      domain: sensor
-      below: 10
-    - condition: state
-      entity_id: input_boolean.nattlage
-      state: "off"
-      for:
-        hours: 0
-        minutes: 15
-        seconds: 0
-        milliseconds: 0
-  action:
-    - type: turn_on
-      device_id: 1995d0fdd0c3a6eaedce2317c06e870f
-      entity_id: light.sovrumslampa
-      domain: light
-      brightness_pct: 30
-    - wait_for_trigger:
-        - type: not_occupied
-          platform: device
-          device_id: d232f7b6822bb0f46805fc7562963e0d
-          entity_id: binary_sensor.sovrumssensor_occupancy
-          domain: binary_sensor
-          for:
-            hours: 0
-            minutes: 5
-            seconds: 0
-            milliseconds: 0
-      timeout: 00:30:00
-    - type: turn_off
-      device_id: 1995d0fdd0c3a6eaedce2317c06e870f
-      entity_id: light.sovrumslampa
-      domain: light
-  mode: single
-- id: "1627475620291"
-  alias: Rulla ner rullgardiner
-  description: ""
-  trigger:
-    - type: illuminance
-      platform: device
-      device_id: 0ed67a986d805df2f3c109d23f1c772e
-      entity_id: sensor.vardagsrumssensor_illuminance
-      domain: sensor
-      above: 900
       for:
         hours: 0
         minutes: 5
         seconds: 0
         milliseconds: 0
+    timeout: 00:30:00
+  - type: turn_off
+    device_id: 1995d0fdd0c3a6eaedce2317c06e870f
+    entity_id: light.sovrumslampa
+    domain: light
+  mode: single
+- id: '1627475620291'
+  alias: Rulla ner rullgardiner
+  description: ''
+  trigger:
+  - type: illuminance
+    platform: device
+    device_id: 0ed67a986d805df2f3c109d23f1c772e
+    entity_id: sensor.vardagsrumssensor_illuminance
+    domain: sensor
+    above: 900
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
   condition:
-    - condition: state
-      entity_id: sun.sun
-      state: above_horizon
-    - condition: numeric_state
-      entity_id: weather.home
-      attribute: temperature
-      above: "20"
+  - condition: state
+    entity_id: sun.sun
+    state: above_horizon
+  - condition: numeric_state
+    entity_id: weather.home
+    attribute: temperature
+    above: '20'
   action: []
   mode: single
-- id: "1628173388980"
+- id: '1628173388980'
   alias: Run config check when new version released
-  description: ""
+  description: ''
   trigger:
-    - platform: state
-      entity_id: binary_sensor.updater
-      from: "off"
-      to: "on"
+  - platform: state
+    entity_id: binary_sensor.updater
+    from: 'off'
+    to: 'on'
   condition: []
   action:
-    - service: hassio.addon_start
-      data:
-        addon: core_check_config
+  - service: hassio.addon_start
+    data:
+      addon: core_check_config
   mode: single
-- id: "1630233997180"
+- id: '1630233997180'
   alias: Lampa kök auto
-  description: ""
+  description: ''
   trigger:
-    - type: occupied
-      platform: device
-      device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
-      entity_id: binary_sensor.hallsensor_occupancy
-      domain: binary_sensor
-    - type: occupied
-      platform: device
-      device_id: 0ed67a986d805df2f3c109d23f1c772e
-      entity_id: binary_sensor.vardagsrumssensor_occupancy
-      domain: binary_sensor
+  - type: occupied
+    platform: device
+    device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
+    entity_id: binary_sensor.hallsensor_occupancy
+    domain: binary_sensor
+  - type: occupied
+    platform: device
+    device_id: 0ed67a986d805df2f3c109d23f1c772e
+    entity_id: binary_sensor.vardagsrumssensor_occupancy
+    domain: binary_sensor
   condition:
-    - condition: or
-      conditions:
-        - condition: sun
-          after: sunset
-          after_offset: -01:00:00
-        - condition: sun
-          before: sunrise
-          before_offset: 01:00:00
-    - condition: state
-      entity_id: input_boolean.nattlage
-      state: "off"
+  - condition: or
+    conditions:
+    - condition: sun
+      after: sunset
+      after_offset: -01:00:00
+    - condition: sun
+      before: sunrise
+      before_offset: 01:00:00
+  - condition: state
+    entity_id: input_boolean.nattlage
+    state: 'off'
   action:
-    - service: light.turn_on
-      target:
-        entity_id: light.kokslampor
-    - delay:
-        hours: 6
-        minutes: 0
-        seconds: 0
-        milliseconds: 0
-    - service: light.turn_off
-      target:
-        entity_id: light.kokslampor
+  - service: light.turn_on
+    target:
+      entity_id: light.kokslampor
+  - delay:
+      hours: 6
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  - service: light.turn_off
+    target:
+      entity_id: light.kokslampor
   mode: single
-- id: "1631392792807"
+- id: '1631392792807'
   alias: Lampa trappa auto (dag)
-  description: ""
+  description: ''
   trigger:
-    - type: occupied
-      platform: device
-      device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
-      entity_id: binary_sensor.hallsensor_occupancy
-      domain: binary_sensor
-    - type: occupied
-      platform: device
-      device_id: 0ed67a986d805df2f3c109d23f1c772e
-      entity_id: binary_sensor.vardagsrumssensor_occupancy
-      domain: binary_sensor
+  - type: occupied
+    platform: device
+    device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
+    entity_id: binary_sensor.hallsensor_occupancy
+    domain: binary_sensor
+  - type: occupied
+    platform: device
+    device_id: 0ed67a986d805df2f3c109d23f1c772e
+    entity_id: binary_sensor.vardagsrumssensor_occupancy
+    domain: binary_sensor
   condition:
-    - condition: state
-      entity_id: input_boolean.nattlage
-      state: "off"
-    - condition: or
-      conditions:
-        - condition: sun
-          after: sunset
-          after_offset: -01:00:00
-        - condition: sun
-          before: sunrise
-          before_offset: 01:00:00
+  - condition: state
+    entity_id: input_boolean.nattlage
+    state: 'off'
+  - condition: or
+    conditions:
+    - condition: sun
+      after: sunset
+      after_offset: -01:00:00
+    - condition: sun
+      before: sunrise
+      before_offset: 01:00:00
   action:
-    - service: light.turn_on
-      target:
-        entity_id: light.trapplampa
-    - delay:
-        hours: 1
-        minutes: 0
-        seconds: 0
-        milliseconds: 0
-    - service: light.turn_off
-      target:
-        entity_id: light.trapplampa
+  - service: light.turn_on
+    target:
+      entity_id: light.trapplampa
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  - service: light.turn_off
+    target:
+      entity_id: light.trapplampa
   mode: single
-- id: "1631561711121"
+- id: '1631561711121'
   alias: Släck allt
-  description: ""
+  description: ''
   trigger:
-    - platform: event
-      event_type: zwave_js_value_notification
-      event_data:
-        node_id: 4
-        value_raw: 25
+  - platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      node_id: 4
+      value_raw: 25
   condition: []
   action:
-    - service: light.turn_off
-      entity_id: all
+  - service: light.turn_off
+    entity_id: all
   mode: single
-- id: "1632909230885"
+- id: '1632909230885'
   alias: Dekoration stjärna auto
-  description: ""
+  description: ''
   trigger:
-    - platform: sun
-      event: sunset
+  - platform: sun
+    event: sunset
   condition:
-    - condition: time
-      before: "22:59"
+  - condition: time
+    before: '22:59'
   action:
-    - service: switch.turn_on
-      target:
-        device_id:
-          - f021ae88c9c94bb9b00a399eaab1019d
-          - 250e639622274815bd5c178f9953a225
-    - wait_for_trigger:
-        - platform: sun
-          event: sunrise
-    - service: switch.turn_off
-      target:
-        device_id:
-          - f021ae88c9c94bb9b00a399eaab1019d
-          - 250e639622274815bd5c178f9953a225
+  - service: switch.turn_on
+    target:
+      device_id:
+      - f021ae88c9c94bb9b00a399eaab1019d
+      - 250e639622274815bd5c178f9953a225
+  - wait_for_trigger:
+    - platform: sun
+      event: sunrise
+  - service: switch.turn_off
+    target:
+      device_id:
+      - f021ae88c9c94bb9b00a399eaab1019d
+      - 250e639622274815bd5c178f9953a225
   mode: single
-- id: "1640613213898"
+- id: '1640613213898'
   alias: Lampa badrum nere auto
-  description: ""
+  description: ''
   trigger:
-    - type: occupied
+  - type: occupied
+    platform: device
+    device_id: 3325202eef6546e95466ebc2a7c6c2b6
+    entity_id: binary_sensor.badsrumsensor_nere_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: input_boolean.nattlage
+        state: 'on'
+      sequence:
+      - type: turn_on
+        device_id: cf2145b123b35ce82aac34e874445af5
+        entity_id: switch.badrumspegel_nere
+        domain: switch
+    default:
+    - type: turn_on
+      device_id: cf2145b123b35ce82aac34e874445af5
+      entity_id: switch.badrumslampa_nere
+      domain: switch
+  - wait_for_trigger:
+    - type: not_occupied
       platform: device
       device_id: 3325202eef6546e95466ebc2a7c6c2b6
       entity_id: binary_sensor.badsrumsensor_nere_occupancy
       domain: binary_sensor
-  condition: []
-  action:
-    - choose:
-        - conditions:
-            - condition: state
-              entity_id: input_boolean.nattlage
-              state: "on"
-          sequence:
-            - type: turn_on
-              device_id: cf2145b123b35ce82aac34e874445af5
-              entity_id: switch.badrumspegel_nere
-              domain: switch
-      default:
-        - type: turn_on
-          device_id: cf2145b123b35ce82aac34e874445af5
-          entity_id: switch.badrumslampa_nere
-          domain: switch
-    - wait_for_trigger:
-        - type: not_occupied
-          platform: device
-          device_id: 3325202eef6546e95466ebc2a7c6c2b6
-          entity_id: binary_sensor.badsrumsensor_nere_occupancy
-          domain: binary_sensor
-          for:
-            hours: 0
-            minutes: 15
-            seconds: 0
-      timeout: 00:60:00
-    - type: turn_off
-      device_id: cf2145b123b35ce82aac34e874445af5
-      entity_id: switch.badrumslampa_nere
-      domain: switch
-    - type: turn_off
-      device_id: cf2145b123b35ce82aac34e874445af5
-      entity_id: switch.badrumspegel_nere
-      domain: switch
+      for:
+        hours: 0
+        minutes: 15
+        seconds: 0
+    timeout: 00:60:00
+  - type: turn_off
+    device_id: cf2145b123b35ce82aac34e874445af5
+    entity_id: switch.badrumslampa_nere
+    domain: switch
+  - type: turn_off
+    device_id: cf2145b123b35ce82aac34e874445af5
+    entity_id: switch.badrumspegel_nere
+    domain: switch
   mode: single
   max_exceeded: silent
-- id: "1640613845415"
+- id: '1640613845415'
   alias: Lampa badrum uppe auto
-  description: ""
+  description: ''
   trigger:
-    - type: occupied
+  - type: occupied
+    platform: device
+    device_id: d6ee36a4c7142a6dc0d3a176cb100ce9
+    entity_id: binary_sensor.badrumsensor_uppe_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: input_boolean.nattlage
+        state: 'on'
+      sequence:
+      - type: turn_on
+        device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
+        entity_id: switch.badrumspegel_uppe
+        domain: switch
+    default:
+    - type: turn_on
+      device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
+      entity_id: switch.badrumslampa_uppe
+      domain: switch
+  - wait_for_trigger:
+    - type: not_occupied
       platform: device
       device_id: d6ee36a4c7142a6dc0d3a176cb100ce9
       entity_id: binary_sensor.badrumsensor_uppe_occupancy
       domain: binary_sensor
-  condition: []
-  action:
-    - choose:
-        - conditions:
-            - condition: state
-              entity_id: input_boolean.nattlage
-              state: "on"
-          sequence:
-            - type: turn_on
-              device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
-              entity_id: switch.badrumspegel_uppe
-              domain: switch
-      default:
-        - type: turn_on
-          device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
-          entity_id: switch.badrumslampa_uppe
-          domain: switch
-    - wait_for_trigger:
-        - type: not_occupied
-          platform: device
-          device_id: d6ee36a4c7142a6dc0d3a176cb100ce9
-          entity_id: binary_sensor.badrumsensor_uppe_occupancy
-          domain: binary_sensor
-          for:
-            hours: 0
-            minutes: 15
-            seconds: 0
-      timeout: 00:60:00
-    - type: turn_off
-      device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
-      entity_id: switch.badrumslampa_uppe
-      domain: switch
-    - type: turn_off
-      device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
-      entity_id: switch.badrumspegel_uppe
-      domain: switch
-  mode: single
-  max_exceeded: silent
-- id: "1642450773581"
-  alias: Lampa vardagsrum max
-  description: ""
-  trigger:
-    - platform: event
-      event_type: zwave_js_value_notification
-      event_data:
-        value_raw: 14
-  condition:
-    - condition: template
-      value_template: "{{ trigger.event.data['node_id'] in [3, 5, 6, 8] }}"
-  action:
-    - service: light.turn_on
-      data:
-        brightness_pct: 100
-      target:
-        entity_id: light.taklampor
-  mode: single
-- id: "1645197393269"
-  alias: Rullagardin sovrum ner
-  description: ""
-  trigger:
-    - platform: state
-      entity_id: input_boolean.nattlage
-      to: "on"
-  condition: []
-  action:
-    - device_id: cb9837eea3df69d7a80c301f97957010
-      domain: cover
-      entity_id: cover.rullgardin_sovrum_1
-      type: set_position
-      position: 1
-    - device_id: 2aa8b40bcda999373e14624bdd2f5db4
-      domain: cover
-      entity_id: cover.rullgardin_sovrum_2
-      type: set_position
-      position: 1
-  mode: single
-- id: "1645197903658"
-  alias: Rullagardin sovrum upp
-  description: ""
-  trigger:
-    - platform: state
-      entity_id: input_boolean.nattlage
-      to: "off"
       for:
         hours: 0
-        minutes: 30
+        minutes: 15
         seconds: 0
+    timeout: 00:60:00
+  - type: turn_off
+    device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
+    entity_id: switch.badrumslampa_uppe
+    domain: switch
+  - type: turn_off
+    device_id: 498cd0ce45c6e6999b7636f5d2f8cce0
+    entity_id: switch.badrumspegel_uppe
+    domain: switch
+  mode: single
+  max_exceeded: silent
+- id: '1642450773581'
+  alias: Lampa vardagsrum max
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      value_raw: 14
+  condition:
+  - condition: template
+    value_template: '{{ trigger.event.data[''node_id''] in [3, 5, 6, 8] }}'
+  action:
+  - service: light.turn_on
+    data:
+      brightness_pct: 100
+    target:
+      entity_id: light.taklampor
+  mode: single
+- id: '1645197393269'
+  alias: Rullagardin sovrum ner
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.nattlage
+    to: 'on'
   condition: []
   action:
-    - device_id: cb9837eea3df69d7a80c301f97957010
-      domain: cover
-      entity_id: cover.rullgardin_sovrum_1
-      type: set_position
-      position: 100
-    - device_id: 2aa8b40bcda999373e14624bdd2f5db4
-      domain: cover
-      entity_id: cover.rullgardin_sovrum_2
-      type: set_position
-      position: 100
+  - device_id: cb9837eea3df69d7a80c301f97957010
+    domain: cover
+    entity_id: cover.rullgardin_sovrum_1
+    type: set_position
+    position: 0
+  - device_id: 2aa8b40bcda999373e14624bdd2f5db4
+    domain: cover
+    entity_id: cover.rullgardin_sovrum_2
+    type: set_position
+    position: 0
+  mode: single
+- id: '1645197903658'
+  alias: Rullagardin sovrum upp
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.nattlage
+    to: 'off'
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+  condition: []
+  action:
+  - device_id: 2aa8b40bcda999373e14624bdd2f5db4
+    domain: cover
+    entity_id: cover.rullgardin_sovrum_2
+    type: set_position
+    position: 100
+  - device_id: cb9837eea3df69d7a80c301f97957010
+    domain: cover
+    entity_id: cover.rullgardin_sovrum_1
+    type: set_position
+    position: 100
   mode: single
