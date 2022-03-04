@@ -70,6 +70,10 @@
                                                 {
                                                     "entity": "scene.nere_vardagsrum",
                                                     "name": "St\u00e4ng"
+                                                },
+                                                {
+                                                    "entity": "scene.halften_vardagsrum",
+                                                    "name": "H\u00e4lften"
                                                 }
                                             ]
                                         }
