@@ -27,7 +27,8 @@
                                 "binary_sensor.unifi_controller_update_available",
                                 "binary_sensor.visual_studio_code_update_available",
                                 "binary_sensor.z_wave_js_update_available",
-                                "binary_sensor.updater",
+                                "binary_sensor.home_assistant_website_update_available",
+                                "binary_sensor.backups_stale",
                                 {
                                     "entity": "sensor.backup_state",
                                     "state_filter": [
@@ -258,6 +259,10 @@
                                 }
                             ],
                             "title": "Trappa"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "sensor.home_assistant_website"
                         }
                     ]
                 },
