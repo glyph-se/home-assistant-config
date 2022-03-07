@@ -263,10 +263,6 @@
                                 }
                             ],
                             "title": "Trappa"
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "sensor.home_assistant_website"
                         }
                     ]
                 },
