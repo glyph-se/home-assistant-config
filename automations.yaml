@@ -348,7 +348,7 @@
     domain: light
   mode: single
 - id: '1627475620291'
-  alias: Rulla ner rullgardiner
+  alias: Rulla ner vardagsrum
   description: ''
   trigger:
   - type: illuminance
@@ -655,6 +655,47 @@
   - device_id: cb9837eea3df69d7a80c301f97957010
     domain: cover
     entity_id: cover.rullgardin_sovrum_1
+    type: set_position
+    position: 100
+  mode: single
+- id: '1646675799957'
+  alias: Rullgardin kontor ner
+  description: ''
+  trigger:
+  - type: power
+    platform: device
+    device_id: f021ae88c9c94bb9b00a399eaab1019d
+    entity_id: sensor.innr_sp_120_59328903_electrical_measurement
+    domain: sensor
+    above: 20
+  condition:
+  - condition: time
+    after: 07:00:00
+    before: 09:00:00
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  action:
+  - device_id: 2adb6171ac15ee8380b0ed725b450af0
+    domain: cover
+    entity_id: cover.rullgardin_arbetsrum_2
+    type: set_position
+    position: 35
+  mode: single
+- id: '1646675989803'
+  alias: Rullgardin kontor upp
+  description: ''
+  trigger:
+  - platform: time
+    at: '12:30:00'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  action:
+  - device_id: 2adb6171ac15ee8380b0ed725b450af0
+    domain: cover
+    entity_id: cover.rullgardin_arbetsrum_2
     type: set_position
     position: 100
   mode: single
