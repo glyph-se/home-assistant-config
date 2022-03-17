@@ -476,6 +476,21 @@
                             "title": "Ljusniv\u00e5er"
                         },
                         {
+                            "show_name": true,
+                            "show_icon": true,
+                            "show_state": true,
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.sol_ost"
+                                },
+                                {
+                                    "entity": "binary_sensor.sol_syd"
+                                }
+                            ],
+                            "title": "Solens position"
+                        },
+                        {
                             "type": "glance",
                             "entities": [
                                 {
