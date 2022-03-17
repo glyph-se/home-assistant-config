@@ -28,11 +28,7 @@ device_tracker:
 #      sony_xperia_one: 192.168.2.192
 
 google_assistant: !include google_assistant.yaml
-
-# Enable workday
-binary_sensor:
-  - platform: workday
-    country: SE
+binary_sensor: !include binary_sensors.yaml
 
 # Move recorder to memory
 recorder:

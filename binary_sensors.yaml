@@ -1,0 +1,20 @@
+# Enable workday
+- platform: workday
+  country: SE
+
+- platform: template
+  sensors:
+    sol_ost:
+      value_template: >
+        '{{
+        (state_attr("sun.sun", "azimuth") > 90) and
+        (state_attr("sun.sun", "azimuth") < 190) and
+        (states("weather.home") == "sunny")
+        }}'
+    sol_syd:
+      value_template: >
+        '{{
+        (state_attr("sun.sun", "azimuth") > 160) and
+        (state_attr("sun.sun", "azimuth") < 250) and
+        (states("weather.home") == "sunny")
+        }}'
