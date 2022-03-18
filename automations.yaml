@@ -673,6 +673,9 @@
     after: 07:00:00
     before: '11:00:00'
   - condition: state
+    entity_id: binary_sensor.sol_ost
+    state: 'on'
+  - condition: state
     entity_id: binary_sensor.workday_sensor
     state: 'on'
   action:
