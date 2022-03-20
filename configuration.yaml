@@ -9,7 +9,7 @@ http:
 # Text to speech
 tts:
   - platform: google_translate
-    base_url: http://192.168.1.13:8123
+    base_url: http://eris.lan.glyph.se:8123
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -23,11 +23,14 @@ device_tracker:
     consider_home: 00:10:00
     new_device_defaults:
       track_new_devices: false
-#  - platform: ping
-#    hosts:
-#      sony_xperia_one: 192.168.2.192
 
 google_assistant: !include google_assistant.yaml
+
+# Extra logs for Google Assistant debugging
+#logger:
+#  default: error
+#  logs:
+#    homeassistant.components.google_assistant: debug
 
 # Enable workday
 binary_sensor:
@@ -38,30 +41,10 @@ binary_sensor:
 recorder:
   purge_keep_days: 2
   db_url: "sqlite:///:memory:"
-# Extra logs for Google Assistant debugging
-#logger:
-#  default: error
-#  logs:
-#    homeassistant.components.google_assistant: debug
 
 input_boolean:
   nattlage:
     name: Nattläge
     icon: mdi:sleep
 
-template:
-  - binary_sensor:
-      - name: "Sol ost"
-        state: >-
-          {{
-          (state_attr("sun.sun", "azimuth") > 110) and
-          (state_attr("sun.sun", "azimuth") < 190) and
-          (states("weather.home") == "sunny")
-          }}
-      - name: "Sol syd"
-        state: >-
-          {{
-          (state_attr("sun.sun", "azimuth") > 160) and
-          (state_attr("sun.sun", "azimuth") < 250) and
-          (states("weather.home") == "sunny")
-          }}
+template: !include_dir_merge_list template/
