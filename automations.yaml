@@ -669,14 +669,8 @@
     domain: sensor
     above: 20
   condition:
-  - condition: time
-    after: 07:00:00
-    before: '11:00:00'
   - condition: state
     entity_id: binary_sensor.sol_ost
-    state: 'on'
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
     state: 'on'
   action:
   - device_id: 2adb6171ac15ee8380b0ed725b450af0
@@ -694,12 +688,11 @@
   alias: Rullgardin kontor upp
   description: ''
   trigger:
-  - platform: time
-    at: '12:30:00'
-  condition:
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
+  - platform: state
+    entity_id: binary_sensor.sol_ost
+    from: 'on'
+    to: 'off'
+  condition: []
   action:
   - device_id: 2adb6171ac15ee8380b0ed725b450af0
     domain: cover
@@ -716,8 +709,10 @@
   alias: Rullgardin öster ovanvåning upp
   description: ''
   trigger:
-  - platform: time
-    at: '12:30:00'
+  - platform: state
+    entity_id: binary_sensor.sol_ost
+    from: 'on'
+    to: 'off'
   condition: []
   action:
   - device_id: cb9837eea3df69d7a80c301f97957010
