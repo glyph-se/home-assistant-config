@@ -645,7 +645,10 @@
       hours: 0
       minutes: 30
       seconds: 0
-  condition: []
+  condition:
+  - condition: state
+    entity_id: binary_sensor.sol_ost
+    state: 'off'
   action:
   - device_id: 2aa8b40bcda999373e14624bdd2f5db4
     domain: cover
