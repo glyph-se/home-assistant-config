@@ -557,13 +557,13 @@
                             "type": "entities",
                             "entities": [
                                 {
-                                    "entity": "switch.innr_sp_120_59328903_on_off"
-                                },
-                                {
                                     "entity": "switch.innr_sp_120_ed448903_on_off"
                                 },
                                 {
                                     "entity": "switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off"
+                                },
+                                {
+                                    "entity": "switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off"
                                 }
                             ],
                             "title": "Dekorationer",
