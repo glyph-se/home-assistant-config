@@ -28,7 +28,11 @@ device_tracker:
 #      sony_xperia_one: 192.168.2.192
 
 google_assistant: !include google_assistant.yaml
-binary_sensor: !include binary_sensors.yaml
+
+# Enable workday
+binary_sensor:
+  - platform: workday
+    country: SE
 
 # Move recorder to memory
 recorder:
@@ -44,3 +48,20 @@ input_boolean:
   nattlage:
     name: Nattläge
     icon: mdi:sleep
+
+template:
+  - binary_sensor:
+      - name: "Sol ost"
+        state: >-
+          {{
+          (state_attr("sun.sun", "azimuth") > 110) and
+          (state_attr("sun.sun", "azimuth") < 190) and
+          (states("weather.home") == "sunny")
+          }}
+      - name: "Sol syd"
+        state: >-
+          {{
+          (state_attr("sun.sun", "azimuth") > 160) and
+          (state_attr("sun.sun", "azimuth") < 250) and
+          (states("weather.home") == "sunny")
+          }}
