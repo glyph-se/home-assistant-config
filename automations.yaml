@@ -623,6 +623,7 @@
   - platform: state
     entity_id: input_boolean.nattlage
     to: 'on'
+    from: 'off'
   condition: []
   action:
   - device_id: cb9837eea3df69d7a80c301f97957010
@@ -647,9 +648,11 @@
       hours: 0
       minutes: 30
       seconds: 0
+    from: 'on'
   - platform: state
     entity_id: binary_sensor.sol_ost
     to: 'off'
+    from: 'on'
   condition:
   - condition: state
     entity_id: binary_sensor.sol_ost
@@ -727,6 +730,7 @@
   - platform: state
     entity_id: binary_sensor.sol_ost
     to: 'off'
+    from: 'on'
   condition: []
   action:
   - device_id: 16e992059cbf48897a13a76761597f90
@@ -742,6 +746,7 @@
   - platform: state
     entity_id: binary_sensor.sol_ost
     to: 'on'
+    from: 'off'
   condition: []
   action:
   - device_id: 16e992059cbf48897a13a76761597f90
