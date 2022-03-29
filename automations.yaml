@@ -1,5 +1,5 @@
 - id: '1583530252657'
-  alias: Legoskåp tänd
+  alias: z Legoskåp tänd
   description: ''
   trigger:
   - event: sunset
@@ -21,7 +21,7 @@
     type: turn_on
   mode: single
 - id: '1583530546061'
-  alias: Legoskåp släck
+  alias: z Legoskåp släck
   description: ''
   trigger:
   - at: '23:00:00'
@@ -39,7 +39,7 @@
     type: turn_off
   mode: single
 - id: 1583772997902_boll_on
-  alias: Blå boll tänd
+  alias: z Blå boll tänd
   description: ''
   trigger:
   - event: sunset
@@ -51,7 +51,7 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_on
 - id: 1583773386688_boll_off_vardag
-  alias: Blå boll släck (vardag)
+  alias: z Blå boll släck (vardag)
   description: ''
   trigger:
   - at: '22:00:00'
@@ -66,7 +66,7 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_off
 - id: 1583773386689_boll_off_helg
-  alias: Blå boll släck (helg)
+  alias: z Blå boll släck (helg)
   description: ''
   trigger:
   - at: '23:59:00'
@@ -81,7 +81,7 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_off
 - id: '1583773805811'
-  alias: Dekoration svarta ljusstakar tänd
+  alias: z Dekoration svarta ljusstakar tänd
   description: ''
   trigger:
   - platform: time
@@ -99,7 +99,7 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
     type: turn_on
 - id: '1583773866555'
-  alias: Dekoration svarta ljusstakar släck
+  alias: z Dekoration svarta ljusstakar släck
   description: ''
   trigger:
   - at: '22:00'
@@ -111,7 +111,7 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
     type: turn_off
 - id: '1584047833146'
-  alias: Korgar tänd
+  alias: z Korgar tänd
   description: ''
   trigger:
   - event: sunset
@@ -134,7 +134,7 @@
       color_temp: 430
       brightness: 160
 - id: '1584047917317'
-  alias: Korgar släck
+  alias: z Korgar släck
   description: ''
   trigger:
   - at: '23:00:00'
@@ -348,7 +348,7 @@
     domain: light
   mode: single
 - id: '1627475620291'
-  alias: Rullgardin vardagsrum ner
+  alias: z Rullgardin vardagsrum ner
   description: ''
   trigger:
   - type: illuminance
@@ -479,7 +479,7 @@
     entity_id: all
   mode: single
 - id: '1632909230885'
-  alias: Dekoration stjärna auto
+  alias: z Dekoration stjärna auto
   description: ''
   trigger:
   - platform: sun
@@ -493,6 +493,7 @@
       device_id:
       - f021ae88c9c94bb9b00a399eaab1019d
       - 250e639622274815bd5c178f9953a225
+    data: {}
   - wait_for_trigger:
     - platform: sun
       event: sunrise
@@ -501,6 +502,7 @@
       device_id:
       - f021ae88c9c94bb9b00a399eaab1019d
       - 250e639622274815bd5c178f9953a225
+    data: {}
   mode: single
 - id: '1640613213898'
   alias: Lampa badrum nere auto
@@ -645,10 +647,20 @@
       hours: 0
       minutes: 30
       seconds: 0
+  - platform: state
+    entity_id: binary_sensor.sol_ost
+    to: 'off'
   condition:
   - condition: state
     entity_id: binary_sensor.sol_ost
     state: 'off'
+  - condition: state
+    entity_id: input_boolean.nattlage
+    state: 'off'
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
   action:
   - device_id: 2aa8b40bcda999373e14624bdd2f5db4
     domain: cover
@@ -709,28 +721,32 @@
     position: 100
   mode: single
 - id: '1647247160318'
-  alias: Rullgardin öster ovanvåning upp
+  alias: Rullgardin TV-hörn upp
   description: ''
   trigger:
   - platform: state
     entity_id: binary_sensor.sol_ost
-    from: 'on'
     to: 'off'
   condition: []
   action:
-  - device_id: cb9837eea3df69d7a80c301f97957010
-    domain: cover
-    entity_id: cover.rullgardin_sovrum_1
-    type: set_position
-    position: 100
-  - device_id: 2aa8b40bcda999373e14624bdd2f5db4
-    domain: cover
-    entity_id: cover.rullgardin_sovrum_2
-    type: set_position
-    position: 100
   - device_id: 16e992059cbf48897a13a76761597f90
     domain: cover
     entity_id: cover.rullgardin_tvhorna
     type: set_position
     position: 100
+  mode: single
+- id: '1648567411037'
+  alias: Rullgardin TV-hörn ner
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sol_ost
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 16e992059cbf48897a13a76761597f90
+    domain: cover
+    entity_id: cover.rullgardin_tvhorna
+    type: set_position
+    position: 0
   mode: single
