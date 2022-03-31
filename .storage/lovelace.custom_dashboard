@@ -491,6 +491,20 @@
                             "title": "Solens position"
                         },
                         {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.sol_ost"
+                                },
+                                {
+                                    "entity": "binary_sensor.sol_syd"
+                                }
+                            ],
+                            "title": "Solens position",
+                            "refresh_interval": 10,
+                            "hours_to_show": 30
+                        },
+                        {
                             "type": "glance",
                             "entities": [
                                 {
