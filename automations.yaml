@@ -321,7 +321,7 @@
     state: 'off'
     for:
       hours: 0
-      minutes: 15
+      minutes: 30
       seconds: 0
       milliseconds: 0
   action:
@@ -645,8 +645,8 @@
     entity_id: input_boolean.nattlage
     to: 'off'
     for:
-      hours: 0
-      minutes: 30
+      hours: 1
+      minutes: 0
       seconds: 0
     from: 'on'
   - platform: state
