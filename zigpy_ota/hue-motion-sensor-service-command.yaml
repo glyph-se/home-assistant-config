@@ -1,0 +1,11 @@
+service: zha.issue_zigbee_cluster_command
+data:
+  ieee: "xx:xx:xx:xx:xx:xx:xx:xx"
+  endpoint_id: 2
+  cluster_id: 25
+  cluster_type: out
+  command: 0
+  command_type: client
+  args:
+    - 0
+    - 100
