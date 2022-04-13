@@ -473,6 +473,11 @@
     event_data:
       node_id: 4
       value_raw: 25
+  - device_id: ca3290b522e632cb9881e9b3e16ed040
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
   condition: []
   action:
   - service: light.turn_off
