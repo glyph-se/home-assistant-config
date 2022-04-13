@@ -22,12 +22,14 @@
                                 "update.deconz_update",
                                 "update.home_assistant_google_drive_backup_update",
                                 "update.home_assistant_operating_system_update",
+                                "update.home_assistant_core_update",
+                                "update.home_assistant_supervisor_update",
+                                "update.home_assistant_website_update",
                                 "update.log_viewer_update",
                                 "update.ssh_web_terminal_update",
                                 "update.unifi_controller_update",
                                 "update.visual_studio_code_update",
                                 "update.z_wave_js_update",
-                                "update.home_assistant_website_update",
                                 "binary_sensor.backups_stale",
                                 {
                                     "entity": "sensor.backup_state",
@@ -401,6 +403,18 @@
                                     "min": 0,
                                     "max": 100,
                                     "name": "Sovrum 2",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.hallknapp_8fa59608_power",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Hallknapp",
                                     "severity": {
                                         "green": 50,
                                         "yellow": 25,
