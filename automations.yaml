@@ -377,7 +377,7 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.updater
+    entity_id: update.home_assistant_core_update
     from: 'off'
     to: 'on'
   condition: []
