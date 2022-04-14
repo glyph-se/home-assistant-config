@@ -185,6 +185,11 @@
                                             ]
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "light",
+                                    "entity": "light.arbetsrumslampa",
+                                    "icon": "mdi:dome-light"
                                 }
                             ]
                         },
