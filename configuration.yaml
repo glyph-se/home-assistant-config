@@ -52,7 +52,7 @@ template: !include_dir_merge_list template/
 #  zigpy_config:
 #    ota:
 #      otau_directory: /config/zigpy_ota
-# Extra logs for ZHA OTA firmware updates
+# Extra logs for ZHA OTA firmware updates to show progress
 #logger:
 #  default: info
 #  logs:
