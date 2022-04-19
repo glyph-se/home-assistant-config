@@ -629,6 +629,10 @@
     entity_id: input_boolean.nattlage
     to: 'on'
     from: 'off'
+  - platform: state
+    entity_id: binary_sensor.sol_ost
+    from: 'off'
+    to: 'on'
   condition: []
   action:
   - device_id: cb9837eea3df69d7a80c301f97957010
