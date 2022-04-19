@@ -26,7 +26,7 @@
                                 "update.home_assistant_supervisor_update",
                                 "update.log_viewer_update",
                                 "update.ssh_web_terminal_update",
-                                "update.unifi_controller_update",
+                                "update.unifi_network_application_update",
                                 "update.visual_studio_code_update",
                                 "update.z_wave_js_update",
                                 "binary_sensor.backups_stale",
