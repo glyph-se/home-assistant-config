@@ -27,7 +27,7 @@
                                 "update.log_viewer_update",
                                 "update.ssh_web_terminal_update",
                                 "update.unifi_network_application_update",
-                                "update.visual_studio_code_update",
+                                "update.studio_code_server_update",
                                 "update.z_wave_js_update",
                                 "binary_sensor.backups_stale",
                                 {
@@ -505,7 +505,7 @@
                                     "entity": "sensor.vardagsrumssensor_illuminance"
                                 },
                                 {
-                                    "entity": "sensor.signify_netherlands_b_v_sml003_illuminance"
+                                    "entity": "sensor.arbetsrumsensor_illuminance"
                                 }
                             ],
                             "title": "Ljusniv\u00e5er"
