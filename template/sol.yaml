@@ -13,7 +13,7 @@
     - name: "Sol syd"
       state: >-
         {{
-        (state_attr("sun.sun", "azimuth") > 160) and
+        (state_attr("sun.sun", "azimuth") > 150) and
         (state_attr("sun.sun", "elevation") > 10) and
         (states("weather.home") == "sunny")
         }}
