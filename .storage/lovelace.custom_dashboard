@@ -331,30 +331,6 @@
                                 },
                                 {
                                     "type": "gauge",
-                                    "entity": "sensor.rullgardin_1_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Rullgardin 1"
-                                },
-                                {
-                                    "type": "gauge",
-                                    "min": 0,
-                                    "max": 100,
-                                    "entity": "sensor.rullgardin_2_battery",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Rullgardin 2"
-                                },
-                                {
-                                    "type": "gauge",
                                     "entity": "sensor.badrumsensor_nere_power",
                                     "min": 0,
                                     "max": 100,
@@ -371,42 +347,6 @@
                                     "min": 0,
                                     "max": 100,
                                     "name": "Badrum uppe",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_tvhorna_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "TV-h\u00f6rna",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_sovrum_1_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Sovrum 1",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_sovrum_2_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Sovrum 2",
                                     "severity": {
                                         "green": 50,
                                         "yellow": 25,
@@ -478,6 +418,98 @@
                                     "show_forecast": false
                                 }
                             ]
+                        },
+                        {
+                            "type": "grid",
+                            "title": "Rullgardin batterier",
+                            "cards": [
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_1_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    },
+                                    "name": "Rullgardin 1"
+                                },
+                                {
+                                    "type": "gauge",
+                                    "min": 0,
+                                    "max": 100,
+                                    "entity": "sensor.rullgardin_2_battery",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    },
+                                    "name": "Rullgardin 2"
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_tvhorna_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "TV-h\u00f6rna",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_sovrum_1_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Sovrum 1",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_sovrum_2_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Sovrum 2",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_arbetsrum_1_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Arbetsrum 1",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rullgardin_arbetsrum_2_battery",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Arbetsrum 2",
+                                    "severity": {
+                                        "green": 50,
+                                        "yellow": 25,
+                                        "red": 10
+                                    }
+                                }
+                            ],
+                            "square": false,
+                            "columns": 4
                         }
                     ]
                 },
