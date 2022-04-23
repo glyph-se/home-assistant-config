@@ -688,16 +688,11 @@
   alias: Rullgardin kontor ner
   description: ''
   trigger:
-  - type: power
-    platform: device
-    device_id: f021ae88c9c94bb9b00a399eaab1019d
-    entity_id: sensor.innr_sp_120_59328903_electrical_measurement
-    domain: sensor
-    above: 20
-  condition:
-  - condition: state
+  - platform: state
     entity_id: binary_sensor.sol_ost
-    state: 'on'
+    from: 'off'
+    to: 'on'
+  condition: []
   action:
   - device_id: 2adb6171ac15ee8380b0ed725b450af0
     domain: cover
