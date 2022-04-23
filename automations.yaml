@@ -315,7 +315,7 @@
     device_id: d232f7b6822bb0f46805fc7562963e0d
     entity_id: sensor.sovrumssensor_illuminance
     domain: sensor
-    below: 10
+    below: 20
   - condition: state
     entity_id: input_boolean.nattlage
     state: 'off'
@@ -323,7 +323,6 @@
       hours: 0
       minutes: 30
       seconds: 0
-      milliseconds: 0
   action:
   - type: turn_on
     device_id: 1995d0fdd0c3a6eaedce2317c06e870f
