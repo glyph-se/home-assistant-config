@@ -4,7 +4,7 @@
         {{
         (state_attr("sun.sun", "azimuth") > 110) and
         (state_attr("sun.sun", "azimuth") < 190) and
-        (states("weather.home") == "sunny")
+        (states("weather.home") in ("sunny", "partlycloudy"))
         }}
       delay_off:
         minutes: 10
@@ -15,7 +15,7 @@
         {{
         (state_attr("sun.sun", "azimuth") > 145) and
         (state_attr("sun.sun", "elevation") > 10) and
-        (states("weather.home") == "sunny")
+        (states("weather.home") in ("sunny", "partlycloudy"))
         }}
       delay_off:
         minutes: 10
