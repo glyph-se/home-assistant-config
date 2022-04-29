@@ -5,3 +5,10 @@
       unit_of_measurement: "°C"
       state_class: measurement
       availability: "{% if states('sensor.sovrumssensor_temperature') | int %}true{% endif %}"
+- sensor:
+    - name: "{{ state_attr('sensor.arbetsrumsensor_temperature', 'friendly_name') }} adjusted"
+      state: "{{ ((states('sensor.arbetsrumsensor_temperature') | float) - 2.0) | round(1) }}"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      state_class: measurement
+      availability: "{% if states('sensor.arbetsrumsensor_temperature') | int %}true{% endif %}"
