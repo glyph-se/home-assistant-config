@@ -377,8 +377,8 @@
   trigger:
   - platform: state
     entity_id: update.home_assistant_core_update
-    from: 'off'
     to: 'on'
+    from: 'off'
   condition: []
   action:
   - service: hassio.addon_start
