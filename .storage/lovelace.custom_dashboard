@@ -409,6 +409,15 @@
                                         {
                                             "entity": "sensor.arbetsrumsensor_temperature",
                                             "name": "Arbetsrum"
+                                        },
+                                        {
+                                            "entity": "sensor.arbetsrumsensor_temperature_adjusted"
+                                        },
+                                        {
+                                            "entity": "sensor.sovrumssensor_temperature_adjusted"
+                                        },
+                                        {
+                                            "entity": "sensor.badrumsensor_uppe_temperature_adjusted"
                                         }
                                     ]
                                 },
