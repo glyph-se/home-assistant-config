@@ -706,7 +706,7 @@
     position: 50
   mode: single
 - id: '1646675989803'
-  alias: Rullgardin kontor upp
+  alias: Rullgardin arbtesrum upp
   description: ''
   trigger:
   - platform: state
