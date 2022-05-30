@@ -669,8 +669,8 @@
     entity_id: input_boolean.nattlage
     state: 'off'
     for:
-      hours: 0
-      minutes: 30
+      hours: 1
+      minutes: 0
       seconds: 0
   action:
   - device_id: 2aa8b40bcda999373e14624bdd2f5db4
