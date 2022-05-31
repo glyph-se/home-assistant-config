@@ -800,3 +800,44 @@
     type: set_position
     position: 100
   mode: single
+- id: '1654026209306'
+  alias: Lampa arbetsrum auto
+  description: ''
+  trigger:
+  - type: occupied
+    platform: device
+    device_id: bfd44dd018197ee5bf727c15b98fd155
+    entity_id: binary_sensor.arbetsrumsensor_occupancy
+    domain: binary_sensor
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: bfd44dd018197ee5bf727c15b98fd155
+    entity_id: sensor.arbetsrumsensor_illuminance
+    domain: sensor
+    below: 10
+  action:
+  - service: light.turn_on
+    target:
+      device_id: 30555272752dc06827a67032af1eb20c
+    data:
+      brightness_pct: 70
+  - wait_for_trigger:
+    - type: not_occupied
+      platform: device
+      device_id: 0ed67a986d805df2f3c109d23f1c772e
+      entity_id: binary_sensor.vardagsrumssensor_occupancy
+      domain: binary_sensor
+      for:
+        hours: 1
+        minutes: 0
+        seconds: 0
+    - platform: sun
+      event: sunrise
+      offset: 01:00:00
+    timeout: 36000
+  - service: light.turn_off
+    data: {}
+    target:
+      device_id: 30555272752dc06827a67032af1eb20c
+  mode: single
