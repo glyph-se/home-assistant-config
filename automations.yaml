@@ -815,7 +815,7 @@
     device_id: bfd44dd018197ee5bf727c15b98fd155
     entity_id: sensor.arbetsrumsensor_illuminance
     domain: sensor
-    below: 10
+    below: 30
   action:
   - service: light.turn_on
     target:
