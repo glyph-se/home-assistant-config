@@ -834,12 +834,9 @@
         seconds: 0
     timeout: 36000
   - wait_for_trigger:
-    - type: power
-      platform: device
-      device_id: f021ae88c9c94bb9b00a399eaab1019d
+    - platform: numeric_state
       entity_id: sensor.innr_sp_120_59328903_electrical_measurement
-      domain: sensor
-      below: 20
+      below: '20'
       for:
         hours: 0
         minutes: 2
