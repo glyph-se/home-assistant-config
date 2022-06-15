@@ -9,7 +9,6 @@ http:
 # Text to speech
 tts:
   - platform: google_translate
-    base_url: http://eris.lan.glyph.se:8123
 
 group: !include groups.yaml
 automation: !include automations.yaml
