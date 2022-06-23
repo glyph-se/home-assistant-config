@@ -371,20 +371,6 @@
     above: '20'
   action: []
   mode: single
-- id: '1628173388980'
-  alias: Run config check when new version released
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: update.home_assistant_core_update
-    to: 'on'
-    from: 'off'
-  condition: []
-  action:
-  - service: hassio.addon_start
-    data:
-      addon: core_check_config
-  mode: single
 - id: '1630233997180'
   alias: Lampa kök auto
   description: ''
