@@ -671,7 +671,7 @@
     position: 100
   mode: single
 - id: '1646675799957'
-  alias: Rullgardin kontor ner
+  alias: Rullgardin arbetsrum ner
   description: ''
   trigger:
   - platform: state
@@ -684,12 +684,12 @@
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_2
     type: set_position
-    position: 35
+    position: 94
   - device_id: 25d7d856f8d8880d5e78c62fa066b230
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_1
     type: set_position
-    position: 50
+    position: 94
   mode: single
 - id: '1646675989803'
   alias: Rullgardin arbtesrum upp
