@@ -824,12 +824,12 @@
       conditions:
       - condition: numeric_state
         entity_id: sensor.arbetsrumslampa_electric_consumption_w
-        below: '20'
+        below: '5'
     then:
     - wait_for_trigger:
       - platform: numeric_state
         entity_id: sensor.arbetsrumslampa_electric_consumption_w
-        below: '20'
+        below: '5'
       timeout: '36000'
     else: []
   - type: turn_off
