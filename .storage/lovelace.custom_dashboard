@@ -180,6 +180,10 @@
                                                 {
                                                     "entity": "scene.halften_arbetsrum",
                                                     "name": "H\u00e4lften"
+                                                },
+                                                {
+                                                    "entity": "scene.nere_arbetsrum",
+                                                    "name": "St\u00e4ng"
                                                 }
                                             ]
                                         }
