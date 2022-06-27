@@ -4,18 +4,15 @@
       device_class: temperature
       unit_of_measurement: "°C"
       state_class: measurement
-      availability: "{% if states('sensor.sovrumssensor_temperature') | int(default=0) %}true{% endif %}"
 - sensor:
     - name: "{{ state_attr('sensor.arbetsrumsensor_temperature', 'friendly_name') }} adjusted"
       state: "{{ ((states('sensor.arbetsrumsensor_temperature') | float) - 2.0) | round(1) }}"
       device_class: temperature
       unit_of_measurement: "°C"
       state_class: measurement
-      availability: "{% if states('sensor.arbetsrumsensor_temperature') | int(default=0) %}true{% endif %}"
 - sensor:
     - name: "{{ state_attr('sensor.badrumsensor_uppe_temperature', 'friendly_name') }} adjusted"
       state: "{{ ((states('sensor.badrumsensor_uppe_temperature') | float) + 0.5) | round(1) }}"
       device_class: temperature
       unit_of_measurement: "°C"
       state_class: measurement
-      availability: "{% if states('sensor.badrumsensor_uppe_temperature') | int(default=0) %}true{% endif %}"
