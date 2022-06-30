@@ -684,12 +684,12 @@
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_2
     type: set_position
-    position: 94
+    position: 5
   - device_id: 25d7d856f8d8880d5e78c62fa066b230
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_1
     type: set_position
-    position: 94
+    position: 5
   mode: single
 - id: '1646675989803'
   alias: Rullgardin arbtesrum upp
