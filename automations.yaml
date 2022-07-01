@@ -823,12 +823,12 @@
     - condition: not
       conditions:
       - condition: numeric_state
-        entity_id: sensor.arbetsrumslampa_electric_consumption_w
+        entity_id: sensor.innr_sp_120_59328903_electrical_measurement
         below: '5'
     then:
     - wait_for_trigger:
       - platform: numeric_state
-        entity_id: sensor.arbetsrumslampa_electric_consumption_w
+        entity_id: sensor.innr_sp_120_59328903_electrical_measurement
         below: '5'
       timeout: '36000'
     else: []
