@@ -824,12 +824,12 @@
       conditions:
       - condition: numeric_state
         entity_id: sensor.innr_sp_120_59328903_electrical_measurement
-        below: '5'
+        below: '10'
     then:
     - wait_for_trigger:
       - platform: numeric_state
         entity_id: sensor.innr_sp_120_59328903_electrical_measurement
-        below: '5'
+        below: '10'
       timeout: '36000'
     else: []
   - type: turn_off
