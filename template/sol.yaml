@@ -4,20 +4,18 @@
         {{
         (state_attr("sun.sun", "elevation") > 10) and
         (state_attr("sun.sun", "azimuth") < 190) and
-        (states("weather.home") in ("sunny", "partlycloudy"))
+        states("binary_sensor.soligt_vader")
         }}
-      delay_off:
-        minutes: 10
-      delay_on:
-        minutes: 10
     - name: "Sol syd"
       state: >-
         {{
         (state_attr("sun.sun", "azimuth") > 145) and
         (state_attr("sun.sun", "elevation") > 10) and
-        (states("weather.home") in ("sunny", "partlycloudy"))
+        states("binary_sensor.soligt_vader")
         }}
-      delay_off:
-        minutes: 10
+    - name: "Soligt väder"
+      state: '{{ (states("weather.home") in ("sunny", "partlycloudy")) }}'
       delay_on:
-        minutes: 10
+        minutes: 6
+      delay_off:
+        minutes: 70
