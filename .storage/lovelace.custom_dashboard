@@ -1,672 +1,672 @@
 {
-    "version": 1,
-    "minor_version": 1,
-    "key": "lovelace.custom_dashboard",
-    "data": {
-        "config": {
-            "title": "Custom dashboard",
-            "views": [
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.custom_dashboard",
+  "data": {
+    "config": {
+      "title": "Custom dashboard",
+      "views": [
+        {
+          "path": "",
+          "title": "Control",
+          "icon": "mdi:home-heart",
+          "badges": [],
+          "cards": [
+            {
+              "type": "entity-filter",
+              "state_filter": [
+                "on"
+              ],
+              "entities": [
+                "update.check_home_assistant_configuration_update",
+                "update.deconz_update",
+                "update.home_assistant_google_drive_backup_update",
+                "update.home_assistant_operating_system_update",
+                "update.home_assistant_core_update",
+                "update.home_assistant_supervisor_update",
+                "update.log_viewer_update",
+                "update.ssh_web_terminal_update",
+                "update.unifi_network_application_update",
+                "update.studio_code_server_update",
+                "update.z_wave_js_update",
+                "binary_sensor.backups_stale",
                 {
-                    "path": "",
-                    "title": "Control",
-                    "icon": "mdi:home-heart",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "entity-filter",
-                            "state_filter": [
-                                "on"
-                            ],
-                            "entities": [
-                                "update.check_home_assistant_configuration_update",
-                                "update.deconz_update",
-                                "update.home_assistant_google_drive_backup_update",
-                                "update.home_assistant_operating_system_update",
-                                "update.home_assistant_core_update",
-                                "update.home_assistant_supervisor_update",
-                                "update.log_viewer_update",
-                                "update.ssh_web_terminal_update",
-                                "update.unifi_network_application_update",
-                                "update.studio_code_server_update",
-                                "update.z_wave_js_update",
-                                "binary_sensor.backups_stale",
-                                {
-                                    "entity": "sensor.backup_state",
-                                    "state_filter": [
-                                        {
-                                            "operator": "!=",
-                                            "value": "backed_up"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "entity": "binary_sensor.backups_stale",
-                                    "state_filter": [
-                                        {
-                                            "value": "on"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "card": {
-                                "type": "glance",
-                                "title": "Uppdateringar"
-                            },
-                            "show_empty": false
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "title": "Vardagsrum",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "type": "buttons",
-                                            "entities": [
-                                                {
-                                                    "entity": "scene.oppna_vardagsrum",
-                                                    "name": "\u00d6ppna"
-                                                },
-                                                {
-                                                    "entity": "scene.nere_vardagsrum",
-                                                    "name": "St\u00e4ng"
-                                                },
-                                                {
-                                                    "entity": "scene.halften_vardagsrum",
-                                                    "name": "H\u00e4lften"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.taklampor",
-                                    "name": "Tak alla",
-                                    "icon": "mdi:wall-sconce-round"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.taklampa_ett",
-                                            "secondary_info": "last-changed",
-                                            "icon": "mdi:wall-sconce-round"
-                                        },
-                                        {
-                                            "entity": "light.taklampa_tva",
-                                            "secondary_info": "last-changed",
-                                            "icon": "mdi:wall-sconce-round"
-                                        },
-                                        {
-                                            "entity": "light.taklampa_tre",
-                                            "secondary_info": "last-changed",
-                                            "icon": "mdi:wall-sconce-round"
-                                        },
-                                        {
-                                            "entity": "light.taklampa_fyra",
-                                            "secondary_info": "last-changed",
-                                            "icon": "mdi:wall-sconce-round"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "title": "Sovrum",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "type": "buttons",
-                                            "entities": [
-                                                {
-                                                    "entity": "scene.oppna_sovrum",
-                                                    "name": "\u00d6ppna"
-                                                },
-                                                {
-                                                    "entity": "scene.morklagg_sovrum",
-                                                    "name": "M\u00f6rkl\u00e4gg"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.sovrumslampa",
-                                    "name": "Tak",
-                                    "icon": "mdi:dome-light"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.sanglampor_zha_group_0x0003",
-                                            "icon": "mdi:lamps",
-                                            "secondary_info": "last-changed"
-                                        },
-                                        {
-                                            "entity": "light.fredriks_sanglampa_level_on_off",
-                                            "secondary_info": "last-changed",
-                                            "icon": "mdi:floor-lamp"
-                                        },
-                                        {
-                                            "entity": "light.linneas_sanglampa_level_on_off",
-                                            "secondary_info": "last-changed",
-                                            "icon": "mdi:floor-lamp"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "title": "Arbetsrum",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "type": "buttons",
-                                            "entities": [
-                                                {
-                                                    "entity": "scene.oppna_arbetsrum",
-                                                    "name": "\u00d6ppna"
-                                                },
-                                                {
-                                                    "entity": "scene.halften_arbetsrum",
-                                                    "name": "H\u00e4lften"
-                                                },
-                                                {
-                                                    "entity": "scene.nere_arbetsrum",
-                                                    "name": "St\u00e4ng"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.arbetsrumslampa",
-                                    "icon": "mdi:dome-light"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "light.matbordslampa",
-                                    "name": "Matbord",
-                                    "secondary_info": "last-changed",
-                                    "icon": "mdi:ceiling-light"
-                                },
-                                {
-                                    "entity": "light.kokshorn",
-                                    "secondary_info": "last-changed",
-                                    "icon": "mdi:light-recessed"
-                                },
-                                {
-                                    "entity": "light.kokslampor",
-                                    "secondary_info": "last-changed",
-                                    "icon": "mdi:track-light"
-                                },
-                                {
-                                    "entity": "light.hallampa",
-                                    "name": "Hall",
-                                    "secondary_info": "last-changed",
-                                    "icon": "mdi:string-lights"
-                                }
-                            ],
-                            "title": "K\u00f6k",
-                            "show_header_toggle": false
-                        },
-                        {
-                            "type": "horizontal-stack",
-                            "title": "Badrum",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.badrumslampa_uppe",
-                                            "icon": "mdi:wall-sconce-round",
-                                            "name": "Lampa"
-                                        },
-                                        {
-                                            "entity": "light.badrumspegel_uppe",
-                                            "icon": "mdi:mirror-rectangle",
-                                            "name": "Spegel"
-                                        }
-                                    ],
-                                    "title": "Uppe"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.badrumslampa_nere",
-                                            "icon": "mdi:wall-sconce-round",
-                                            "name": "Lampa"
-                                        },
-                                        {
-                                            "entity": "light.badrumspegel_nere",
-                                            "icon": "mdi:mirror-rectangle",
-                                            "name": "Spegel"
-                                        }
-                                    ],
-                                    "title": "Nere"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "light.trapplampa",
-                                    "secondary_info": "last-changed",
-                                    "icon": "mdi:stairs"
-                                }
-                            ],
-                            "title": "Trappa"
-                        }
-                    ]
+                  "entity": "sensor.backup_state",
+                  "state_filter": [
+                    {
+                      "operator": "!=",
+                      "value": "backed_up"
+                    }
+                  ]
                 },
                 {
-                    "icon": "mdi:information-outline",
-                    "title": "Information",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "grid",
-                            "title": "Batteriniv\u00e5er",
-                            "cards": [
-                                {
-                                    "type": "gauge",
-                                    "min": 0,
-                                    "max": 100,
-                                    "entity": "sensor.hallsensor_power",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Hallsensor"
-                                },
-                                {
-                                    "type": "gauge",
-                                    "min": 0,
-                                    "max": 100,
-                                    "entity": "sensor.vardagsrumssensor_power",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Vardagsrumssensor"
-                                },
-                                {
-                                    "type": "gauge",
-                                    "min": 0,
-                                    "max": 100,
-                                    "entity": "sensor.sovrumssensor_power",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Sovrumssenor"
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.skafferisensor_power",
-                                    "min": 0,
-                                    "max": 100,
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Skafferisensor"
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.badrumsensor_nere_power",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Badrum nere",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.badrumsensor_uppe_power",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Badrum uppe",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.hallknapp_8fa59608_power",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Hallknapp",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.arbetsrumsensor_power",
-                                    "name": "Arbetsrumsensor",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                }
-                            ],
-                            "square": false,
-                            "columns": 4
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "title": "Temperatur",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.badrumsensor_nere_temperature",
-                                            "name": "Badrum nere"
-                                        },
-                                        {
-                                            "entity": "sensor.badrumsensor_uppe_temperature",
-                                            "name": "Badrum uppe"
-                                        },
-                                        {
-                                            "entity": "sensor.hallsensor_temperature",
-                                            "name": "Hall"
-                                        },
-                                        {
-                                            "entity": "sensor.sovrumssensor_temperature",
-                                            "name": "Sovrum"
-                                        },
-                                        {
-                                            "entity": "sensor.vardagsrumssensor_temperature",
-                                            "name": "Vardagsrum"
-                                        },
-                                        {
-                                            "entity": "sensor.arbetsrumsensor_temperature",
-                                            "name": "Arbetsrum"
-                                        },
-                                        {
-                                            "entity": "sensor.arbetsrumsensor_temperature_adjusted"
-                                        },
-                                        {
-                                            "entity": "sensor.sovrumssensor_temperature_adjusted"
-                                        },
-                                        {
-                                            "entity": "sensor.badrumsensor_uppe_temperature_adjusted"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "weather-forecast",
-                                    "entity": "weather.home",
-                                    "show_forecast": false
-                                }
-                            ]
-                        },
-                        {
-                            "type": "grid",
-                            "title": "Rullgardin batterier",
-                            "cards": [
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_1_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Rullgardin 1"
-                                },
-                                {
-                                    "type": "gauge",
-                                    "min": 0,
-                                    "max": 100,
-                                    "entity": "sensor.rullgardin_2_battery",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    },
-                                    "name": "Rullgardin 2"
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_tvhorna_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "TV-h\u00f6rna",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_sovrum_1_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Sovrum 1",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_sovrum_2_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Sovrum 2",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_arbetsrum_1_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Arbetsrum 1",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                },
-                                {
-                                    "type": "gauge",
-                                    "entity": "sensor.rullgardin_arbetsrum_2_battery",
-                                    "min": 0,
-                                    "max": 100,
-                                    "name": "Arbetsrum 2",
-                                    "severity": {
-                                        "green": 50,
-                                        "yellow": 25,
-                                        "red": 10
-                                    }
-                                }
-                            ],
-                            "square": false,
-                            "columns": 4
-                        }
-                    ]
-                },
-                {
-                    "icon": "mdi:bug-outline",
-                    "title": "Debug",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "sensor.badrumsensor_nere_illuminance"
-                                },
-                                {
-                                    "entity": "sensor.badrumsensor_uppe_illuminance"
-                                },
-                                {
-                                    "entity": "sensor.hallsensor_illuminance"
-                                },
-                                {
-                                    "entity": "sensor.sovrumssensor_illuminance"
-                                },
-                                {
-                                    "entity": "sensor.vardagsrumssensor_illuminance"
-                                },
-                                {
-                                    "entity": "sensor.arbetsrumsensor_illuminance"
-                                }
-                            ],
-                            "title": "Ljusniv\u00e5er"
-                        },
-                        {
-                            "show_name": true,
-                            "show_icon": true,
-                            "show_state": true,
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.sol_ost"
-                                },
-                                {
-                                    "entity": "binary_sensor.sol_syd"
-                                }
-                            ],
-                            "title": "Solens position"
-                        },
-                        {
-                            "type": "history-graph",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.sol_ost"
-                                },
-                                {
-                                    "entity": "binary_sensor.sol_syd"
-                                }
-                            ],
-                            "title": "Solens position",
-                            "refresh_interval": 10,
-                            "hours_to_show": 30
-                        },
-                        {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "switch.skafferilampa"
-                                },
-                                {
-                                    "entity": "binary_sensor.workday_sensor"
-                                },
-                                {
-                                    "entity": "input_boolean.nattlage"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "sensor.backup_state"
-                                },
-                                {
-                                    "entity": "binary_sensor.backups_stale"
-                                }
-                            ],
-                            "state_color": true,
-                            "title": "Backup"
-                        },
-                        {
-                            "type": "history-graph",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.badsrumsensor_nere_occupancy",
-                                    "name": "Badrum nere"
-                                },
-                                {
-                                    "entity": "binary_sensor.badrumsensor_uppe_occupancy",
-                                    "name": "Badrum uppe"
-                                },
-                                {
-                                    "entity": "binary_sensor.hallsensor_occupancy",
-                                    "name": "Hall"
-                                },
-                                {
-                                    "entity": "binary_sensor.sovrumssensor_occupancy",
-                                    "name": "Sovrum"
-                                },
-                                {
-                                    "entity": "binary_sensor.vardagsrumssensor_occupancy",
-                                    "name": "Vardagsrum"
-                                }
-                            ],
-                            "refresh_interval": 0,
-                            "title": "R\u00f6relser",
-                            "hours_to_show": 1
-                        }
-                    ]
-                },
-                {
-                    "title": "Tillf\u00e4lliga",
-                    "path": "tillfalliga",
-                    "icon": "mdi:hexagram-outline",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.innr_sp_120_ed448903_on_off"
-                                },
-                                {
-                                    "entity": "switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off"
-                                },
-                                {
-                                    "entity": "switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off"
-                                }
-                            ],
-                            "title": "Dekorationer",
-                            "show_header_toggle": true,
-                            "state_color": false
-                        }
-                    ]
+                  "entity": "binary_sensor.backups_stale",
+                  "state_filter": [
+                    {
+                      "value": "on"
+                    }
+                  ]
                 }
-            ]
+              ],
+              "card": {
+                "type": "glance",
+                "title": "Uppdateringar"
+              },
+              "show_empty": false
+            },
+            {
+              "type": "vertical-stack",
+              "title": "Vardagsrum",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "type": "buttons",
+                      "entities": [
+                        {
+                          "entity": "scene.oppna_vardagsrum",
+                          "name": "Öppna"
+                        },
+                        {
+                          "entity": "scene.nere_vardagsrum",
+                          "name": "Stäng"
+                        },
+                        {
+                          "entity": "scene.halften_vardagsrum",
+                          "name": "Hälften"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "light",
+                  "entity": "light.taklampor",
+                  "name": "Tak alla",
+                  "icon": "mdi:wall-sconce-round"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.taklampa_ett",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:wall-sconce-round"
+                    },
+                    {
+                      "entity": "light.taklampa_tva",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:wall-sconce-round"
+                    },
+                    {
+                      "entity": "light.taklampa_tre",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:wall-sconce-round"
+                    },
+                    {
+                      "entity": "light.taklampa_fyra",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:wall-sconce-round"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "title": "Sovrum",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "type": "buttons",
+                      "entities": [
+                        {
+                          "entity": "scene.oppna_sovrum",
+                          "name": "Öppna"
+                        },
+                        {
+                          "entity": "scene.morklagg_sovrum",
+                          "name": "Mörklägg"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "light",
+                  "entity": "light.sovrumslampa",
+                  "name": "Tak",
+                  "icon": "mdi:dome-light"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.sanglampor_zha_group_0x0003",
+                      "icon": "mdi:lamps",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "light.fredriks_sanglampa_level_on_off",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:floor-lamp"
+                    },
+                    {
+                      "entity": "light.linneas_sanglampa_level_on_off",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:floor-lamp"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "title": "Arbetsrum",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "type": "buttons",
+                      "entities": [
+                        {
+                          "entity": "scene.oppna_arbetsrum",
+                          "name": "Öppna"
+                        },
+                        {
+                          "entity": "scene.halften_arbetsrum",
+                          "name": "Hälften"
+                        },
+                        {
+                          "entity": "scene.nere_arbetsrum",
+                          "name": "Stäng"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "light",
+                  "entity": "light.arbetsrumslampa",
+                  "icon": "mdi:dome-light"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.matbordslampa",
+                  "name": "Matbord",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:ceiling-light"
+                },
+                {
+                  "entity": "light.kokshorn",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:light-recessed"
+                },
+                {
+                  "entity": "light.kokslampor",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:track-light"
+                },
+                {
+                  "entity": "light.hallampa",
+                  "name": "Hall",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:string-lights"
+                }
+              ],
+              "title": "Kök",
+              "show_header_toggle": false
+            },
+            {
+              "type": "horizontal-stack",
+              "title": "Badrum",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.badrumslampa_uppe",
+                      "icon": "mdi:wall-sconce-round",
+                      "name": "Lampa"
+                    },
+                    {
+                      "entity": "light.badrumspegel_uppe",
+                      "icon": "mdi:mirror-rectangle",
+                      "name": "Spegel"
+                    }
+                  ],
+                  "title": "Uppe"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.badrumslampa_nere",
+                      "icon": "mdi:wall-sconce-round",
+                      "name": "Lampa"
+                    },
+                    {
+                      "entity": "light.badrumspegel_nere",
+                      "icon": "mdi:mirror-rectangle",
+                      "name": "Spegel"
+                    }
+                  ],
+                  "title": "Nere"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.trapplampa",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:stairs"
+                }
+              ],
+              "title": "Trappa"
+            }
+          ]
+        },
+        {
+          "icon": "mdi:information-outline",
+          "title": "Information",
+          "badges": [],
+          "cards": [
+            {
+              "type": "grid",
+              "title": "Batterinivåer",
+              "cards": [
+                {
+                  "type": "gauge",
+                  "min": 0,
+                  "max": 100,
+                  "entity": "sensor.hallsensor_power",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  },
+                  "name": "Hallsensor"
+                },
+                {
+                  "type": "gauge",
+                  "min": 0,
+                  "max": 100,
+                  "entity": "sensor.vardagsrumssensor_power",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  },
+                  "name": "Vardagsrumssensor"
+                },
+                {
+                  "type": "gauge",
+                  "min": 0,
+                  "max": 100,
+                  "entity": "sensor.sovrumssensor_power",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  },
+                  "name": "Sovrumssenor"
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.skafferisensor_power",
+                  "min": 0,
+                  "max": 100,
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  },
+                  "name": "Skafferisensor"
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.badrumsensor_nere_power",
+                  "min": 0,
+                  "max": 100,
+                  "name": "Badrum nere",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.badrumsensor_uppe_power",
+                  "min": 0,
+                  "max": 100,
+                  "name": "Badrum uppe",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.hallknapp_8fa59608_power",
+                  "min": 0,
+                  "max": 100,
+                  "name": "Hallknapp",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.arbetsrumsensor_power",
+                  "name": "Arbetsrumsensor",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                }
+              ],
+              "square": false,
+              "columns": 4
+            },
+            {
+              "type": "vertical-stack",
+              "title": "Temperatur",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.badrumsensor_nere_temperature",
+                      "name": "Badrum nere"
+                    },
+                    {
+                      "entity": "sensor.badrumsensor_uppe_temperature",
+                      "name": "Badrum uppe"
+                    },
+                    {
+                      "entity": "sensor.hallsensor_temperature",
+                      "name": "Hall"
+                    },
+                    {
+                      "entity": "sensor.sovrumssensor_temperature",
+                      "name": "Sovrum"
+                    },
+                    {
+                      "entity": "sensor.vardagsrumssensor_temperature",
+                      "name": "Vardagsrum"
+                    },
+                    {
+                      "entity": "sensor.arbetsrumsensor_temperature",
+                      "name": "Arbetsrum"
+                    },
+                    {
+                      "entity": "sensor.arbetsrumsensor_temperature_adjusted"
+                    },
+                    {
+                      "entity": "sensor.sovrumssensor_temperature_adjusted"
+                    },
+                    {
+                      "entity": "sensor.badrumsensor_uppe_temperature_adjusted"
+                    }
+                  ]
+                },
+                {
+                  "type": "weather-forecast",
+                  "entity": "weather.home",
+                  "show_forecast": false
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "title": "Rullgardin batterier",
+              "cards": [
+                {
+                  "type": "gauge",
+                  "entity": "sensor.rullgardin_takterrass_1_battery",
+                  "min": 0,
+                  "max": 100,
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  },
+                  "name": "Rullgardin 1"
+                },
+                {
+                  "type": "gauge",
+                  "min": 0,
+                  "max": 100,
+                  "entity": "sensor.rullgardin_takterrass_2_battery",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  },
+                  "name": "Rullgardin 2"
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.rullgardin_tvhorna_battery",
+                  "min": 0,
+                  "max": 100,
+                  "name": "TV-hörna",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.rullgardin_sovrum_1_battery",
+                  "min": 0,
+                  "max": 100,
+                  "name": "Sovrum 1",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.rullgardin_sovrum_2_battery",
+                  "min": 0,
+                  "max": 100,
+                  "name": "Sovrum 2",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.rullgardin_arbetsrum_1_battery",
+                  "min": 0,
+                  "max": 100,
+                  "name": "Arbetsrum 1",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.rullgardin_arbetsrum_2_battery",
+                  "min": 0,
+                  "max": 100,
+                  "name": "Arbetsrum 2",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                }
+              ],
+              "square": false,
+              "columns": 4
+            }
+          ]
+        },
+        {
+          "icon": "mdi:bug-outline",
+          "title": "Debug",
+          "badges": [],
+          "cards": [
+            {
+              "type": "glance",
+              "entities": [
+                {
+                  "entity": "sensor.badrumsensor_nere_illuminance"
+                },
+                {
+                  "entity": "sensor.badrumsensor_uppe_illuminance"
+                },
+                {
+                  "entity": "sensor.hallsensor_illuminance"
+                },
+                {
+                  "entity": "sensor.sovrumssensor_illuminance"
+                },
+                {
+                  "entity": "sensor.vardagsrumssensor_illuminance"
+                },
+                {
+                  "entity": "sensor.arbetsrumsensor_illuminance"
+                }
+              ],
+              "title": "Ljusnivåer"
+            },
+            {
+              "show_name": true,
+              "show_icon": true,
+              "show_state": true,
+              "type": "glance",
+              "entities": [
+                {
+                  "entity": "binary_sensor.sol_ost"
+                },
+                {
+                  "entity": "binary_sensor.sol_syd"
+                }
+              ],
+              "title": "Solens position"
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "binary_sensor.sol_ost"
+                },
+                {
+                  "entity": "binary_sensor.sol_syd"
+                }
+              ],
+              "title": "Solens position",
+              "refresh_interval": 10,
+              "hours_to_show": 30
+            },
+            {
+              "type": "glance",
+              "entities": [
+                {
+                  "entity": "switch.skafferilampa"
+                },
+                {
+                  "entity": "binary_sensor.workday_sensor"
+                },
+                {
+                  "entity": "input_boolean.nattlage"
+                }
+              ]
+            },
+            {
+              "type": "glance",
+              "entities": [
+                {
+                  "entity": "sensor.backup_state"
+                },
+                {
+                  "entity": "binary_sensor.backups_stale"
+                }
+              ],
+              "state_color": true,
+              "title": "Backup"
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "binary_sensor.badsrumsensor_nere_occupancy",
+                  "name": "Badrum nere"
+                },
+                {
+                  "entity": "binary_sensor.badrumsensor_uppe_occupancy",
+                  "name": "Badrum uppe"
+                },
+                {
+                  "entity": "binary_sensor.hallsensor_occupancy",
+                  "name": "Hall"
+                },
+                {
+                  "entity": "binary_sensor.sovrumssensor_occupancy",
+                  "name": "Sovrum"
+                },
+                {
+                  "entity": "binary_sensor.vardagsrumssensor_occupancy",
+                  "name": "Vardagsrum"
+                }
+              ],
+              "refresh_interval": 0,
+              "title": "Rörelser",
+              "hours_to_show": 1
+            }
+          ]
+        },
+        {
+          "title": "Tillfälliga",
+          "path": "tillfalliga",
+          "icon": "mdi:hexagram-outline",
+          "badges": [],
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.innr_sp_120_ed448903_on_off"
+                },
+                {
+                  "entity": "switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off"
+                },
+                {
+                  "entity": "switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off"
+                }
+              ],
+              "title": "Dekorationer",
+              "show_header_toggle": true,
+              "state_color": false
+            }
+          ]
         }
+      ]
     }
+  }
 }
