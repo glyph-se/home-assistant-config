@@ -1,0 +1,16 @@
+powerview_uppdatera_batteristatus:
+  alias: 'PowerView: Uppdatera position'
+  sequence:
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id:
+      - cover.rullgardin_arbetsrum_1
+      - cover.rullgardin_arbetsrum_2
+      - cover.rullgardin_sovrum_1
+      - cover.rullgardin_sovrum_2
+      - cover.rullgardin_tvhorna
+      - cover.rullgardin_takterrass_1
+      - cover.rullgardin_takterrass_2
+  mode: single
+  icon: mdi:roller-shade
