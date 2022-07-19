@@ -1,17 +1,20 @@
 - sensor:
-    - name: "{{ state_attr('sensor.sovrumssensor_temperature', 'friendly_name') }} adjusted"
+    - unique_id: sovrumssensor_temperature_adjusted
+      name: "{{ state_attr('sensor.sovrumssensor_temperature', 'friendly_name') }} adjusted"
       state: "{{ ((states('sensor.sovrumssensor_temperature') | float) + 2.0) | round(1) }}"
       device_class: temperature
       unit_of_measurement: "°C"
       state_class: measurement
 - sensor:
-    - name: "{{ state_attr('sensor.arbetsrumsensor_temperature', 'friendly_name') }} adjusted"
+    - unique_id: arbetsrumsensor_temperature_adjusted
+      name: "{{ state_attr('sensor.arbetsrumsensor_temperature', 'friendly_name') }} adjusted"
       state: "{{ ((states('sensor.arbetsrumsensor_temperature') | float) - 2.0) | round(1) }}"
       device_class: temperature
       unit_of_measurement: "°C"
       state_class: measurement
 - sensor:
-    - name: "{{ state_attr('sensor.badrumsensor_uppe_temperature', 'friendly_name') }} adjusted"
+    - unique_id: badrumsensor_uppe_temperature_adjusted
+      name: "{{ state_attr('sensor.badrumsensor_uppe_temperature', 'friendly_name') }} adjusted"
       state: "{{ ((states('sensor.badrumsensor_uppe_temperature') | float) + 0.5) | round(1) }}"
       device_class: temperature
       unit_of_measurement: "°C"
