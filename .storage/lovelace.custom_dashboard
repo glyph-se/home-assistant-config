@@ -422,6 +422,9 @@
                     },
                     {
                       "entity": "sensor.badrumsensor_uppe_temperature_adjusted"
+                    },
+                    {
+                      "entity": "sensor.hallsensor_temperature_adjusted"
                     }
                   ]
                 },
