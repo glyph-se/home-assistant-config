@@ -19,3 +19,10 @@
       device_class: temperature
       unit_of_measurement: "°C"
       state_class: measurement
+- sensor:
+    - unique_id: hallsensor_temperature_adjusted
+      name: "{{ state_attr('sensor.hallsensor_temperature', 'friendly_name') }} adjusted"
+      state: "{{ ((states('sensor.hallsensor_temperature') | float) + 1) | round(1) }}"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      state_class: measurement
