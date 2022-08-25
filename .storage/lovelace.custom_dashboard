@@ -203,7 +203,7 @@
                   "entity": "light.matbordslampa",
                   "name": "Matbord",
                   "secondary_info": "last-changed",
-                  "icon": "mdi:ceiling-light"
+                  "icon": "mdi:chandelier"
                 },
                 {
                   "entity": "light.kokshorn",
