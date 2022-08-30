@@ -840,7 +840,7 @@
     domain: light
   mode: single
 - id: '1661885524056'
-  alias: Badrumsspegel uppe tänd
+  alias: Badrumsspegel uppe auto
   description: ''
   trigger:
   - type: opened
@@ -848,37 +848,24 @@
     device_id: 7894a5000d413afe843d43b5b9b5caf9
     entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
     domain: binary_sensor
-  condition: []
+  condition:
+  - condition: state
+    entity_id: light.badrumspegel_uppe
+    state: 'off'
   action:
   - service: switch.turn_on
     target:
       entity_id: switch.badrumspegel_uppe
     data: {}
-  mode: restart
-- id: '1661885701607'
-  alias: Badrumsspegel uppe släck
-  description: ''
-  trigger:
-  - type: not_opened
-    platform: device
-    device_id: 7894a5000d413afe843d43b5b9b5caf9
-    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
-    domain: binary_sensor
-  - type: opened
-    platform: device
-    device_id: 7894a5000d413afe843d43b5b9b5caf9
-    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
-    domain: binary_sensor
-    for:
-      hours: 0
-      minutes: 30
-      seconds: 0
-    id: timeout
-  condition: []
-  action:
+  - wait_for_trigger:
+    - type: not_opened
+      platform: device
+      device_id: 7894a5000d413afe843d43b5b9b5caf9
+      entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
+      domain: binary_sensor
+    timeout: 00:30:00
   - service: switch.turn_off
-    target:
-      entity_id:
-      - switch.badrumspegel_uppe
     data: {}
+    target:
+      entity_id: switch.badrumspegel_uppe
   mode: restart
