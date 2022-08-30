@@ -856,7 +856,7 @@
     data: {}
   mode: restart
 - id: '1661885701607'
-  alias: Badsrumsspegel uppe släck
+  alias: Badrumsspegel uppe släck
   description: ''
   trigger:
   - type: not_opened
