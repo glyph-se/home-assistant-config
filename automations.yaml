@@ -756,12 +756,12 @@
   action:
   - device_id: bd3630fd9e8c2c1f303577b5c0292830
     domain: cover
-    entity_id: cover.rullgardin_1
+    entity_id: cover.rullgardin_takterrass_1
     type: set_position
     position: 0
   - device_id: c3fb9245c6ca7edc4d8d65d5ec2a1b99
     domain: cover
-    entity_id: cover.rullgardin_2
+    entity_id: cover.rullgardin_takterrass_2
     type: set_position
     position: 0
   mode: single
@@ -777,12 +777,12 @@
   action:
   - device_id: bd3630fd9e8c2c1f303577b5c0292830
     domain: cover
-    entity_id: cover.rullgardin_1
+    entity_id: cover.rullgardin_takterrass_1
     type: set_position
     position: 100
   - device_id: c3fb9245c6ca7edc4d8d65d5ec2a1b99
     domain: cover
-    entity_id: cover.rullgardin_2
+    entity_id: cover.rullgardin_takterrass_2
     type: set_position
     position: 100
   mode: single
