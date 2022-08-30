@@ -205,7 +205,8 @@
   action:
   - service: switch.turn_on
     target:
-      device_id: 52f9317673d83e56150c3d8ca7e18bc4
+      entity_id: switch.skafferilampa
+    data: {}
   mode: restart
 - id: '1625167345545'
   alias: Skafferi släck
@@ -230,7 +231,8 @@
   action:
   - service: switch.turn_off
     target:
-      device_id: 52f9317673d83e56150c3d8ca7e18bc4
+      entity_id: switch.skafferilampa
+    data: {}
   mode: restart
 - id: '1626003792906'
   alias: Nattläge på
@@ -837,3 +839,46 @@
     entity_id: light.arbetsrumslampa
     domain: light
   mode: single
+- id: '1661885524056'
+  alias: Badrumsspegel uppe tänd
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 7894a5000d413afe843d43b5b9b5caf9
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.badrumspegel_uppe
+    data: {}
+  mode: restart
+- id: '1661885701607'
+  alias: Badsrumsspegel uppe släck
+  description: ''
+  trigger:
+  - type: not_opened
+    platform: device
+    device_id: 7894a5000d413afe843d43b5b9b5caf9
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
+    domain: binary_sensor
+  - type: opened
+    platform: device
+    device_id: 7894a5000d413afe843d43b5b9b5caf9
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+    id: timeout
+  condition: []
+  action:
+  - service: switch.turn_off
+    target:
+      entity_id:
+      - switch.badrumspegel_uppe
+    data: {}
+  mode: restart
