@@ -452,7 +452,7 @@
       entity_id: light.trapplampa
   mode: single
 - id: '1631561711121'
-  alias: Släck allt
+  alias: Gå hemifrån
   description: ''
   trigger:
   - platform: event
@@ -469,6 +469,23 @@
   action:
   - service: light.turn_off
     entity_id: all
+  - if:
+    - condition: state
+      entity_id: binary_sensor.ytterdorrar
+      state: 'on'
+    then:
+    - repeat:
+        count: '6'
+        sequence:
+        - service: light.toggle
+          data: {}
+          target:
+            device_id: a9b757038722af90948fd69813460753
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 1
+            milliseconds: 0
   mode: single
 - id: '1632909230885'
   alias: z Dekoration stjärna auto
