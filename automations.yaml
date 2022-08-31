@@ -467,8 +467,6 @@
     subtype: turn_on
   condition: []
   action:
-  - service: light.turn_off
-    entity_id: all
   - if:
     - condition: state
       entity_id: binary_sensor.ytterdorrar
@@ -486,6 +484,8 @@
             minutes: 0
             seconds: 1
             milliseconds: 0
+  - service: light.turn_off
+    entity_id: all
   mode: single
 - id: '1632909230885'
   alias: z Dekoration stjärna auto
