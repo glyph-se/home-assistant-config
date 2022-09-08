@@ -14,7 +14,7 @@
         states("binary_sensor.soligt_vader")
         }}
     - name: "Soligt väder"
-      state: '{{ (states("weather.home") in ("sunny", "partlycloudy")) }}'
+      state: '{{ (states("weather.home") in ("sunny", "partlycloudy")) and false }}'
       delay_on:
         minutes: 6
       delay_off:
