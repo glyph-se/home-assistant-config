@@ -94,10 +94,10 @@
   - condition: time
     after: '18:00'
   action:
-  - device_id: 67515fccbe29472c8032217b84fb9b1b
+  - type: turn_on
+    device_id: 250e639622274815bd5c178f9953a225
+    entity_id: switch.innr_sp_120_ed448903_on_off
     domain: switch
-    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
-    type: turn_on
 - id: '1583773866555'
   alias: z Dekoration svarta ljusstakar släck
   description: ''
@@ -106,10 +106,10 @@
     platform: time
   condition: []
   action:
-  - device_id: 67515fccbe29472c8032217b84fb9b1b
+  - type: turn_off
+    device_id: 250e639622274815bd5c178f9953a225
+    entity_id: switch.innr_sp_120_ed448903_on_off
     domain: switch
-    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_3d4ac3fe_on_off
-    type: turn_off
 - id: '1584047833146'
   alias: z Korgar tänd
   description: ''
