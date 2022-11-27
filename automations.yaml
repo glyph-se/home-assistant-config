@@ -500,8 +500,8 @@
   - service: switch.turn_on
     target:
       device_id:
-      - f021ae88c9c94bb9b00a399eaab1019d
-      - 250e639622274815bd5c178f9953a225
+      - 8269351cd5fd4ab7aa20a373c72279d3
+      - 67515fccbe29472c8032217b84fb9b1b
     data: {}
   - wait_for_trigger:
     - platform: sun
@@ -509,8 +509,8 @@
   - service: switch.turn_off
     target:
       device_id:
-      - f021ae88c9c94bb9b00a399eaab1019d
-      - 250e639622274815bd5c178f9953a225
+      - 67515fccbe29472c8032217b84fb9b1b
+      - 8269351cd5fd4ab7aa20a373c72279d3
     data: {}
   mode: single
 - id: '1640613213898'
