@@ -273,6 +273,27 @@
                 }
               ],
               "title": "Trappa"
+            },
+            {
+              "type": "entity-filter",
+              "entities": [
+                "media_player.vardagsrum_speaker",
+                "media_player.arbetsrum_speaker",
+                "media_player.kitchen_display",
+                "media_player.bathroom_up_speaker",
+                "media_player.bathroom_down_display",
+                "media_player.living_room_tv",
+                "media_player.flora",
+                "media_player.bedroom_speaker"
+              ],
+              "state_filter": [
+                "playing",
+                "paused",
+                "buffering"
+              ],
+              "card": {
+                "type": "entities"
+              }
             }
           ]
         },
