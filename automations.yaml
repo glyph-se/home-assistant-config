@@ -102,7 +102,7 @@
   alias: z Dekoration svarta ljusstakar släck
   description: ''
   trigger:
-  - at: '22:00'
+  - at: '21:30:00'
     platform: time
   condition: []
   action:
