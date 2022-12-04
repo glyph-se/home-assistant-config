@@ -488,7 +488,7 @@
     entity_id: all
   mode: single
 - id: '1632909230885'
-  alias: z Dekoration stjärna auto
+  alias: z Dekoration stjärna tänd
   description: ''
   trigger:
   - platform: sun
@@ -502,15 +502,6 @@
       device_id:
       - 8269351cd5fd4ab7aa20a373c72279d3
       - 67515fccbe29472c8032217b84fb9b1b
-    data: {}
-  - wait_for_trigger:
-    - platform: sun
-      event: sunrise
-  - service: switch.turn_off
-    target:
-      device_id:
-      - 67515fccbe29472c8032217b84fb9b1b
-      - 8269351cd5fd4ab7aa20a373c72279d3
     data: {}
   mode: single
 - id: '1640613213898'
@@ -886,3 +877,19 @@
     target:
       entity_id: switch.badrumspegel_uppe
   mode: restart
+- id: '1670138805403'
+  alias: z Dekoration stjärna släck
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: 01:00:00
+  condition: []
+  action:
+  - service: switch.turn_off
+    target:
+      device_id:
+      - 67515fccbe29472c8032217b84fb9b1b
+      - 8269351cd5fd4ab7aa20a373c72279d3
+    data: {}
+  mode: single
