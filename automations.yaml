@@ -893,3 +893,35 @@
       - 8269351cd5fd4ab7aa20a373c72279d3
     data: {}
   mode: single
+- id: '1670874152255'
+  alias: z Dekoration balkong uppe tänd
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 0
+  - platform: time
+    at: 05:30:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 5383ed961bf1b81313ab8341d5bdd665
+    entity_id: switch.balkong_uppe_switch
+    domain: switch
+  mode: single
+- id: '1670874204130'
+  alias: z Dekoration balkong uppe släck
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: 0
+  - platform: time
+    at: '23:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 5383ed961bf1b81313ab8341d5bdd665
+    entity_id: switch.balkong_uppe_switch
+    domain: switch
+  mode: single
