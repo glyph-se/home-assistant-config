@@ -1,10 +1,3 @@
-#- platform: group
-#  name: Korgar
-#  entities:
-#    - light.philips_lta001_5a422d08_level_light_color_on_off
-#    - light.philips_lta001_40e83008_level_light_color_on_off
-#    - light.philips_lta001_bc2fab08_level_light_color_on_off
-
 - platform: switch
   name: Kökslampor
   entity_id: switch.kokslampor
