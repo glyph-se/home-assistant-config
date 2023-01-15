@@ -922,3 +922,35 @@
     entity_id: switch.balkong_nere_switch
     domain: switch
   mode: single
+- id: '1673775956922'
+  alias: Badrumsspegel nere auto
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 5d5c160c66652a12fb88cbb01e3368a5
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_5
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: light.badrumspegel_nere
+    state: 'off'
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id:
+      - switch.badrumspegel_nere
+    data: {}
+  - wait_for_trigger:
+    - type: not_opened
+      platform: device
+      device_id: 5d5c160c66652a12fb88cbb01e3368a5
+      entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_5
+      domain: binary_sensor
+    timeout: 00:30:00
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id:
+      - switch.badrumspegel_nere
+  mode: restart
