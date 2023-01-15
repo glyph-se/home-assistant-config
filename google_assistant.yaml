@@ -1,6 +1,6 @@
 project_id: home-assistant-2-dca83
 expose_by_default: true
-service_account: !include google-assistant-service-account-2.json
+service_account: !secret google_assistant_service_account
 report_state: true
 exposed_domains:
   - light
