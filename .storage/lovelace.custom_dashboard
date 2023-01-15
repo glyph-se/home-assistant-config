@@ -399,6 +399,26 @@
                     "yellow": 25,
                     "red": 10
                   }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.lumi_lumi_sensor_magnet_aq2_battery_4",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  },
+                  "name": "Badrumsspegel uppe"
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.lumi_lumi_sensor_magnet_aq2_battery_5",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  },
+                  "name": "Badrumsspegel nere"
                 }
               ],
               "square": false,
