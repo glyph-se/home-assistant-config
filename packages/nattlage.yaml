@@ -1,0 +1,4 @@
+input_boolean:
+  nattlage:
+    name: Nattläge
+    icon: mdi:sleep

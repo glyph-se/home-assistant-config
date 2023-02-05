@@ -1,0 +1,4 @@
+# Enable workday
+binary_sensor:
+  - platform: workday
+    country: SE

@@ -1,0 +1,29 @@
+google_assistant:
+  project_id: home-assistant-2-dca83
+  expose_by_default: true
+  service_account: !secret google_assistant_service_account
+  report_state: true
+  exposed_domains:
+    - light
+    - cover
+    - scene
+  entity_config:
+    sensor.hallsensor_temperature:
+      expose: true
+    sensor.vardagsrumssensor_temperature:
+      expose: true
+    sensor.sovrumssensor_temperature:
+      expose: true
+    sensor.badrumsensor_nere_temperature:
+      expose: true
+    sensor.badrumsensor_uppe_temperature:
+      expose: true
+    input_boolean.nattlage:
+      expose: true
+    switch.skafferilampa:
+      expose: true
+# Extra logs for Google Assistant debugging
+#logger:
+#  default: error
+#  logs:
+#    homeassistant.components.google_assistant: debug

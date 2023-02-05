@@ -7,6 +7,7 @@
 !.gitignore
 !*.md
 !/template
+!/packages
 !/zigpy_ota
 
 # Ignore folders.

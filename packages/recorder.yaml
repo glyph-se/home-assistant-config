@@ -1,0 +1,4 @@
+# Move recorder to memory
+recorder:
+  purge_keep_days: 2
+  db_url: "sqlite:////dev/shm/ha-recorder-v2.db"

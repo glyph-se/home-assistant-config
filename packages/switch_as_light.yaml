@@ -1,0 +1,21 @@
+light:
+  - platform: switch
+    name: Kökslampor
+    entity_id: switch.kokslampor
+  - platform: switch
+    name: Kökshörn
+    entity_id: switch.kokshorn
+
+  - platform: switch
+    name: Badrumslampa nere
+    entity_id: switch.badrumslampa_nere
+  - platform: switch
+    name: Badrumspegel nere
+    entity_id: switch.badrumspegel_nere
+
+  - platform: switch
+    name: Badrumslampa uppe
+    entity_id: switch.badrumslampa_uppe
+  - platform: switch
+    name: Badrumspegel uppe
+    entity_id: switch.badrumspegel_uppe

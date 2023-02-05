@@ -1,0 +1,10 @@
+#zha:
+#  zigpy_config:
+#    ota:
+#      otau_directory: /config/zigpy_ota
+# Extra logs for ZHA OTA firmware updates to show progress
+#logger:
+#  default: info
+#  logs:
+#    homeassistant.components.zha: debug
+#    zigpy: debug

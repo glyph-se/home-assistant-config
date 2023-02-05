@@ -1,0 +1,8 @@
+light:
+  - platform: group
+    name: Taklampor
+    entities:
+      - light.taklampa_ett
+      - light.taklampa_tva
+      - light.taklampa_tre
+      - light.taklampa_fyra

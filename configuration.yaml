@@ -1,59 +1,12 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-http:
-  use_x_forwarded_for: true
-  trusted_proxies:
-    - 192.168.1.11
-
-# Text to speech
-tts:
-  - platform: google_translate
+homeassistant:
+  packages: !include_dir_named packages
 
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-light: !include light_groups.yaml
-
-device_tracker:
-  - platform: bluetooth_tracker
-    #    interval_seconds: 60
-    consider_home: 00:10:00
-    new_device_defaults:
-      track_new_devices: false
-
-google_assistant: !include google_assistant.yaml
-
-# Extra logs for Google Assistant debugging
-#logger:
-#  default: error
-#  logs:
-#    homeassistant.components.google_assistant: debug
-
-# Enable workday
-binary_sensor:
-  - platform: workday
-    country: SE
-
-# Move recorder to memory
-recorder:
-  purge_keep_days: 2
-  db_url: "sqlite:////dev/shm/ha-recorder-v2.db"
-
-input_boolean:
-  nattlage:
-    name: Nattläge
-    icon: mdi:sleep
 
 template: !include_dir_merge_list template/
-#zha:
-#  zigpy_config:
-#    ota:
-#      otau_directory: /config/zigpy_ota
-# Extra logs for ZHA OTA firmware updates to show progress
-#logger:
-#  default: info
-#  logs:
-#    homeassistant.components.zha: debug
-#    zigpy: debug
