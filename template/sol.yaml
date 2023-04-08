@@ -9,7 +9,7 @@
     - name: "Sol syd"
       state: >-
         {{
-        (state_attr("sun.sun", "azimuth") > 145) and
+        (state_attr("sun.sun", "azimuth") > 143) and
         (state_attr("sun.sun", "elevation") > 10) and
         states("binary_sensor.soligt_vader")
         }}
