@@ -728,16 +728,31 @@
     to: 'on'
   condition: []
   action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   - device_id: 2adb6171ac15ee8380b0ed725b450af0
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_2
     type: set_position
     position: 45
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   - device_id: 25d7d856f8d8880d5e78c62fa066b230
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_1
     type: set_position
     position: 0
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   mode: single
 - id: '1646675989803'
   alias: Rullgardin arbtesrum upp
@@ -749,16 +764,31 @@
     to: 'off'
   condition: []
   action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   - device_id: 2adb6171ac15ee8380b0ed725b450af0
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_2
     type: set_position
     position: 100
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   - device_id: 25d7d856f8d8880d5e78c62fa066b230
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_1
     type: set_position
     position: 100
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   mode: single
 - id: '1647247160318'
   alias: Rullgardin TV-hörn upp
@@ -770,11 +800,21 @@
     from: 'on'
   condition: []
   action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   - device_id: 16e992059cbf48897a13a76761597f90
     domain: cover
     entity_id: cover.rullgardin_tvhorna
     type: set_position
     position: 100
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   mode: single
 - id: '1648567411037'
   alias: Rullgardin TV-hörn ner
@@ -786,11 +826,21 @@
     from: 'off'
   condition: []
   action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   - device_id: 16e992059cbf48897a13a76761597f90
     domain: cover
     entity_id: cover.rullgardin_tvhorna
     type: set_position
     position: 10
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
   mode: single
 - id: '1650556172490'
   alias: Rullgardin takterass ner
