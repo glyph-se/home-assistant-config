@@ -737,7 +737,7 @@
     domain: cover
     entity_id: cover.rullgardin_arbetsrum_2
     type: set_position
-    position: 45
+    position: 0
   - delay:
       hours: 0
       minutes: 0
