@@ -241,6 +241,12 @@
                   "name": "Hall",
                   "secondary_info": "last-changed",
                   "icon": "mdi:string-lights"
+                },
+                {
+                  "entity": "light.signify_netherlands_b_v_lcx004_light",
+                  "name": "Köksö",
+                  "icon": "mdi:countertop",
+                  "secondary_info": "last-changed"
                 }
               ],
               "title": "Kök",
@@ -303,6 +309,7 @@
           "badges": [],
           "cards": [
             {
+              "square": false,
               "type": "grid",
               "title": "Batterinivåer",
               "cards": [
@@ -419,9 +426,18 @@
                     "red": 10
                   },
                   "name": "Badrumsspegel nere"
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.signify_netherlands_b_v_sml003_battery",
+                  "name": "Kökssensor",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
                 }
               ],
-              "square": false,
               "columns": 4
             },
             {
@@ -469,6 +485,9 @@
                     },
                     {
                       "entity": "sensor.badrumsensor_nere_temperature_adjusted"
+                    },
+                    {
+                      "entity": "sensor.signify_netherlands_b_v_sml003_temperature"
                     }
                   ]
                 },
@@ -598,6 +617,9 @@
                 },
                 {
                   "entity": "sensor.arbetsrumsensor_illuminance"
+                },
+                {
+                  "entity": "sensor.signify_netherlands_b_v_sml003_illuminance"
                 }
               ],
               "title": "Ljusnivåer"

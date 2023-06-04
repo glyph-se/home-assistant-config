@@ -371,10 +371,17 @@
     device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
     entity_id: binary_sensor.hallsensor_occupancy
     domain: binary_sensor
+    enabled: false
   - type: occupied
     platform: device
     device_id: 0ed67a986d805df2f3c109d23f1c772e
     entity_id: binary_sensor.vardagsrumssensor_occupancy
+    domain: binary_sensor
+    enabled: false
+  - type: occupied
+    platform: device
+    device_id: 56758ef368d0c49c297fdc3179059962
+    entity_id: binary_sensor.signify_netherlands_b_v_sml003_occupancy
     domain: binary_sensor
   condition:
   - condition: or
@@ -392,7 +399,18 @@
   - service: light.turn_on
     target:
       entity_id: light.kokslampor
-  - delay:
+    data: {}
+  - wait_for_trigger:
+    - type: not_occupied
+      platform: device
+      device_id: 56758ef368d0c49c297fdc3179059962
+      entity_id: binary_sensor.signify_netherlands_b_v_sml003_occupancy
+      domain: binary_sensor
+      for:
+        hours: 0
+        minutes: 30
+        seconds: 0
+    timeout:
       hours: 6
       minutes: 0
       seconds: 0
@@ -400,6 +418,7 @@
   - service: light.turn_off
     target:
       entity_id: light.kokslampor
+    data: {}
   mode: single
 - id: '1631392792807'
   alias: Lampa trappa auto (dag)
