@@ -1072,3 +1072,30 @@
       entity_id:
       - switch.badrumspegel_nere
   mode: restart
+- id: '1685904801707'
+  alias: Köksö ledstrip tänd
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -01:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 09d68373bc37409a28c11961a1bf5a27
+    entity_id: light.signify_netherlands_b_v_lcx004_light
+    domain: light
+  mode: single
+- id: '1685905108462'
+  alias: Köksö ledstrip släck
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 09d68373bc37409a28c11961a1bf5a27
+    entity_id: light.signify_netherlands_b_v_lcx004_light
+    domain: light
+  mode: single
