@@ -4,14 +4,14 @@
         {{
         (state_attr("sun.sun", "elevation") > 10) and
         (state_attr("sun.sun", "azimuth") < 190) and
-        states("binary_sensor.soligt_vader")
+        states("binary_sensor.soligt_vader") and false
         }}
     - name: "Sol syd"
       state: >-
         {{
         (state_attr("sun.sun", "azimuth") > 138) and
         (state_attr("sun.sun", "elevation") > 12) and
-        states("binary_sensor.soligt_vader")
+        states("binary_sensor.soligt_vader") and false
         }}
     - name: "Soligt väder"
       state: '{{ (states("weather.home") in ("sunny", "partlycloudy")) }}'
