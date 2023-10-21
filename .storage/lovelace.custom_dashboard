@@ -702,6 +702,14 @@
                 {
                   "entity": "binary_sensor.vardagsrumssensor_occupancy",
                   "name": "Vardagsrum"
+                },
+                {
+                  "entity": "binary_sensor.signify_netherlands_b_v_sml003_occupancy",
+                  "name": "Kök"
+                },
+                {
+                  "entity": "binary_sensor.arbetsrumsensor_occupancy",
+                  "name": "Arbetsrum"
                 }
               ],
               "refresh_interval": 0,
