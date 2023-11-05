@@ -1,5 +1,5 @@
 device_tracker:
-  - platform: bluetooth_tracker
+  - platform: bluetooth_le_tracker
     #    interval_seconds: 60
     consider_home: 00:10:00
     new_device_defaults:
