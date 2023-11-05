@@ -81,7 +81,7 @@
     entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
     type: turn_off
 - id: '1583773805811'
-  alias: z Dekoration svarta ljusstakar tänd
+  alias: "Dekoration \U0001F54E svarta ljusstakar tänd"
   description: ''
   trigger:
   - platform: time
@@ -99,7 +99,7 @@
     entity_id: switch.innr_sp_120_ed448903_on_off
     domain: switch
 - id: '1583773866555'
-  alias: z Dekoration svarta ljusstakar släck
+  alias: "Dekoration \U0001F54E svarta ljusstakar släck"
   description: ''
   trigger:
   - at: '21:30:00'
@@ -496,7 +496,7 @@
     entity_id: all
   mode: single
 - id: '1632909230885'
-  alias: z Dekoration stjärna tänd
+  alias: Dekoration ⭐ stjärna tänd
   description: ''
   trigger:
   - platform: sun
@@ -767,6 +767,7 @@
     entity_id: cover.rullgardin_arbetsrum_1
     type: set_position
     position: 0
+    enabled: false
   - delay:
       hours: 0
       minutes: 0
@@ -803,6 +804,7 @@
     entity_id: cover.rullgardin_arbetsrum_1
     type: set_position
     position: 100
+    enabled: false
   - delay:
       hours: 0
       minutes: 0
@@ -985,7 +987,7 @@
       entity_id: switch.badrumspegel_uppe
   mode: restart
 - id: '1670138805403'
-  alias: z Dekoration stjärna släck
+  alias: Dekoration ⭐ stjärna släck
   description: ''
   trigger:
   - platform: sun
@@ -1001,7 +1003,7 @@
     data: {}
   mode: single
 - id: '1670874152255'
-  alias: z Dekoration balkong tänd
+  alias: Dekoration balkong tänd
   description: ''
   trigger:
   - platform: sun
@@ -1009,6 +1011,7 @@
     offset: 0
   - platform: time
     at: 05:30:00
+    enabled: false
   condition: []
   action:
   - type: turn_on
@@ -1021,12 +1024,13 @@
     domain: switch
   mode: single
 - id: '1670874204130'
-  alias: z Dekoration balkong släck
+  alias: Dekoration balkong släck
   description: ''
   trigger:
   - platform: sun
     event: sunrise
     offset: 0
+    enabled: false
   - platform: time
     at: '23:00:00'
   condition: []
