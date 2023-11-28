@@ -993,6 +993,8 @@
   - platform: sun
     event: sunrise
     offset: 01:00:00
+  - platform: time
+    at: '23:00:00'
   condition: []
   action:
   - service: switch.turn_off
@@ -1102,4 +1104,42 @@
     device_id: 09d68373bc37409a28c11961a1bf5a27
     entity_id: light.signify_netherlands_b_v_lcx004_light
     domain: light
+  mode: single
+- id: '1701201701685'
+  alias: Lampa badkarsstyrning
+  description: ''
+  trigger:
+  - device_id: c2c54c240b883a57d936254928476598
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+    id: stor
+  - device_id: c2c54c240b883a57d936254928476598
+    domain: zha
+    platform: device
+    type: remote_button_double_press
+    subtype: turn_on
+    id: liten
+  condition: []
+  action:
+  - if:
+    - condition: trigger
+      id:
+      - stor
+    then:
+    - service: light.toggle
+      data: {}
+      target:
+        entity_id: light.badrumslampa_uppe
+  - if:
+    - condition: trigger
+      id:
+      - liten
+    then:
+    - service: light.toggle
+      data: {}
+      target:
+        entity_id:
+        - light.badrumspegel_uppe
   mode: single
