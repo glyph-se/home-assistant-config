@@ -1150,6 +1150,8 @@
   - platform: sun
     event: sunset
     offset: -01:00:00
+  - platform: time
+    at: 05:30:00
   condition: []
   action:
   - type: turn_on
@@ -1163,6 +1165,8 @@
   trigger:
   - platform: time
     at: '22:00:00'
+  - platform: time
+    at: 08:00:00
   condition: []
   action:
   - type: turn_off
