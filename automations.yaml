@@ -1143,3 +1143,30 @@
         entity_id:
         - light.badrumspegel_uppe
   mode: single
+- id: '1701598027475'
+  alias: Julgran tänd
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -01:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: eff3b8035e43c4b6ae4b409f60e6e5c8
+    entity_id: c7ee71fa4e4ae71da3a8bdbc62578aad
+    domain: light
+  mode: single
+- id: '1701598057422'
+  alias: Julgran släck
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: eff3b8035e43c4b6ae4b409f60e6e5c8
+    entity_id: c7ee71fa4e4ae71da3a8bdbc62578aad
+    domain: light
+  mode: single
