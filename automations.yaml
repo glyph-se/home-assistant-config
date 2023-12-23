@@ -935,9 +935,13 @@
       domain: binary_sensor
       for:
         hours: 0
-        minutes: 2
+        minutes: 5
         seconds: 0
-    timeout: 36000
+    timeout:
+      hours: 10
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
   - if:
     - condition: not
       conditions:
@@ -949,7 +953,11 @@
       - platform: numeric_state
         entity_id: sensor.innr_sp_120_59328903_electrical_measurement
         below: '10'
-      timeout: '36000'
+      timeout:
+        hours: 10
+        minutes: 0
+        seconds: 0
+        milliseconds: 0
     else: []
   - type: turn_off
     device_id: 30555272752dc06827a67032af1eb20c
