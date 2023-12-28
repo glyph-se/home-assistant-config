@@ -1152,12 +1152,13 @@
         - light.badrumspegel_uppe
   mode: single
 - id: '1701598027475'
-  alias: Julgran tänd
+  alias: "Dekoration julgran \U0001F384 tänd"
   description: ''
   trigger:
   - platform: sun
     event: sunset
     offset: -01:00:00
+    enabled: false
   - platform: time
     at: 05:30:00
   condition: []
@@ -1168,13 +1169,14 @@
     domain: light
   mode: single
 - id: '1701598057422'
-  alias: Julgran släck
+  alias: "Dekoration julgran \U0001F384 släck"
   description: ''
   trigger:
   - platform: time
     at: '22:00:00'
   - platform: time
     at: 08:00:00
+    enabled: false
   condition: []
   action:
   - type: turn_off
