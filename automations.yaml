@@ -111,11 +111,12 @@
     entity_id: switch.innr_sp_120_ed448903_on_off
     domain: switch
 - id: '1584047833146'
-  alias: z Dekoration korgar tänd
+  alias: "Dekoration \U0001F9FA korgar tänd"
   description: ''
   trigger:
   - event: sunset
     platform: sun
+    offset: -01:00:00
   condition: []
   action:
   - service: light.turn_on
@@ -128,10 +129,10 @@
       - light.philips_lta001_40e83008_level_light_color_on_off
       - light.philips_lta001_bc2fab08_level_light_color_on_off
 - id: '1584047917317'
-  alias: z Dekoration korgar släck
+  alias: "Dekoration \U0001F9FA korgar släck"
   description: ''
   trigger:
-  - at: '23:00:00'
+  - at: '22:00:00'
     platform: time
   condition: []
   action:
@@ -182,7 +183,7 @@
     domain: light
   mode: single
 - id: '1625166644648'
-  alias: Skafferi tänd
+  alias: Lampa skafferi tänd
   description: ''
   trigger:
   - type: opened
@@ -198,7 +199,7 @@
     data: {}
   mode: restart
 - id: '1625167345545'
-  alias: Skafferi släck
+  alias: Lampa skafferi släck
   description: ''
   trigger:
   - type: not_opened
@@ -460,7 +461,7 @@
       entity_id: light.trapplampa
   mode: single
 - id: '1631561711121'
-  alias: Gå hemifrån
+  alias: Action ▶️ Gå hemifrån
   description: ''
   trigger:
   - platform: event
@@ -965,7 +966,7 @@
     domain: light
   mode: single
 - id: '1661885524056'
-  alias: Badrumsspegel uppe auto
+  alias: Lampa badrumsspegel uppe auto
   description: ''
   trigger:
   - type: opened
@@ -1055,7 +1056,7 @@
     domain: switch
   mode: single
 - id: '1673775956922'
-  alias: Badrumsspegel nere auto
+  alias: Lampa badrumsspegel nere auto
   description: ''
   trigger:
   - type: opened
@@ -1087,7 +1088,7 @@
       - switch.badrumspegel_nere
   mode: restart
 - id: '1685904801707'
-  alias: Köksö ledstrip tänd
+  alias: Dekoration köksö ledstrip tänd
   description: ''
   trigger:
   - platform: sun
@@ -1101,7 +1102,7 @@
     domain: light
   mode: single
 - id: '1685905108462'
-  alias: Köksö ledstrip släck
+  alias: Dekoration köksö ledstrip släck
   description: ''
   trigger:
   - platform: time
@@ -1152,7 +1153,7 @@
         - light.badrumspegel_uppe
   mode: single
 - id: '1701598027475'
-  alias: "Dekoration julgran \U0001F384 tänd"
+  alias: "Dekoration \U0001F384 julgran tänd"
   description: ''
   trigger:
   - platform: sun
@@ -1169,7 +1170,7 @@
     domain: light
   mode: single
 - id: '1701598057422'
-  alias: "Dekoration julgran \U0001F384 släck"
+  alias: "Dekoration \U0001F384 julgran släck"
   description: ''
   trigger:
   - platform: time
