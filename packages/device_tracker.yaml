@@ -1,6 +1,7 @@
 device_tracker:
   - platform: bluetooth_le_tracker
-    #    interval_seconds: 60
+    track_battery: true
+    interval_seconds: 60
     consider_home: 00:10:00
     new_device_defaults:
       track_new_devices: false
