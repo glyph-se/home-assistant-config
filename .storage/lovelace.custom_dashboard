@@ -436,6 +436,16 @@
                     "yellow": 25,
                     "red": 10
                   }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.badkarsknapp_battery",
+                  "name": "Badkarsknapp",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
                 }
               ],
               "columns": 4
