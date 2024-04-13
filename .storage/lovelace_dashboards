@@ -18,7 +18,7 @@
         "icon": "mdi:map",
         "title": "Map",
         "url_path": "map",
-        "show_in_sidebar": true,
+        "show_in_sidebar": false,
         "require_admin": false,
         "mode": "storage"
       }
