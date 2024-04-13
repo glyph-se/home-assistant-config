@@ -1,17 +1,27 @@
 {
-    "version": 1,
-    "key": "lovelace_dashboards",
-    "data": {
-        "items": [
-            {
-                "require_admin": false,
-                "show_in_sidebar": true,
-                "icon": "mdi:home-heart",
-                "title": "Custom dashboard",
-                "url_path": "custom-dashboard",
-                "mode": "storage",
-                "id": "custom_dashboard"
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_dashboards",
+  "data": {
+    "items": [
+      {
+        "require_admin": false,
+        "show_in_sidebar": true,
+        "icon": "mdi:home-heart",
+        "title": "Custom dashboard",
+        "url_path": "custom-dashboard",
+        "mode": "storage",
+        "id": "custom_dashboard"
+      },
+      {
+        "id": "map",
+        "icon": "mdi:map",
+        "title": "Map",
+        "url_path": "map",
+        "show_in_sidebar": true,
+        "require_admin": false,
+        "mode": "storage"
+      }
+    ]
+  }
 }
