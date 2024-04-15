@@ -213,10 +213,9 @@
     entity_id: binary_sensor.skafferisensor_on_off
     domain: binary_sensor
     for:
-      hours: 0
-      minutes: 30
+      hours: 1
+      minutes: 0
       seconds: 0
-      milliseconds: 0
   condition: []
   action:
   - service: switch.turn_off
