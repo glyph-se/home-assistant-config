@@ -687,16 +687,31 @@
     to: 'on'
   condition: []
   action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
   - device_id: cb9837eea3df69d7a80c301f97957010
     domain: cover
     entity_id: cover.rullgardin_sovrum_1
     type: set_position
     position: 0
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
   - device_id: 2aa8b40bcda999373e14624bdd2f5db4
     domain: cover
     entity_id: cover.rullgardin_sovrum_2
     type: set_position
     position: 0
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
   mode: single
 - id: '1645197903658'
   alias: Rullgardin sovrum upp
@@ -850,7 +865,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 7
       milliseconds: 0
   - device_id: 16e992059cbf48897a13a76761597f90
     domain: cover
@@ -860,7 +875,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 7
       milliseconds: 0
   mode: single
 - id: '1650556172490'
