@@ -941,7 +941,6 @@
     device_id: 30555272752dc06827a67032af1eb20c
     entity_id: light.arbetsrumslampa
     domain: light
-    brightness_pct: 70
   - wait_for_trigger:
     - type: not_occupied
       platform: device
