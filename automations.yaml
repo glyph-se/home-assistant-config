@@ -90,7 +90,7 @@
     event: sunset
   condition:
   - condition: sun
-    after: sunset
+    before: sunset
   - condition: time
     after: '16:00:00'
   action:
