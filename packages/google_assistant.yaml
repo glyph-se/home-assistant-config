@@ -26,8 +26,6 @@ google_assistant:
       expose: true
     switch.skafferilampa:
       expose: true
-    light.korgar_zha_group_0x0002: # Currently not plugged in
-      expose: false
     media_player.flora:
       expose: true
 # Extra logs for Google Assistant debugging
