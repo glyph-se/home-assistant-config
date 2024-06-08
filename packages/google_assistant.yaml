@@ -18,6 +18,10 @@ google_assistant:
       expose: true
     sensor.badrumsensor_uppe_temperature:
       expose: true
+    sensor.arbetsrumsensor_temperature:
+      expose: true
+    sensor.kokssensor_temperature:
+      expose: true
     input_boolean.nattlage:
       expose: true
     switch.skafferilampa:
