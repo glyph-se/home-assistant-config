@@ -743,16 +743,31 @@
       minutes: 0
       seconds: 0
   action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
   - device_id: 2aa8b40bcda999373e14624bdd2f5db4
     domain: cover
     entity_id: cover.rullgardin_sovrum_2
     type: set_position
     position: 100
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
   - device_id: cb9837eea3df69d7a80c301f97957010
     domain: cover
     entity_id: cover.rullgardin_sovrum_1
     type: set_position
     position: 100
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
   mode: single
 - id: '1646675799957'
   alias: Rullgardin arbetsrum ner
@@ -767,7 +782,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 11
       milliseconds: 0
   - device_id: 2adb6171ac15ee8380b0ed725b450af0
     domain: cover
@@ -778,7 +793,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 11
       milliseconds: 0
     enabled: false
   - device_id: 25d7d856f8d8880d5e78c62fa066b230
@@ -794,7 +809,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 11
       milliseconds: 0
   mode: single
 - id: '1646675989803'
@@ -810,7 +825,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 11
       milliseconds: 0
   - device_id: 2adb6171ac15ee8380b0ed725b450af0
     domain: cover
@@ -821,7 +836,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 11
       milliseconds: 0
     enabled: false
   - device_id: 25d7d856f8d8880d5e78c62fa066b230
@@ -837,7 +852,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 11
       milliseconds: 0
   mode: single
 - id: '1647247160318'
@@ -853,7 +868,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 7
       milliseconds: 0
   - device_id: 16e992059cbf48897a13a76761597f90
     domain: cover
@@ -863,7 +878,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 7
       milliseconds: 0
   mode: single
 - id: '1648567411037'
@@ -902,16 +917,31 @@
     from: 'off'
   condition: []
   action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
   - device_id: bd3630fd9e8c2c1f303577b5c0292830
     domain: cover
     entity_id: cover.rullgardin_takterrass_1
     type: set_position
     position: 0
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
   - device_id: c3fb9245c6ca7edc4d8d65d5ec2a1b99
     domain: cover
     entity_id: cover.rullgardin_takterrass_2
     type: set_position
     position: 0
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
   mode: single
 - id: '1650556217010'
   alias: Rullgardin takterrass upp
@@ -923,16 +953,31 @@
     from: 'on'
   condition: []
   action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
   - device_id: bd3630fd9e8c2c1f303577b5c0292830
     domain: cover
     entity_id: cover.rullgardin_takterrass_1
     type: set_position
     position: 100
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
   - device_id: c3fb9245c6ca7edc4d8d65d5ec2a1b99
     domain: cover
     entity_id: cover.rullgardin_takterrass_2
     type: set_position
     position: 100
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
   mode: single
 - id: '1654026209306'
   alias: Lampa arbetsrum auto
