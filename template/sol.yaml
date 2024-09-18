@@ -10,7 +10,7 @@
       state: >-
         {{
         (state_attr("sun.sun", "azimuth") > 138) and
-        (state_attr("sun.sun", "elevation") > 12) and
+        (state_attr("sun.sun", "elevation") > 10) and
         states("binary_sensor.soligt_vader")
         }}
     - name: "Soligt väder"
