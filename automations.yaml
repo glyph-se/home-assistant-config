@@ -699,16 +699,23 @@
     entity_id: cover.rullgardin_sovrum_1
     type: set_position
     position: 0
+    enabled: false
   - delay:
       hours: 0
       minutes: 0
       seconds: 5
       milliseconds: 0
+    enabled: false
   - device_id: 2aa8b40bcda999373e14624bdd2f5db4
     domain: cover
     entity_id: cover.rullgardin_sovrum_2
     type: set_position
     position: 0
+    enabled: false
+  - service: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.morklagg_sovrum
   - delay:
       hours: 0
       minutes: 0
@@ -748,21 +755,28 @@
       minutes: 0
       seconds: 5
       milliseconds: 0
+  - service: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.oppna_sovrum
   - device_id: 2aa8b40bcda999373e14624bdd2f5db4
     domain: cover
     entity_id: cover.rullgardin_sovrum_2
     type: set_position
     position: 100
+    enabled: false
   - delay:
       hours: 0
       minutes: 0
       seconds: 5
       milliseconds: 0
+    enabled: false
   - device_id: cb9837eea3df69d7a80c301f97957010
     domain: cover
     entity_id: cover.rullgardin_sovrum_1
     type: set_position
     position: 100
+    enabled: false
   - delay:
       hours: 0
       minutes: 0
