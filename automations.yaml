@@ -621,7 +621,7 @@
       - condition: or
         conditions:
         - condition: template
-          value_template: '{{ repeat.index == 60 }}'
+          value_template: '{{ repeat.index == 90 }}'
         - condition: and
           conditions:
           - type: is_not_occupied
