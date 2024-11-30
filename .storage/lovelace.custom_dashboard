@@ -674,6 +674,9 @@
                 },
                 {
                   "entity": "input_boolean.nattlage"
+                },
+                {
+                  "entity": "input_boolean.sol_automation"
                 }
               ]
             },
