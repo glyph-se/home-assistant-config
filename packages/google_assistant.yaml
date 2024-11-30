@@ -24,6 +24,8 @@ google_assistant:
       expose: true
     input_boolean.nattlage:
       expose: true
+    input_boolean.sol_automation:
+      expose: true
     switch.skafferilampa:
       expose: true
     media_player.flora:
