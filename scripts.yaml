@@ -1,16 +1,36 @@
-powerview_uppdatera_batteristatus:
+powerview_uppdater_batteri:
+  alias: 'PowerView: Uppdatera batteri'
+  sequence:
+  - action: homeassistant.update_entity
+    metadata: {}
+    data:
+      entity_id:
+      - sensor.rullgardin_tvhorna_battery
+      - sensor.rullgardin_arbetsrum_1_battery
+      - sensor.rullgardin_arbetsrum_2_battery
+      - sensor.rullgardin_sovrum_1_battery
+      - sensor.rullgardin_sovrum_2_battery
+      - sensor.rullgardin_takterrass_1_battery
+      - sensor.rullgardin_takterrass_2_battery
+      - sensor.rullgardin_grona_rummet_battery
+      - sensor.rullgardin_bla_rummet_battery
+  description: ''
+  icon: mdi:battery-check
+powerview_uppdatera_position:
   alias: 'PowerView: Uppdatera position'
   sequence:
-  - service: homeassistant.update_entity
-    data: {}
-    target:
+  - action: homeassistant.update_entity
+    metadata: {}
+    data:
       entity_id:
       - cover.rullgardin_arbetsrum_1
       - cover.rullgardin_arbetsrum_2
+      - cover.rullgardin_bla_rummet
+      - cover.rullgardin_grona_rummet
       - cover.rullgardin_sovrum_1
       - cover.rullgardin_sovrum_2
-      - cover.rullgardin_tvhorna
       - cover.rullgardin_takterrass_1
       - cover.rullgardin_takterrass_2
-  mode: single
+      - cover.rullgardin_tvhorna
+  description: ''
   icon: mdi:roller-shade
