@@ -1,7 +1,7 @@
 #zha:
 #  zigpy_config:
 #    ota:
-#      otau_directory: /config/zigpy_ota
+# See https://github.com/zigpy/zigpy/wiki/OTA-Configuration for details
 # Extra logs for ZHA OTA firmware updates to show progress
 #logger:
 #  default: info
