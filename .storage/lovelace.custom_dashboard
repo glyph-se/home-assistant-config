@@ -621,6 +621,18 @@
                   }
                 },
                 {
+                  "type": "gauge",
+                  "entity": "sensor.rullgardin_bla_rummet_battery",
+                  "min": 0,
+                  "max": 100,
+                  "name": "Blå rummet",
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
                   "show_name": true,
                   "show_icon": true,
                   "type": "button",
