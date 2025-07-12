@@ -4,16 +4,16 @@
         {{
         (state_attr("sun.sun", "elevation") > 10) and
         (state_attr("sun.sun", "azimuth") < 190) and
-        states("binary_sensor.soligt_vader") and
-        states("input_boolean.sol_automation")
+        states("binary_sensor.soligt_vader") == 'on' and
+        states("input_boolean.sol_automation") == 'on'
         }}
     - name: "Sol syd"
       state: >-
         {{
         (state_attr("sun.sun", "azimuth") > 138) and
         (state_attr("sun.sun", "elevation") > 8) and
-        states("binary_sensor.soligt_vader") and
-        states("input_boolean.sol_automation")
+        states("binary_sensor.soligt_vader") == 'on' and
+        states("input_boolean.sol_automation") == 'on'
         }}
     - name: "Soligt väder"
       state: >
