@@ -16,7 +16,8 @@
         states("input_boolean.sol_automation")
         }}
     - name: "Soligt väder"
-      state: '{{ (states("weather.home") in ("sunny", "partlycloudy")) }}'
+      state: >
+        {{ (states("weather.home") in ("sunny", "partlycloudy")) }}
       delay_on:
         minutes: 6
       delay_off:
