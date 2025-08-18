@@ -244,9 +244,15 @@
                 },
                 {
                   "entity": "light.signify_netherlands_b_v_lcx004_light",
-                  "name": "Köksö",
+                  "name": "Köksö ledstrip",
                   "icon": "mdi:countertop",
                   "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "light.kokso",
+                  "name": "Köksö",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:countertop"
                 }
               ],
               "title": "Kök",
