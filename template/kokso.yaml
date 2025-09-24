@@ -4,7 +4,7 @@
       level: "{{ state_attr('light.kokso_strip', 'brightness') }}"
       temperature: "{{ state_attr('light.kokso_strip', 'color_temp') }}"
       turn_on:
-        action: light.turn_off
+        action: light.turn_on
         entity_id: light.kokso_knapp_basic
       turn_off:
         action: light.turn_off
