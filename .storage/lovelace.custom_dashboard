@@ -249,7 +249,7 @@
                   "secondary_info": "last-changed"
                 },
                 {
-                  "entity": "light.kokso_combined",
+                  "entity": "light.kokso",
                   "name": "Köksö",
                   "secondary_info": "last-changed",
                   "icon": "mdi:countertop"
