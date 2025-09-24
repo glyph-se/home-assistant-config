@@ -30,6 +30,10 @@ google_assistant:
       expose: true
     media_player.flora:
       expose: true
+    light.kokso_strip:
+      expose: false
+    light.kokso_knapp_basic:
+      expose: false
 # Extra logs for Google Assistant debugging
 #logger:
 #  default: error
