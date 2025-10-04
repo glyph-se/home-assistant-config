@@ -34,7 +34,7 @@ google_assistant:
       expose: false
     light.kokso_knapp_basic:
       expose: false
-    light.kokso_knapp_basic_2:
+    light.kokso_basic_2:
       expose: false
     light.kokso_2:
       expose: false
