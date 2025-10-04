@@ -1281,11 +1281,13 @@
     - light.kokso_2_2
     id: 'on'
     to: 'on'
+    from: 'off'
   - trigger: state
     entity_id:
     - light.kokso_2_2
     id: 'off'
     to: 'off'
+    from: 'on'
   conditions: []
   actions:
   - type: toggle
