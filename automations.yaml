@@ -1279,6 +1279,13 @@
   - trigger: state
     entity_id:
     - light.kokso_2_2
+    id: 'on'
+    to: 'on'
+  - trigger: state
+    entity_id:
+    - light.kokso_2_2
+    id: 'off'
+    to: 'off'
   conditions: []
   actions:
   - type: toggle
