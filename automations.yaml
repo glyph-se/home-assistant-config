@@ -1272,26 +1272,3 @@
     entity_id: c7ee71fa4e4ae71da3a8bdbc62578aad
     domain: light
   mode: single
-- id: '1759604823491'
-  alias: Köksö manual
-  description: ''
-  triggers:
-  - trigger: state
-    entity_id:
-    - light.kokso_2_2
-    id: 'on'
-    to: 'on'
-    from: 'off'
-  - trigger: state
-    entity_id:
-    - light.kokso_2_2
-    id: 'off'
-    to: 'off'
-    from: 'on'
-  conditions: []
-  actions:
-  - type: toggle
-    device_id: 5e6fe905217ef0056eba4127368862e7
-    entity_id: 7b9909d095607fc37750996b2db3e825
-    domain: light
-  mode: single
