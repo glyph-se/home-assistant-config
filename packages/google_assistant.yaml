@@ -30,9 +30,15 @@ google_assistant:
       expose: true
     media_player.flora:
       expose: true
-    light.kokso_strip:
-      expose: false
     light.kokso_knapp_basic:
+      expose: false
+    light.kokso_knapp_basic_2:
+      expose: false
+    light.kokso_2:
+      expose: false
+    light.kokso_2_2:
+      expose: false
+    light.kokso:
       expose: false
 # Extra logs for Google Assistant debugging
 #logger:
