@@ -1085,20 +1085,20 @@
 - id: '1670138805403'
   alias: Dekoration ⭐ stjärna släck
   description: ''
-  trigger:
-  - platform: sun
-    event: sunrise
+  triggers:
+  - event: sunrise
     offset: 01:00:00
-  - platform: time
-    at: '22:00:00'
-  condition: []
-  action:
-  - service: switch.turn_off
-    target:
+    trigger: sun
+  - at: '21:30:00'
+    trigger: time
+  conditions: []
+  actions:
+  - target:
       device_id:
       - 67515fccbe29472c8032217b84fb9b1b
       - 8269351cd5fd4ab7aa20a373c72279d3
     data: {}
+    action: switch.turn_off
   mode: single
 - id: '1670874152255'
   alias: Dekoration balkong tänd
@@ -1260,7 +1260,7 @@
   alias: "Dekoration \U0001F384 julgran släck"
   description: ''
   triggers:
-  - at: '22:00:00'
+  - at: '21:30:00'
     trigger: time
   - at: '10:00:00'
     enabled: true
