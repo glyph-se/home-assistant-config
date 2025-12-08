@@ -1,7 +1,7 @@
 light:
   - platform: switch
     name: Köksspottar
-    entity_id: switch.koksspottar
+    entity_id: switch.koksspottar_knapp
   - platform: switch
     name: Kökshörn
     entity_id: switch.kokshorn
