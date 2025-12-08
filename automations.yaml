@@ -367,25 +367,25 @@
 - id: '1630233997180'
   alias: Lampa kök auto
   description: ''
-  trigger:
+  triggers:
   - type: occupied
-    platform: device
     device_id: 0636d3c8b83e02ef17b6b7f4350af0c2
     entity_id: binary_sensor.hallsensor_occupancy
     domain: binary_sensor
     enabled: false
+    trigger: device
   - type: occupied
-    platform: device
     device_id: 0ed67a986d805df2f3c109d23f1c772e
     entity_id: binary_sensor.vardagsrumssensor_occupancy
     domain: binary_sensor
     enabled: false
+    trigger: device
   - type: occupied
-    platform: device
     device_id: 56758ef368d0c49c297fdc3179059962
     entity_id: binary_sensor.signify_netherlands_b_v_sml003_occupancy
     domain: binary_sensor
-  condition:
+    trigger: device
+  conditions:
   - condition: or
     conditions:
     - condition: sun
@@ -397,14 +397,16 @@
   - condition: state
     entity_id: input_boolean.nattlage
     state: 'off'
-  action:
-  - service: light.turn_on
-    target:
-      entity_id: light.kokslampor
-    data: {}
+  actions:
+  - target:
+      entity_id:
+      - light.koksspottar_knapp
+      - light.dresden_elektronik_conbee_ii_koksspottar
+    data:
+      brightness_pct: 50
+    action: light.turn_on
   - wait_for_trigger:
     - type: not_occupied
-      platform: device
       device_id: 56758ef368d0c49c297fdc3179059962
       entity_id: binary_sensor.signify_netherlands_b_v_sml003_occupancy
       domain: binary_sensor
@@ -412,15 +414,17 @@
         hours: 0
         minutes: 30
         seconds: 0
+      trigger: device
     timeout:
       hours: 6
       minutes: 0
       seconds: 0
       milliseconds: 0
-  - service: light.turn_off
-    target:
-      entity_id: light.kokslampor
+  - target:
+      entity_id:
+      - light.dresden_elektronik_conbee_ii_koksspottar
     data: {}
+    action: light.turn_off
   mode: single
 - id: '1631392792807'
   alias: Lampa trappa auto (dag)
