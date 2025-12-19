@@ -232,7 +232,7 @@
                   "icon": "mdi:light-recessed"
                 },
                 {
-                  "entity": "light.kokslampor",
+                  "entity": "light.dresden_elektronik_conbee_ii_koksspottar",
                   "secondary_info": "last-changed",
                   "icon": "mdi:track-light"
                 },
