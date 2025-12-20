@@ -40,6 +40,8 @@ google_assistant:
       expose: false
     light.kokso_knapp_2:
       expose: false
+    script.slack_alla_lampor:
+      expose: true
 # Extra logs for Google Assistant debugging
 #logger:
 #  default: error

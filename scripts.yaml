@@ -34,3 +34,14 @@ powerview_uppdatera_position:
       - cover.rullgardin_tvhorna
   description: ''
   icon: mdi:roller-shade
+slack_alla_lampor:
+  sequence:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: "{{ states.light |\n  rejectattr('entity_id', 'search', '_knapp$')
+        |\n  map(attribute='entity_id') |\n  list }}"
+  alias: Släck alla lampor
+  description: ''
+  icon: mdi:lightbulb-alert

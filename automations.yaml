@@ -468,19 +468,19 @@
 - id: '1631561711121'
   alias: Action ▶️ Gå hemifrån
   description: ''
-  trigger:
-  - platform: event
-    event_type: zwave_js_value_notification
+  triggers:
+  - event_type: zwave_js_value_notification
     event_data:
       node_id: 4
       value_raw: 25
+    trigger: event
   - device_id: ca3290b522e632cb9881e9b3e16ed040
     domain: zha
-    platform: device
     type: remote_button_short_press
     subtype: turn_on
-  condition: []
-  action:
+    trigger: device
+  conditions: []
+  actions:
   - if:
     - condition: state
       entity_id: binary_sensor.ytterdorrar
@@ -489,17 +489,21 @@
     - repeat:
         count: '6'
         sequence:
-        - service: light.toggle
-          data: {}
+        - data: {}
           target:
             device_id: a9b757038722af90948fd69813460753
+          action: light.toggle
         - delay:
             hours: 0
             minutes: 0
             seconds: 1
             milliseconds: 0
-  - service: light.turn_off
-    entity_id: all
+  - entity_id: all
+    action: light.turn_off
+    enabled: false
+  - action: script.slack_alla_lampor
+    metadata: {}
+    data: {}
   mode: single
 - id: '1632909230885'
   alias: Dekoration ⭐ stjärna tänd
