@@ -38,48 +38,6 @@
     entity_id: switch.innr_sp_120_59328903_on_off
     type: turn_off
   mode: single
-- id: 1583772997902_boll_on
-  alias: z Blå boll tänd
-  description: ''
-  trigger:
-  - event: sunset
-    platform: sun
-  condition: []
-  action:
-  - device_id: 8269351cd5fd4ab7aa20a373c72279d3
-    domain: switch
-    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
-    type: turn_on
-- id: 1583773386688_boll_off_vardag
-  alias: z Blå boll släck (vardag)
-  description: ''
-  trigger:
-  - at: '22:00:00'
-    platform: time
-  condition:
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
-  action:
-  - device_id: 8269351cd5fd4ab7aa20a373c72279d3
-    domain: switch
-    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
-    type: turn_off
-- id: 1583773386689_boll_off_helg
-  alias: z Blå boll släck (helg)
-  description: ''
-  trigger:
-  - at: '23:59:00'
-    platform: time
-  condition:
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'off'
-  action:
-  - device_id: 8269351cd5fd4ab7aa20a373c72279d3
-    domain: switch
-    entity_id: switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off
-    type: turn_off
 - id: '1583773805811'
   alias: "Dekoration \U0001F54E svarta ljusstakar tänd"
   description: ''
@@ -508,19 +466,19 @@
 - id: '1632909230885'
   alias: Dekoration ⭐ stjärna tänd
   description: ''
-  trigger:
-  - platform: sun
-    event: sunset
-  condition:
+  triggers:
+  - event: sunset
+    trigger: sun
+  conditions:
   - condition: time
-    before: '22:59'
-  action:
-  - service: switch.turn_on
-    target:
+    before: '21:29:00'
+  actions:
+  - target:
       device_id:
       - 8269351cd5fd4ab7aa20a373c72279d3
       - 67515fccbe29472c8032217b84fb9b1b
     data: {}
+    action: switch.turn_on
   mode: single
 - id: '1640613213898'
   alias: Lampa badrum nere auto
