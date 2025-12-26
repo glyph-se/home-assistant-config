@@ -11,17 +11,27 @@ google_assistant:
   entity_config:
     sensor.hallsensor_temperature:
       expose: true
-    sensor.vardagsrumssensor_temperature:
+    sensor.hallsensor_temperature_adjusted:
       expose: true
     sensor.sovrumssensor_temperature:
       expose: true
+    sensor.sovrumssensor_temperature_adjusted:
+      expose: true
     sensor.badrumsensor_nere_temperature:
+      expose: true
+    sensor.badrumsensor_nere_temperature_adjusted:
       expose: true
     sensor.badrumsensor_uppe_temperature:
       expose: true
+    sensor.badrumsensor_uppe_temperature_adjusted:
+      expose: true
     sensor.arbetsrumsensor_temperature:
       expose: true
+    sensor.arbetsrumsensor_temperature_adjusted:
+      expose: true
     sensor.kokssensor_temperature:
+      expose: true
+    sensor.vardagsrumssensor_temperature:
       expose: true
     input_boolean.nattlage:
       expose: true
