@@ -40,8 +40,8 @@ slack_alla_lampor:
     metadata: {}
     data: {}
     target:
-      entity_id: "{{ states.light |\n  rejectattr('entity_id', 'search', '_knapp$')
-        |\n  map(attribute='entity_id') |\n  list }}"
+      entity_id: "{{ states.light |\n  selectattr('state', 'eq', 'on') |\n  rejectattr('entity_id',
+        'search', '_knapp$') |\n  map(attribute='entity_id') |\n  list }}"
   alias: Släck alla lampor
   description: ''
   icon: mdi:lightbulb-alert
