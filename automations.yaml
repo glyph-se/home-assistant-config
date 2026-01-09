@@ -73,36 +73,32 @@
 - id: '1584047833146'
   alias: "Dekoration \U0001F9FA korgar tänd"
   description: ''
-  trigger:
+  triggers:
   - event: sunset
-    platform: sun
     offset: -01:00:00
-  condition: []
-  action:
-  - service: light.turn_on
-    data:
+    trigger: sun
+  conditions: []
+  actions:
+  - data:
       color_temp: 430
       brightness: 160
     target:
       entity_id:
-      - light.philips_lta001_5a422d08_level_light_color_on_off
-      - light.philips_lta001_40e83008_level_light_color_on_off
-      - light.philips_lta001_bc2fab08_level_light_color_on_off
+      - light.korgar_zha_group_0x0002
+    action: light.turn_on
 - id: '1584047917317'
   alias: "Dekoration \U0001F9FA korgar släck"
   description: ''
-  trigger:
+  triggers:
   - at: '22:00:00'
-    platform: time
-  condition: []
-  action:
-  - service: light.turn_off
-    data: {}
+    trigger: time
+  conditions: []
+  actions:
+  - data: {}
     target:
       entity_id:
-      - light.philips_lta001_5a422d08_level_light_color_on_off
-      - light.philips_lta001_40e83008_level_light_color_on_off
-      - light.philips_lta001_bc2fab08_level_light_color_on_off
+      - light.korgar_zha_group_0x0002
+    action: light.turn_off
 - id: '1620915831174'
   alias: Lampa hall auto
   description: ''
