@@ -644,10 +644,10 @@
                   "type": "button",
                   "tap_action": {
                     "action": "perform-action",
-                    "perform_action": "script.powerview_uppdater_batteri",
+                    "perform_action": "script.powerview_uppdatera_batteri",
                     "target": {}
                   },
-                  "entity": "script.powerview_uppdater_batteri",
+                  "entity": "script.powerview_uppdatera_batteri",
                   "show_state": true,
                   "hold_action": {
                     "action": "none"
