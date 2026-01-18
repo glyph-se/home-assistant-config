@@ -1065,15 +1065,15 @@
 - id: '1670874152255'
   alias: Dekoration balkong tänd
   description: ''
-  trigger:
-  - platform: sun
-    event: sunset
+  triggers:
+  - event: sunset
     offset: 0
-  - platform: time
-    at: 05:30:00
-    enabled: false
-  condition: []
-  action:
+    trigger: sun
+  - at: 05:30:00
+    enabled: true
+    trigger: time
+  conditions: []
+  actions:
   - type: turn_on
     device_id: 5383ed961bf1b81313ab8341d5bdd665
     entity_id: switch.balkong_uppe_switch
@@ -1086,15 +1086,15 @@
 - id: '1670874204130'
   alias: Dekoration balkong släck
   description: ''
-  trigger:
-  - platform: sun
-    event: sunrise
+  triggers:
+  - event: sunrise
     offset: 0
-    enabled: false
-  - platform: time
-    at: '23:00:00'
-  condition: []
-  action:
+    enabled: true
+    trigger: sun
+  - at: '23:00:00'
+    trigger: time
+  conditions: []
+  actions:
   - type: turn_off
     device_id: 5383ed961bf1b81313ab8341d5bdd665
     entity_id: switch.balkong_uppe_switch
