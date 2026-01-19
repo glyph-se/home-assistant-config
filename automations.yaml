@@ -1072,7 +1072,13 @@
   - at: 05:30:00
     enabled: true
     trigger: time
-  conditions: []
+  conditions:
+  - condition: or
+    conditions:
+    - condition: sun
+      before: sunrise
+    - condition: time
+      after: '12:00:00'
   actions:
   - type: turn_on
     device_id: 5383ed961bf1b81313ab8341d5bdd665
