@@ -243,7 +243,7 @@
                   "icon": "mdi:string-lights"
                 },
                 {
-                  "entity": "light.signify_netherlands_b_v_lcx004_light",
+                  "entity": "light.kokso_bakkant_ledstrip",
                   "name": "Köksö ledstrip",
                   "icon": "mdi:countertop",
                   "secondary_info": "last-changed"
