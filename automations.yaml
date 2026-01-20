@@ -1268,14 +1268,15 @@
         id:
         - single_click
       - condition: state
-        entity_id: light.kokso_strip
+        entity_id: light.kokso_ledstrip_ovan
         state:
         - 'on'
       sequence:
       - action: light.turn_off
         metadata: {}
         target:
-          entity_id: light.kokso_strip
+          entity_id:
+          - light.kokso_ledstrip_ovan
         data: {}
     - conditions:
       - condition: trigger
@@ -1286,7 +1287,7 @@
         metadata: {}
         target:
           entity_id:
-          - light.kokso_strip
+          - light.kokso_ledstrip_ovan
         data:
           brightness_pct: 100
     default:
@@ -1294,7 +1295,7 @@
       metadata: {}
       target:
         entity_id:
-        - light.kokso_strip
+        - light.kokso_ledstrip_ovan
       data:
         brightness_pct: 40
   - delay:
@@ -1305,6 +1306,7 @@
   - action: light.turn_off
     metadata: {}
     target:
-      entity_id: light.kokso_strip
+      entity_id:
+      - light.kokso_ledstrip_ovan
     data: {}
   mode: restart
