@@ -1240,3 +1240,71 @@
     entity_id: c7ee71fa4e4ae71da3a8bdbc62578aad
     domain: light
   mode: single
+- id: '1768935022147'
+  alias: Lampa köksö styrning
+  description: ''
+  triggers:
+  - device_id: 380fa75a5850a3012518d65de301d3a5
+    domain: zha
+    type: remote_button_short_press
+    subtype: turn_on
+    trigger: device
+    id: single_click
+  - device_id: 380fa75a5850a3012518d65de301d3a5
+    domain: zha
+    type: remote_button_double_press
+    subtype: turn_on
+    trigger: device
+    id: double_click
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: ccd7e04749cac789c8b4166242b7c69c
+    entity_id: 8716c319543737f43daf610c8aec3162
+    domain: light
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - single_click
+      - condition: state
+        entity_id: light.kokso_strip
+        state:
+        - 'on'
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        target:
+          entity_id: light.kokso_strip
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - double_click
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        target:
+          entity_id:
+          - light.kokso_strip
+        data:
+          brightness_pct: 100
+    default:
+    - action: light.turn_on
+      metadata: {}
+      target:
+        entity_id:
+        - light.kokso_strip
+      data:
+        brightness_pct: 40
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  - action: light.turn_off
+    metadata: {}
+    target:
+      entity_id: light.kokso_strip
+    data: {}
+  mode: restart
