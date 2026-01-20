@@ -1143,30 +1143,30 @@
       - switch.badrumspegel_nere
   mode: restart
 - id: '1685904801707'
-  alias: Dekoration köksö ledstrip tänd
+  alias: Dekoration köksö bakkant tänd
   description: ''
-  trigger:
-  - platform: sun
-    event: sunset
+  triggers:
+  - event: sunset
     offset: -01:00:00
-  condition: []
-  action:
+    trigger: sun
+  conditions: []
+  actions:
   - type: turn_on
     device_id: 09d68373bc37409a28c11961a1bf5a27
-    entity_id: light.signify_netherlands_b_v_lcx004_light
+    entity_id: 806d0e8f4fb93c7616bf0e4bf38b63c5
     domain: light
   mode: single
 - id: '1685905108462'
-  alias: Dekoration köksö ledstrip släck
+  alias: Dekoration köksö bakkant släck
   description: ''
-  trigger:
-  - platform: time
-    at: '22:00:00'
-  condition: []
-  action:
+  triggers:
+  - at: '22:00:00'
+    trigger: time
+  conditions: []
+  actions:
   - type: turn_off
     device_id: 09d68373bc37409a28c11961a1bf5a27
-    entity_id: light.signify_netherlands_b_v_lcx004_light
+    entity_id: 806d0e8f4fb93c7616bf0e4bf38b63c5
     domain: light
   mode: single
 - id: '1701201701685'

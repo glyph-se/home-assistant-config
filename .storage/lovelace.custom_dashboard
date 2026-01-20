@@ -329,7 +329,9 @@
                     "yellow": 25,
                     "red": 10
                   },
-                  "name": "Hallsensor"
+                  "name": {
+                    "type": "device"
+                  }
                 },
                 {
                   "type": "gauge",
@@ -341,7 +343,9 @@
                     "yellow": 25,
                     "red": 10
                   },
-                  "name": "Vardagsrumssensor"
+                  "name": {
+                    "type": "device"
+                  }
                 },
                 {
                   "type": "gauge",
@@ -353,7 +357,9 @@
                     "yellow": 25,
                     "red": 10
                   },
-                  "name": "Sovrumssenor"
+                  "name": {
+                    "type": "device"
+                  }
                 },
                 {
                   "type": "gauge",
@@ -365,14 +371,18 @@
                     "yellow": 25,
                     "red": 10
                   },
-                  "name": "Skafferisensor"
+                  "name": {
+                    "type": "device"
+                  }
                 },
                 {
                   "type": "gauge",
                   "entity": "sensor.badrumsensor_nere_power",
                   "min": 0,
                   "max": 100,
-                  "name": "Badrum nere",
+                  "name": {
+                    "type": "device"
+                  },
                   "severity": {
                     "green": 50,
                     "yellow": 25,
@@ -384,7 +394,9 @@
                   "entity": "sensor.badrumsensor_uppe_power",
                   "min": 0,
                   "max": 100,
-                  "name": "Badrum uppe",
+                  "name": {
+                    "type": "device"
+                  },
                   "severity": {
                     "green": 50,
                     "yellow": 25,
@@ -396,7 +408,9 @@
                   "entity": "sensor.hallknapp_8fa59608_power",
                   "min": 0,
                   "max": 100,
-                  "name": "Hallknapp",
+                  "name": {
+                    "type": "device"
+                  },
                   "severity": {
                     "green": 50,
                     "yellow": 25,
@@ -406,7 +420,9 @@
                 {
                   "type": "gauge",
                   "entity": "sensor.arbetsrumsensor_power",
-                  "name": "Arbetsrumsensor",
+                  "name": {
+                    "type": "device"
+                  },
                   "severity": {
                     "green": 50,
                     "yellow": 25,
@@ -421,7 +437,9 @@
                     "yellow": 25,
                     "red": 10
                   },
-                  "name": "Badrumsspegel uppe"
+                  "name": {
+                    "type": "device"
+                  }
                 },
                 {
                   "type": "gauge",
@@ -431,12 +449,16 @@
                     "yellow": 25,
                     "red": 10
                   },
-                  "name": "Badrumsspegel nere"
+                  "name": {
+                    "type": "device"
+                  }
                 },
                 {
                   "type": "gauge",
                   "entity": "sensor.signify_netherlands_b_v_sml003_battery",
-                  "name": "Kökssensor",
+                  "name": {
+                    "type": "device"
+                  },
                   "severity": {
                     "green": 50,
                     "yellow": 25,
@@ -446,7 +468,21 @@
                 {
                   "type": "gauge",
                   "entity": "sensor.badkarsknapp_battery",
-                  "name": "Badkarsknapp",
+                  "name": {
+                    "type": "device"
+                  },
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.koksflakt_knapp_battery",
+                  "name": {
+                    "type": "device"
+                  },
                   "severity": {
                     "green": 50,
                     "yellow": 25,

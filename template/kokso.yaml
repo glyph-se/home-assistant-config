@@ -1,8 +1,8 @@
 - light:
     - name: "Köksö"
-      state: "{{ is_state('light.kokso_knapp', 'on') and is_state('light.kokso_strip', 'on') }}"
-      level: "{{ state_attr('light.kokso_strip', 'brightness') }}"
-      temperature: "{{ state_attr('light.kokso_strip', 'color_temp') }}"
+      state: "{{ is_state('light.kokso_knapp', 'on') and is_state('light.kokso_ledstrip_ovan', 'on') }}"
+      level: "{{ state_attr('light.kokso_ledstrip_ovan', 'brightness') }}"
+      temperature: "{{ state_attr('light.kokso_ledstrip_ovan', 'color_temp') }}"
       turn_on:
         action: light.turn_on
         entity_id: light.kokso_knapp
@@ -11,11 +11,11 @@
         entity_id: light.kokso_knapp
       set_level:
         action: light.turn_on
-        entity_id: light.kokso_strip
+        entity_id: light.kokso_ledstrip_ovan
         data:
           brightness: "{{ brightness }}"
       set_temperature:
         action: light.turn_on
-        entity_id: light.kokso_strip
+        entity_id: light.kokso_ledstrip_ovan
         data:
           color_temp: "{{ color_temp }}"
