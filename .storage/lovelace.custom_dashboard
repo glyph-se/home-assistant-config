@@ -455,7 +455,7 @@
                 },
                 {
                   "type": "gauge",
-                  "entity": "sensor.signify_netherlands_b_v_sml003_battery",
+                  "entity": "sensor.kokssensor_battery",
                   "name": {
                     "type": "device"
                   },
@@ -501,27 +501,39 @@
                   "entities": [
                     {
                       "entity": "sensor.badrumsensor_nere_temperature",
-                      "name": "Badrum nere"
+                      "name": {
+                        "type": "area"
+                      }
                     },
                     {
                       "entity": "sensor.badrumsensor_uppe_temperature",
-                      "name": "Badrum uppe"
+                      "name": {
+                        "type": "area"
+                      }
                     },
                     {
                       "entity": "sensor.hallsensor_temperature",
-                      "name": "Hall"
+                      "name": {
+                        "type": "area"
+                      }
                     },
                     {
                       "entity": "sensor.sovrumssensor_temperature",
-                      "name": "Sovrum"
+                      "name": {
+                        "type": "area"
+                      }
                     },
                     {
                       "entity": "sensor.vardagsrumssensor_temperature",
-                      "name": "Vardagsrum"
+                      "name": {
+                        "type": "area"
+                      }
                     },
                     {
                       "entity": "sensor.arbetsrumsensor_temperature",
-                      "name": "Arbetsrum"
+                      "name": {
+                        "type": "area"
+                      }
                     },
                     {
                       "entity": "sensor.arbetsrumsensor_temperature_adjusted"
@@ -539,14 +551,16 @@
                       "entity": "sensor.badrumsensor_nere_temperature_adjusted"
                     },
                     {
-                      "entity": "sensor.signify_netherlands_b_v_sml003_temperature"
+                      "entity": "sensor.kokssensor_temperature"
                     }
                   ]
                 },
                 {
+                  "show_current": true,
+                  "show_forecast": false,
                   "type": "weather-forecast",
                   "entity": "weather.home",
-                  "show_forecast": false
+                  "forecast_type": "daily"
                 }
               ]
             },
