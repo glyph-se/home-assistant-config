@@ -1,0 +1,8 @@
+binary_sensor:
+  - platform: group
+    name: Ytterdörrar
+    device_class: opening
+    entities:
+      - binary_sensor.balkongdorrsensor_vardagsrum_vast_opening
+      - binary_sensor.balkongdorrssensor_kok_oster_opening
+      - binary_sensor.balkongdorrssensor_kok_vaster_opening

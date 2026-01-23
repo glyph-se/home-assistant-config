@@ -488,6 +488,42 @@
                     "yellow": 25,
                     "red": 10
                   }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.balkongdorrssensor_kok_oster_battery",
+                  "name": {
+                    "type": "device"
+                  },
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.balkongdorrssensor_kok_vaster_battery",
+                  "name": {
+                    "type": "device"
+                  },
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.balkongdorrsensor_vardagsrum_vast_battery",
+                  "name": {
+                    "type": "device"
+                  },
+                  "severity": {
+                    "green": 50,
+                    "yellow": 25,
+                    "red": 10
+                  }
                 }
               ],
               "columns": 4
@@ -543,6 +579,15 @@
                     },
                     {
                       "entity": "sensor.fuktsensor_badrum_uppe_temperature"
+                    },
+                    {
+                      "entity": "sensor.balkongdorrssensor_kok_oster_devicetemperature"
+                    },
+                    {
+                      "entity": "sensor.balkongdorrssensor_kok_vaster_devicetemperature"
+                    },
+                    {
+                      "entity": "sensor.balkongdorrsensor_vardagsrum_vast_devicetemperature"
                     },
                     {
                       "entity": "sensor.arbetsrumsensor_temperature_adjusted"
