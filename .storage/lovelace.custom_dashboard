@@ -536,6 +536,15 @@
                       }
                     },
                     {
+                      "entity": "sensor.kokssensor_temperature",
+                      "name": {
+                        "type": "area"
+                      }
+                    },
+                    {
+                      "entity": "sensor.lumi_lumi_weather_temperature"
+                    },
+                    {
                       "entity": "sensor.arbetsrumsensor_temperature_adjusted"
                     },
                     {
@@ -551,7 +560,10 @@
                       "entity": "sensor.badrumsensor_nere_temperature_adjusted"
                     },
                     {
-                      "entity": "sensor.kokssensor_temperature"
+                      "entity": "sensor.kokssensor_temperature_adjusted"
+                    },
+                    {
+                      "entity": "sensor.vardagsrumssensor_temperature_adjusted"
                     }
                   ]
                 },
@@ -718,25 +730,43 @@
               "type": "glance",
               "entities": [
                 {
-                  "entity": "sensor.badrumsensor_nere_illuminance"
+                  "entity": "sensor.badrumsensor_nere_illuminance",
+                  "name": {
+                    "type": "area"
+                  }
                 },
                 {
-                  "entity": "sensor.badrumsensor_uppe_illuminance"
+                  "entity": "sensor.badrumsensor_uppe_illuminance",
+                  "name": {
+                    "type": "area"
+                  }
                 },
                 {
-                  "entity": "sensor.hallsensor_illuminance"
+                  "entity": "sensor.hallsensor_illuminance",
+                  "name": {
+                    "type": "area"
+                  }
                 },
                 {
-                  "entity": "sensor.sovrumssensor_illuminance"
+                  "entity": "sensor.sovrumssensor_illuminance",
+                  "name": {
+                    "type": "area"
+                  }
                 },
                 {
                   "entity": "sensor.vardagsrumssensor_illuminance"
                 },
                 {
-                  "entity": "sensor.arbetsrumsensor_illuminance"
+                  "entity": "sensor.arbetsrumsensor_illuminance",
+                  "name": {
+                    "type": "area"
+                  }
                 },
                 {
-                  "entity": "sensor.signify_netherlands_b_v_sml003_illuminance"
+                  "entity": "sensor.kokssensor_illuminance",
+                  "name": {
+                    "type": "area"
+                  }
                 }
               ],
               "title": "Ljusnivåer"
