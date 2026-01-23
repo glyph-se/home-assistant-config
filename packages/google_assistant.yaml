@@ -9,29 +9,21 @@ google_assistant:
     - scene
     - script
   entity_config:
-    sensor.hallsensor_temperature:
-      expose: true
     sensor.hallsensor_temperature_adjusted:
-      expose: true
-    sensor.sovrumssensor_temperature:
       expose: true
     sensor.sovrumssensor_temperature_adjusted:
       expose: true
-    sensor.badrumsensor_nere_temperature:
-      expose: true
     sensor.badrumsensor_nere_temperature_adjusted:
-      expose: true
-    sensor.badrumsensor_uppe_temperature:
       expose: true
     sensor.badrumsensor_uppe_temperature_adjusted:
       expose: true
-    sensor.arbetsrumsensor_temperature:
-      expose: true
     sensor.arbetsrumsensor_temperature_adjusted:
       expose: true
-    sensor.kokssensor_temperature:
+    sensor.kokssensor_temperature_adjusted:
       expose: true
-    sensor.vardagsrumssensor_temperature:
+    sensor.vardagsrumssensor_temperature_adjusted:
+      expose: true
+    sensor.fuktsensor_badrum_uppe_temperature_adjusted:
       expose: true
     input_boolean.nattlage:
       expose: true
