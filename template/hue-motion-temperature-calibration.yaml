@@ -50,7 +50,7 @@
 - sensor:
     - unique_id: fuktsensor_badrum_uppe_temperature_adjusted
       name: "{{ state_attr('sensor.fuktsensor_badrum_uppe_temperature', 'friendly_name') }} adjusted"
-      state: "{{ ((states('sensor.fuktsensor_badrum_uppe_temperature') | float) + 1.5) | round(1) }}"
+      state: "{{ ((states('sensor.fuktsensor_badrum_uppe_temperature') | float) - 0,5) | round(1) }}"
       device_class: temperature
       unit_of_measurement: "°C"
       state_class: measurement

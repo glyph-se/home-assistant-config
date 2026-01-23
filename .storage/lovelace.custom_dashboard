@@ -542,7 +542,7 @@
                       }
                     },
                     {
-                      "entity": "sensor.lumi_lumi_weather_temperature"
+                      "entity": "sensor.fuktsensor_badrum_uppe_temperature"
                     },
                     {
                       "entity": "sensor.arbetsrumsensor_temperature_adjusted"
@@ -564,6 +564,9 @@
                     },
                     {
                       "entity": "sensor.vardagsrumssensor_temperature_adjusted"
+                    },
+                    {
+                      "entity": "sensor.fuktsensor_badrum_uppe_temperature_adjusted"
                     }
                   ]
                 },
