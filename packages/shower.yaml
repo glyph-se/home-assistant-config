@@ -4,7 +4,7 @@ binary_sensor:
     sensors:
       badrum_uppe_shower_on:
         max_samples: 2
-        entity_id: sensor.lumi_lumi_weather_humidity
+        entity_id: sensor.fuktsensor_badrum_uppe_humidity
         sample_duration: 600
         min_gradient: 0.03333
   # Tracks 2 humidity readings over 10 minutes. If the change decrease is greater than 5%, evals to true. (-5/(60*10))
@@ -13,6 +13,6 @@ binary_sensor:
     sensors:
       badrum_uppe_shower_off:
         max_samples: 2
-        entity_id: sensor.lumi_lumi_weather_humidity
+        entity_id: sensor.fuktsensor_badrum_uppe_humidity
         sample_duration: 600
         min_gradient: -0.00833
