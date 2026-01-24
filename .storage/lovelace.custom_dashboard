@@ -306,6 +306,42 @@
                 }
               ],
               "title": "Trappa"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "light.grona_rummet_lampa",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "cover.rullgardin_grona_rummet",
+                  "vertical": false,
+                  "features_position": "bottom"
+                }
+              ],
+              "title": "Gröna rummet"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "light.bla_rummet_lampa",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "cover.rullgardin_bla_rummet",
+                  "vertical": false,
+                  "features_position": "bottom"
+                }
+              ],
+              "title": "Blå rummet"
             }
           ]
         },
@@ -933,6 +969,10 @@
                 },
                 {
                   "entity": "switch.ikea_of_sweden_tradfri_control_outlet_5ddf51fe_on_off"
+                },
+                {
+                  "entity": "light.julgran_light",
+                  "icon": "mdi:pine-tree"
                 }
               ],
               "title": "Dekorationer",
