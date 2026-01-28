@@ -328,6 +328,10 @@
       entity_id: 5485500bec14972f3d2492b632af3111
       domain: binary_sensor
       trigger: device
+      for:
+        hours: 0
+        minutes: 30
+        seconds: 0
     timeout:
       hours: 6
       minutes: 0
@@ -1269,3 +1273,53 @@
       - light.kokso_ledstrip_ovan
     data: {}
   mode: restart
+- id: '1769541049617'
+  alias: Living room TV auto avstängning
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - media_player.living_room_tv
+    to:
+    - 'off'
+    - idle
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+  - trigger: state
+    entity_id:
+    - media_player.flora
+    to:
+    - idle
+    - 'off'
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+  conditions:
+  - condition: state
+    entity_id: media_player.flora
+    state:
+    - idle
+    - 'off'
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+  - condition: state
+    entity_id: media_player.living_room_tv
+    state:
+    - 'off'
+    - idle
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+  actions:
+  - action: media_player.turn_off
+    metadata: {}
+    target:
+      entity_id: media_player.living_room_tv
+    data: {}
+  mode: single
