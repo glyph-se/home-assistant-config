@@ -35,9 +35,7 @@ google_assistant:
       expose: true
     light.kokso_strip_ovan:
       expose: false
-    light.kokso_knapp_s1:
-      expose: false
-    light.kokso_knapp_s2:
+    light.kokso_knapp:
       expose: false
     light.koksspottar_knapp:
       expose: false
