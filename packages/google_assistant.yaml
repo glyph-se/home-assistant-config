@@ -33,7 +33,7 @@ google_assistant:
       expose: true
     media_player.flora:
       expose: true
-    light.kokso_strip_ovan:
+    light.kokso_ledstrip_ovan:
       expose: false
     light.kokso_knapp:
       expose: false
