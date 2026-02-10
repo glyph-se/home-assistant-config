@@ -1221,10 +1221,16 @@
     id: double_click
   conditions: []
   actions:
-  - type: turn_on
-    device_id: ccd7e04749cac789c8b4166242b7c69c
-    entity_id: 00dfadc72804606996e22e43ce6ce24d
-    domain: light
+  - if:
+    - condition: state
+      entity_id: light.kokso_knapp
+      state:
+      - 'off'
+    then:
+    - type: turn_on
+      device_id: ccd7e04749cac789c8b4166242b7c69c
+      entity_id: 00dfadc72804606996e22e43ce6ce24d
+      domain: light
   - choose:
     - conditions:
       - condition: trigger

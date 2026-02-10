@@ -4,11 +4,18 @@
       level: "{{ state_attr('light.kokso_ledstrip_ovan', 'brightness') }}"
       temperature: "{{ state_attr('light.kokso_ledstrip_ovan', 'color_temp') }}"
       turn_on:
-        action: light.turn_on
-        entity_id: light.kokso_knapp
+        - if:
+            - condition: state
+              entity_id: light.kokso_knapp
+              state: "off"
+          then:
+            - action: light.turn_on
+              entity_id: light.kokso_knapp
+        - action: light.turn_on
+          entity_id: light.kokso_ledstrip_ovan
       turn_off:
         action: light.turn_off
-        entity_id: light.kokso_knapp
+        entity_id: light.kokso_ledstrip_ovan
       set_level:
         action: light.turn_on
         entity_id: light.kokso_ledstrip_ovan
