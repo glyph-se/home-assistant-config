@@ -1,11 +1,11 @@
 - id: "1583530252657"
   alias: z Legoskåp tänd
   description: ""
-  trigger:
+  triggers:
     - event: sunset
       offset: +00:45:00
-      platform: sun
-  condition:
+      trigger: sun
+  conditions:
     - condition: state
       entity_id: group.people
       state: home
@@ -14,7 +14,7 @@
         - fri
         - sat
         - sun
-  action:
+  actions:
     - device_id: f021ae88c9c94bb9b00a399eaab1019d
       domain: switch
       entity_id: switch.innr_sp_120_59328903_on_off
@@ -767,15 +767,15 @@
         milliseconds: 0
   mode: single
 - id: "1646675989803"
-  alias: Rullgardin arbtesrum upp
+  alias: Rullgardin arbetsrum upp
   description: ""
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.sol_ost
+  triggers:
+    - entity_id: binary_sensor.sol_ost
       from: "on"
       to: "off"
-  condition: []
-  action:
+      trigger: state
+  conditions: []
+  actions:
     - delay:
         hours: 0
         minutes: 0
@@ -799,10 +799,10 @@
       type: set_position
       position: 100
       enabled: false
-    - service: scene.turn_on
-      target:
+    - target:
         entity_id: scene.oppna_arbetsrum
       data: {}
+      action: scene.turn_on
     - delay:
         hours: 0
         minutes: 0
@@ -1236,24 +1236,24 @@
   conditions: []
   actions:
     - if:
-            - condition: trigger
-              id:
-                - single_click
-            - condition: state
-              entity_id: light.kokso_ledstrip_ovan
-              state:
-                - "on"
+        - condition: trigger
+          id:
+            - single_click
+        - condition: state
+          entity_id: light.kokso_ledstrip_ovan
+          state:
+            - "on"
         - condition: state
           entity_id: light.kokso_knapp
           state:
             - "on"
       then:
-            - action: light.turn_off
-              metadata: {}
-              target:
-                entity_id:
-                  - light.kokso_ledstrip_ovan
-              data: {}
+        - action: light.turn_off
+          metadata: {}
+          target:
+            entity_id:
+              - light.kokso_ledstrip_ovan
+          data: {}
       else:
         - if:
             - condition: state
@@ -1267,37 +1267,37 @@
                 entity_id: light.kokso_knapp
               data: {}
         - choose:
-        - conditions:
-            - condition: trigger
-              id:
-                - double_click
-          sequence:
+            - conditions:
+                - condition: trigger
+                  id:
+                    - double_click
+              sequence:
+                - action: light.turn_on
+                  metadata: {}
+                  target:
+                    entity_id:
+                      - light.kokso_ledstrip_ovan
+                  data:
+                    brightness_pct: 100
+          default:
             - action: light.turn_on
               metadata: {}
               target:
                 entity_id:
                   - light.kokso_ledstrip_ovan
               data:
-                brightness_pct: 100
-      default:
-        - action: light.turn_on
+                brightness_pct: 40
+        - delay:
+            hours: 1
+            minutes: 0
+            seconds: 0
+            milliseconds: 0
+        - action: light.turn_off
           metadata: {}
           target:
             entity_id:
               - light.kokso_ledstrip_ovan
-          data:
-            brightness_pct: 40
-    - delay:
-        hours: 1
-        minutes: 0
-        seconds: 0
-        milliseconds: 0
-    - action: light.turn_off
-      metadata: {}
-      target:
-        entity_id:
-          - light.kokso_ledstrip_ovan
-      data: {}
+          data: {}
   mode: restart
 - id: "1769541049617"
   alias: Living room TV auto avstängning
