@@ -13,6 +13,7 @@
 # Ignore folders.
 /.cloud
 /.google.token
+/.ssh
 
 # Ignore storage, except everything beginning with lovelace
 /.storage/*

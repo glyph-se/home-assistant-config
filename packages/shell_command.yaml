@@ -1,0 +1,15 @@
+# Some inspiration from
+# * https://gist.github.com/edwork/6aa6fdab04bc6e5612a912c645318c0f
+# * https://stackoverflow.com/q/3790454
+# * https://www.home-assistant.io/integrations/shell_command/
+# * https://developers.home-assistant.io/docs/documenting/yaml-style-guide/#strings
+shell_command:
+  living_room_tv_turn_off: >
+    ssh -i /config/.ssh/id_ed25519
+      -o UserKnownHostsFile=/config/.ssh/known_hosts
+      root@flora.lan.glyph.se 'cec-ctl --to 0 --standby'
+  living_room_tv_turn_on: >
+    ssh -i /config/.ssh/id_ed25519
+      -o UserKnownHostsFile=/config/.ssh/known_hosts
+      root@flora.lan.glyph.se
+      'cec-ctl --to 0 --image-view-on'
