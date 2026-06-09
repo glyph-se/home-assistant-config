@@ -25,4 +25,4 @@
         action: light.turn_on
         entity_id: light.kokso_ledstrip_ovan
         data:
-          color_temp: "{{ color_temp }}"
+          color_temp_kelvin: "{{ color_temp_kelvin }}"
