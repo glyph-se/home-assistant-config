@@ -618,44 +618,26 @@
 - id: '1645197393269'
   alias: Rullgardin sovrum ner
   description: ''
-  trigger:
-  - platform: state
-    entity_id: input_boolean.nattlage
+  triggers:
+  - entity_id: input_boolean.nattlage
     to: 'on'
     from: 'off'
-  - platform: state
-    entity_id: binary_sensor.sol_ost
+    trigger: state
+  - entity_id: binary_sensor.sol_ost
     from: 'off'
     to: 'on'
-  condition: []
-  action:
+    trigger: state
+  conditions: []
+  actions:
   - delay:
       hours: 0
       minutes: 0
       seconds: 5
       milliseconds: 0
-  - device_id: cb9837eea3df69d7a80c301f97957010
-    domain: cover
-    entity_id: cover.rullgardin_sovrum_1
-    type: set_position
-    position: 0
-    enabled: false
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
-    enabled: false
-  - device_id: 2aa8b40bcda999373e14624bdd2f5db4
-    domain: cover
-    entity_id: cover.rullgardin_sovrum_2
-    type: set_position
-    position: 0
-    enabled: false
-  - service: scene.turn_on
-    metadata: {}
+  - metadata: {}
     target:
       entity_id: scene.morklagg_sovrum
+    action: scene.turn_on
   - delay:
       hours: 0
       minutes: 0
@@ -665,20 +647,20 @@
 - id: '1645197903658'
   alias: Rullgardin sovrum upp
   description: ''
-  trigger:
-  - platform: state
-    entity_id: input_boolean.nattlage
+  triggers:
+  - entity_id: input_boolean.nattlage
     to: 'off'
     for:
       hours: 1
       minutes: 0
       seconds: 0
     from: 'on'
-  - platform: state
-    entity_id: binary_sensor.sol_ost
+    trigger: state
+  - entity_id: binary_sensor.sol_ost
     to: 'off'
     from: 'on'
-  condition:
+    trigger: state
+  conditions:
   - condition: state
     entity_id: binary_sensor.sol_ost
     state: 'off'
@@ -689,34 +671,16 @@
       hours: 1
       minutes: 0
       seconds: 0
-  action:
+  actions:
   - delay:
       hours: 0
       minutes: 0
       seconds: 5
       milliseconds: 0
-  - service: scene.turn_on
-    metadata: {}
+  - metadata: {}
     target:
       entity_id: scene.oppna_sovrum
-  - device_id: 2aa8b40bcda999373e14624bdd2f5db4
-    domain: cover
-    entity_id: cover.rullgardin_sovrum_2
-    type: set_position
-    position: 100
-    enabled: false
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
-    enabled: false
-  - device_id: cb9837eea3df69d7a80c301f97957010
-    domain: cover
-    entity_id: cover.rullgardin_sovrum_1
-    type: set_position
-    position: 100
-    enabled: false
+    action: scene.turn_on
   - delay:
       hours: 0
       minutes: 0
@@ -726,40 +690,22 @@
 - id: '1646675799957'
   alias: Rullgardin arbetsrum ner
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.sol_ost
+  triggers:
+  - entity_id: binary_sensor.sol_ost
     from: 'off'
     to: 'on'
-  condition: []
-  action:
+    trigger: state
+  conditions: []
+  actions:
   - delay:
       hours: 0
       minutes: 0
       seconds: 11
       milliseconds: 0
-  - device_id: 2adb6171ac15ee8380b0ed725b450af0
-    domain: cover
-    entity_id: cover.rullgardin_arbetsrum_2
-    type: set_position
-    position: 0
-    enabled: false
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 11
-      milliseconds: 0
-    enabled: false
-  - device_id: 25d7d856f8d8880d5e78c62fa066b230
-    domain: cover
-    entity_id: cover.rullgardin_arbetsrum_1
-    type: set_position
-    position: 0
-    enabled: false
-  - service: scene.turn_on
-    data: {}
+  - data: {}
     target:
       entity_id: scene.nere_arbetsrum
+    action: scene.turn_on
   - delay:
       hours: 0
       minutes: 0
@@ -781,24 +727,6 @@
       minutes: 0
       seconds: 11
       milliseconds: 0
-  - device_id: 2adb6171ac15ee8380b0ed725b450af0
-    domain: cover
-    entity_id: cover.rullgardin_arbetsrum_2
-    type: set_position
-    position: 100
-    enabled: false
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 11
-      milliseconds: 0
-    enabled: false
-  - device_id: 25d7d856f8d8880d5e78c62fa066b230
-    domain: cover
-    entity_id: cover.rullgardin_arbetsrum_1
-    type: set_position
-    position: 100
-    enabled: false
   - target:
       entity_id: scene.oppna_arbetsrum
     data: {}
@@ -812,23 +740,23 @@
 - id: '1647247160318'
   alias: Rullgardin TV-hörn upp
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.sol_ost
+  triggers:
+  - entity_id: binary_sensor.sol_ost
     to: 'off'
     from: 'on'
-  condition: []
-  action:
+    trigger: state
+  conditions: []
+  actions:
   - delay:
       hours: 0
       minutes: 0
       seconds: 7
       milliseconds: 0
-  - device_id: 16e992059cbf48897a13a76761597f90
-    domain: cover
-    entity_id: cover.rullgardin_tvhorna
-    type: set_position
-    position: 100
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.serverrum_humlebo_hub_oppna_tv
+    data: {}
   - delay:
       hours: 0
       minutes: 0
@@ -838,23 +766,23 @@
 - id: '1648567411037'
   alias: Rullgardin TV-hörn ner
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.sol_ost
+  triggers:
+  - entity_id: binary_sensor.sol_ost
     to: 'on'
     from: 'off'
-  condition: []
-  action:
+    trigger: state
+  conditions: []
+  actions:
   - delay:
       hours: 0
       minutes: 0
       seconds: 7
       milliseconds: 0
-  - device_id: 16e992059cbf48897a13a76761597f90
-    domain: cover
-    entity_id: cover.rullgardin_tvhorna
-    type: set_position
-    position: 7
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.serverrum_humlebo_hub_ner_tv
+    data: {}
   - delay:
       hours: 0
       minutes: 0
@@ -864,33 +792,23 @@
 - id: '1650556172490'
   alias: Rullgardin takterass ner
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.sol_syd
+  triggers:
+  - entity_id: binary_sensor.sol_syd
     to: 'on'
     from: 'off'
-  condition: []
-  action:
+    trigger: state
+  conditions: []
+  actions:
   - delay:
       hours: 0
       minutes: 0
       seconds: 3
       milliseconds: 0
-  - device_id: bd3630fd9e8c2c1f303577b5c0292830
-    domain: cover
-    entity_id: cover.rullgardin_takterrass_1
-    type: set_position
-    position: 0
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 3
-      milliseconds: 0
-  - device_id: c3fb9245c6ca7edc4d8d65d5ec2a1b99
-    domain: cover
-    entity_id: cover.rullgardin_takterrass_2
-    type: set_position
-    position: 0
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.humlebo_hub_ner_takterrass
+    data: {}
   - delay:
       hours: 0
       minutes: 0
@@ -900,33 +818,23 @@
 - id: '1650556217010'
   alias: Rullgardin takterrass upp
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.sol_syd
+  triggers:
+  - entity_id: binary_sensor.sol_syd
     to: 'off'
     from: 'on'
-  condition: []
-  action:
+    trigger: state
+  conditions: []
+  actions:
   - delay:
       hours: 0
       minutes: 0
       seconds: 3
       milliseconds: 0
-  - device_id: bd3630fd9e8c2c1f303577b5c0292830
-    domain: cover
-    entity_id: cover.rullgardin_takterrass_1
-    type: set_position
-    position: 100
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 3
-      milliseconds: 0
-  - device_id: c3fb9245c6ca7edc4d8d65d5ec2a1b99
-    domain: cover
-    entity_id: cover.rullgardin_takterrass_2
-    type: set_position
-    position: 100
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.serverrum_humlebo_hub_oppna_takterrass
+    data: {}
   - delay:
       hours: 0
       minutes: 0
@@ -1437,4 +1345,61 @@
     target:
       entity_id: light.kokso_ledstrip_ovan
     data: {}
+  mode: single
+- id: '1785785632806'
+  alias: Rullgardin små rum ner
+  description: ''
+  triggers:
+  - entity_id:
+    - binary_sensor.sol_vast
+    from:
+    - 'off'
+    to:
+    - 'on'
+    trigger: state
+  conditions: []
+  actions:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 13
+      milliseconds: 0
+  - data: {}
+    target:
+      entity_id:
+      - scene.serverrum_humlebo_hub_halften_bla_rummet
+      - scene.serverrum_humlebo_hub_halften_grona_rummet
+    action: scene.turn_on
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 13
+      milliseconds: 0
+  mode: single
+- id: '1785785744163'
+  alias: Rullgardin små rum upp
+  description: ''
+  triggers:
+  - entity_id: binary_sensor.sol_ost
+    from: 'on'
+    to: 'off'
+    trigger: state
+  conditions: []
+  actions:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 13
+      milliseconds: 0
+  - target:
+      entity_id:
+      - scene.serverrum_humlebo_hub_halften_bla_rummet
+      - scene.serverrum_humlebo_hub_halften_grona_rummet
+    data: {}
+    action: scene.turn_on
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 13
+      milliseconds: 0
   mode: single
