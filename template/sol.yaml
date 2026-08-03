@@ -15,6 +15,14 @@
         states("binary_sensor.soligt_vader") == 'on' and
         states("input_boolean.sol_automation") == 'on'
         }}
+    - name: "Sol väst"
+      state: >-
+        {{
+        (state_attr("sun.sun", "azimuth") > 237) and
+        (state_attr("sun.sun", "elevation") > 8) and
+        states("binary_sensor.soligt_vader") == 'on' and
+        states("input_boolean.sol_automation") == 'on'
+        }}
     - name: "Soligt väder"
       state: >
         {{ (states("weather.home") in ("sunny", "partlycloudy")) }}
