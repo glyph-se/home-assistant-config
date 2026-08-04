@@ -1393,8 +1393,8 @@
       milliseconds: 0
   - target:
       entity_id:
-      - scene.serverrum_humlebo_hub_halften_bla_rummet
-      - scene.serverrum_humlebo_hub_halften_grona_rummet
+      - scene.serverrum_humlebo_hub_oppet_bla_rummet
+      - scene.serverrum_humlebo_hub_oppet_grona_rummet
     data: {}
     action: scene.turn_on
   - delay:
