@@ -638,11 +638,6 @@
     target:
       entity_id: scene.morklagg_sovrum
     action: scene.turn_on
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
   mode: single
 - id: '1645197903658'
   alias: Rullgardin sovrum upp
@@ -681,11 +676,6 @@
     target:
       entity_id: scene.oppna_sovrum
     action: scene.turn_on
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
   mode: single
 - id: '1646675799957'
   alias: Rullgardin arbetsrum ner
@@ -706,11 +696,6 @@
     target:
       entity_id: scene.nere_arbetsrum
     action: scene.turn_on
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 11
-      milliseconds: 0
   mode: single
 - id: '1646675989803'
   alias: Rullgardin arbetsrum upp
@@ -731,11 +716,6 @@
       entity_id: scene.oppna_arbetsrum
     data: {}
     action: scene.turn_on
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 11
-      milliseconds: 0
   mode: single
 - id: '1647247160318'
   alias: Rullgardin TV-hörn upp
@@ -757,11 +737,6 @@
     target:
       entity_id: scene.serverrum_humlebo_hub_oppna_tv
     data: {}
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 7
-      milliseconds: 0
   mode: single
 - id: '1648567411037'
   alias: Rullgardin TV-hörn ner
@@ -783,11 +758,6 @@
     target:
       entity_id: scene.serverrum_humlebo_hub_ner_tv
     data: {}
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 7
-      milliseconds: 0
   mode: single
 - id: '1650556172490'
   alias: Rullgardin takterass ner
@@ -809,11 +779,6 @@
     target:
       entity_id: scene.humlebo_hub_ner_takterrass
     data: {}
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 3
-      milliseconds: 0
   mode: single
 - id: '1650556217010'
   alias: Rullgardin takterrass upp
@@ -835,11 +800,6 @@
     target:
       entity_id: scene.serverrum_humlebo_hub_oppna_takterrass
     data: {}
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 3
-      milliseconds: 0
   mode: single
 - id: '1654026209306'
   alias: Lampa arbetsrum auto
@@ -1362,7 +1322,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 13
+      seconds: 17
       milliseconds: 0
   - data: {}
     target:
@@ -1370,11 +1330,6 @@
       - scene.serverrum_humlebo_hub_halften_bla_rummet
       - scene.serverrum_humlebo_hub_halften_grona_rummet
     action: scene.turn_on
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 13
-      milliseconds: 0
   mode: single
 - id: '1785785744163'
   alias: Rullgardin små rum upp
@@ -1389,7 +1344,7 @@
   - delay:
       hours: 0
       minutes: 0
-      seconds: 13
+      seconds: 17
       milliseconds: 0
   - target:
       entity_id:
@@ -1397,9 +1352,4 @@
       - scene.serverrum_humlebo_hub_oppet_grona_rummet
     data: {}
     action: scene.turn_on
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 13
-      milliseconds: 0
   mode: single
